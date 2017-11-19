@@ -1,0 +1,18 @@
+;; Object function/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "function/"
+  :tables
+  (list
+    (semanticdb-table "Function.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util.function" package nil nil [217 244])
+            ("java.util.Objects" include nil nil [246 271]))          
+      :file "Function.java"
+      :pointmax 2871
+      :fsize 2870
+      :lastmodtime '(22500 20591 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 662 . 2870) (GT 660 . 661) (IDENTIFIER 659 . 660) (COMMA 657 . 658) (IDENTIFIER 656 . 657) (LT 655 . 656) (IDENTIFIER 609 . 629))))
+  :file "!Volumes!3TB!download!jdk1.8.0_111!src!java!util!function!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

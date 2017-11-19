@@ -1,0 +1,212 @@
+*関数
+Lispで関数を呼び出すには関数名をカッコで囲む。関数にパラメータを渡したければそれも一緒にカッコに入れる。
+>|lisp|
+(defun function_name (arguments)
+ ...)
+||<
+まず関数の名前と引数を記し、その後ろに関数を実装するコードを書いていく。
+
+*トップレベル定義
+Lispではグローバルに定義される変数をトップレベル定義と呼ぶ。新しいトップレベル定義はdefparameter 関数で作ることができる。
+>|lisp|
+(defparameter *small* 1)
+||<
+アスタリスクはearmuffsと呼ばれる習慣。ローカル変数と区別するのに便利。
+
+*REPL(read-eval-printループ)の機能
+式をタイプするとLispはそれを直ちに評価して結果を返す。CLISPを終了するときは(quit)とタイプする。
+Lispでプログラムを書いているときには、わざわざスクリーンに値を表示させるような関数を書くことは少ない。関数内で表示せずとも返した値は自動的にREPLの機能によって表示される。
+他の言語でreturnと書くようなところをLispでは関数の最後の式が自動的に返されるのでその必要がない。
+
+*数当てゲーム（バイナリサーチ）
+>|lisp|
+(defparameter *big* 100)
+(defparameter *small* 1)
+
+(defparameter *big* 100)
+(defparameter *small* 1)
+
+(defun guess-my-number()
+  (ash (+ *small* *big*) -1));;(+ *small* *big*)は２つの変数の値を足すコード。加算結果はash関数に渡される。ashは渡された数値を２進数で考え、ビットをシフトする。第二引数に1を渡すと左シフト、-1を渡すと右シフトする。
+
+;;関数の呼び出し
+(guess-my-number);;50
+
+(defun smaller()
+  (setf *big* (1- (guess-my-number)));;setfでグローバル変数*big*の値を変える。guess-mynumberを呼び*small*と*big*を足して右シフトした値を得て、それを引数として1を引いた関数1-（1-は関数名で、「1を引け」と動詞のように読むと良い）を呼び出す。
+  (guess-my-number));;smaller関数によって新しい推測値を表示させるために再びguess-my-numberを呼ぶ。
+
+(defun bigger()
+  (setf *small* (1+ (guess-my-number)))
+  (guess-my-number))
+
+
+;;実行
+(bigger)
+;;75
+(smaller)
+;;62
+(smaller)
+;;56
+
+;;グローバル変数をリセットするstart-over
+(defun start-over()
+  (defparameter *small* 1)
+  (defparameter *big* 100)
+  (guess-my-number))
+
+(start-over);;50
+||<
+
+*ローカル変数の定義
+ローカル変数の定義にはletコマンドを使う。
+>|lisp|
+(let (変数定義)
+     ...本体...)
+||<
+
+*ローカル関数の定義
+ローカル関数の定義にはfletコマンドを使う。最初の２行で関数を宣言する。この関数はfletの本体の中で使える。
+>|lisp|
+(flet ((関数名 (引数)
+      ...関数本体...))
+  ...本体...
+  ||<)
+
+一つの引数nを取るローカル変数fを定義し、本体の中で5を引数として関数fを呼び出す。
+>|lisp|
+(flet ((f (n)
+      (+ n 10)))
+     (f 5));;15
+||<
+
+*コードモードとデータモード
+Lispではデフォルトではコードモードになっている。
+コードモードにいるとき、その入力はフォームの構造に沿っていなければならない。
+フォームとは最初の要素が特別のコマンドになっているようなリストのこと。
+フォームを読む際に、リストの残りの要素はすべて引数として関数に渡される。
+
+データモードで書かれてものはすべてデータとして扱われる。
+データは「実行」されない。
+データモードで固定した情報をデータとしてコード中に埋め込んでおくことができる。
+Lispにデータモードであることを教えるにはシングルクオートをリストの手前につける。
+これを「クオートする」という。
+クオートによって「次に来るのはコマンドじゃないよ、プログラムで使うデータの塊だよ」とLispに教える。
+
+*コンスセル
+Lispのリストはコンスセルでつなぎ合わされている。
+コンスセルはリンクリストである。
+
+*cons関数
+2つのデータをLispプログラムの中で結び付けたいときに使う。
+cons（constructの略）を呼ぶとLispコンパイラはそれぞれのオブジェクトへの参照を入れておく、コンスセルのための小さなメモリをアロケートする。
+例えばシンボルchickenをシンボルcatとくっつけると、consはひとつのコンスセルを返す。
+>|lisp|
+(cons 'chicken 'cat);;(CHICKEN . CAT)
+||<
+コンスセルの表現は繋げられた要素の間にドットをおいて全体をカッコで囲んだもの、リストとは異なる。
+Lispではコンスセルの連なりとリストは全く同じもの。
+>|lisp|
+(cons 'pork (cons 'beef (cons 'chicken())));;(PORK BEEF CHICKEN)
+||<
+空のリスト()はCommon Lispではシンボルnilと同じもので、リストの終端は空のリストである。
+３つの要素をコンスすれば、３つの要素を持つリストになる。
+
+*car
+関数car(Contents of the Address part of the Register)はセルの最初のスロットにあるデータを取り出すのに使う。
+>|lisp|
+(car '(pork beef chicken));;PORK
+||<
+関数cdr(Contents of the Decrement part of the Register)は２番めのスロットの値を取り出すのに使う。リストの場合はリストの残りの部分を返す(リストの最初の要素を取り除く)。
+>|lisp|
+(cdr '(pork beef chicken));;(BEEF CHICKEN)
+||<
+
+*list
+list関数は長いリストを一気に作ることができる。
+>|lisp|
+(list 'pork 'beef 'chicken);;(PORK BEEF CHICKEN)
+||<
+
+*空と偽
+条件式の評価において空のリストは偽として扱う。
+
+*progn
+prognコマンドを使って一つの式の中に余分なコマンドを押し込むことができる。最後の式の評価値をフォーム全体の値として返す。progn 特別式は、任意の数の引数を受け付け、先頭の引数から順に全ての式を評価する。
+
+
+>|lisp|
+(defvar *number-was-odd* nil)
+(if(oddp 5)
+         (progn (setf *number-was-odd* t)
+                'odd-number)
+         'even-number);;==>ODD-NUMBER
+*number-was-odd*
+==>T
+||<
+
+*whenとunless
+ifの中でひとつ以上の処理を書きたいときにprognを使わなくても、whienやunlessを使えば条件が真の時に囲まれた式をすべて実行する。
+>|lisp|
+(defvar *number-is-odd* nil)
+(when (oddp 5)
+      (setf *number-is-odd* t)
+      'odd-number)
+==>ODD-NUMBER
+
+*number-is-odd*
+==>T
+
+(unless (oddp 4)
+        (setf *number-is-odd* nil)
+        'even-number)
+==>EVEN-NUMBER
+
+*number-is-odd*
+NIL
+||<
+
+*cond
+condは複数の節を引数として受け取る。各節の先頭に条件をチェックする述語があり条件が成立した場合残りの式を評価する。条件が不成立であれば、次の節に移る。条件は常に上から順に検査され、最初に条件を満たしたものがcondの返り値になる。
+>|lisp|
+(defvar *arch-enemy* nil)
+(defun pudding-eater (person)
+  (cond ((eq person 'henry) (setf *arch-enemy* 'stupid-lisp-alien)
+         '(curse you lisp alien - you ate my pudding))
+        ((eq person 'johnny)(setf *arc-enemy* 'useless-old-johnny)
+         '(i hope you choked on my pudding johnny))
+        (t '(why you eat my pudding stranger ?))))
+(pudding-eater 'johnny)
+==>(I HOPE YOU CHOKED ON MY PUDDING JOHNNY)
+
+*arc-enemy*
+==>USELESS-OLD-JOHNNY
+
+(pudding-eater 'george-clooney)
+==>(WHY YOU EAT MY PUDDING STRANGER ?)
+||<
+
+*case
+caseでは比較対象になる値を並べて置くだけで良い。
+>|lisp|
+(defun pudding-eater(person)
+  (case person
+    ((henry) (setf *arch-enemy* 'stupid-lisp-alien)
+     '(curse you lisp alien - you ate my pudding))
+    ((johnny) (setf *arch-enemy* 'useless-old-johnny)
+     '(i hope you choked on my pudding johnny))
+    (otherwise '(why you eat my pudding stranger ?))))
+||<
+*andとorを使って条件分岐を行う
+andやorは条件判断にも使うことができる。orに与えられた式のうち真になるものが見つかったら直ちに、Lispは残りの式を評価せずにすぐに心を返す。同様に、andに与えられた式のうち偽になるものが見つかったら直ちに残りを評価する手間をかけずに偽値を返す。次のコードはある数が偶数の場合だけグローバル変数を真値にセットする。
+>|lisp|
+(defparameter *is-it-even* nil);;*IS-IT-EVEN*
+(or (oddp 4) (setf *is-it-even* t));;T
+*is-it-even*;;T
+
+;;奇数を与えると変数の値が変わらないことがわかる。
+(defparameter *is-it-even* nil);;*IS-IT-EVEN*
+(or (oddp 5) (setf *is-it-even* t));;T
+*is-it-even*;;NIL
+||<
+

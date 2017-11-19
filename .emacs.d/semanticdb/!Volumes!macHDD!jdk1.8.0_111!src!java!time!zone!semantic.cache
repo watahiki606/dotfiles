@@ -1,0 +1,429 @@
+;; Object zone/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "zone/"
+  :tables
+  (list
+    (semanticdb-table "package-info.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.time.zone" package nil nil [2807 2830]))          
+      :file "package-info.java"
+      :pointmax 2831
+      :fsize 2830
+      :lastmodtime '(22500 20592 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "Ser.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.time.zone" package nil nil [1845 1868])
+            ("java.io.DataInput" include nil nil [1870 1895])
+            ("java.io.DataOutput" include nil nil [1896 1922])
+            ("java.io.Externalizable" include nil nil [1923 1953])
+            ("java.io.IOException" include nil nil [1954 1981])
+            ("java.io.InvalidClassException" include nil nil [1982 2019])
+            ("java.io.ObjectInput" include nil nil [2020 2047])
+            ("java.io.ObjectOutput" include nil nil [2048 2076])
+            ("java.io.StreamCorruptedException" include nil nil [2077 2117])
+            ("java.time.ZoneOffset" include nil nil [2118 2146])
+            ("Ser" type
+               (:typemodifiers ("final")
+                :interfaces ("Externalizable")
+                :members 
+                  ( ("serialVersionUID" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [2429 2496])
+                    ("ZRULES" variable
+                       (:typemodifiers ("static" "final")
+                        :type "byte")
+                        (reparse-symbol class_member_declaration) [2533 2562])
+                    ("ZOT" variable
+                       (:typemodifiers ("static" "final")
+                        :type "byte")
+                        (reparse-symbol class_member_declaration) [2609 2635])
+                    ("ZOTRULE" variable
+                       (:typemodifiers ("static" "final")
+                        :type "byte")
+                        (reparse-symbol class_member_declaration) [2682 2712])
+                    ("type" variable
+                       (:typemodifiers ("private")
+                        :type "byte")
+                        (reparse-symbol class_member_declaration) [2756 2774])
+                    ("object" variable
+                       (:typemodifiers ("private")
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [2819 2841])
+                    ("Ser" function
+                       (:constructor-flag t
+                        :typemodifiers ("public"))
+                        (reparse-symbol class_member_declaration) [2903 2923])
+                    ("Ser" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("type" variable (:type "byte") (reparse-symbol formal_parameters) [3064 3073])
+                            ("object" variable (:type "Object") (reparse-symbol formal_parameters) [3075 3088]))                          )
+                        (reparse-symbol class_member_declaration) [3060 3153])
+                    ("writeExternal" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("out" variable (:type "ObjectOutput") (reparse-symbol formal_parameters) [4069 4085]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4043 4155])
+                    ("write" function
+                       (:throws ("IOException")
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("object" variable (:type "Object") (reparse-symbol formal_parameters) [4179 4192])
+                            ("out" variable (:type "DataOutput") (reparse-symbol formal_parameters) [4194 4208]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4161 4280])
+                    ("writeInternal" function
+                       (:throws ("IOException")
+                        :typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("type" variable (:type "byte") (reparse-symbol formal_parameters) [4320 4329])
+                            ("object" variable (:type "Object") (reparse-symbol formal_parameters) [4331 4344])
+                            ("out" variable (:type "DataOutput") (reparse-symbol formal_parameters) [4346 4360]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4286 4887])
+                    ("readExternal" function
+                       (:throws ("IOException" "ClassNotFoundException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("in" variable (:type "ObjectInput") (reparse-symbol formal_parameters) [6166 6180]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6141 6303])
+                    ("read" function
+                       (:throws ("IOException" "ClassNotFoundException")
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("in" variable (:type "DataInput") (reparse-symbol formal_parameters) [6328 6340]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [6309 6466])
+                    ("readInternal" function
+                       (:throws ("IOException" "ClassNotFoundException")
+                        :typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("type" variable (:type "byte") (reparse-symbol formal_parameters) [6507 6516])
+                            ("in" variable (:type "DataInput") (reparse-symbol formal_parameters) [6518 6530]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [6472 6968])
+                    ("readResolve" function
+                       (:typemodifiers ("private")
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [7104 7164])
+                    ("writeOffset" function
+                       (:throws ("IOException")
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("offset" variable (:type "ZoneOffset") (reparse-symbol formal_parameters) [7470 7487])
+                            ("out" variable (:type "DataOutput") (reparse-symbol formal_parameters) [7489 7503]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7446 7804])
+                    ("readOffset" function
+                       (:throws ("IOException")
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("in" variable (:type "DataInput") (reparse-symbol formal_parameters) [8037 8049]))                          
+                        :type "ZoneOffset")
+                        (reparse-symbol class_member_declaration) [8008 8241])
+                    ("writeEpochSec" function
+                       (:throws ("IOException")
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("epochSec" variable (:type "long") (reparse-symbol formal_parameters) [8558 8571])
+                            ("out" variable (:type "DataOutput") (reparse-symbol formal_parameters) [8573 8587]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8532 9042])
+                    ("readEpochSec" function
+                       (:throws ("IOException")
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("in" variable (:type "DataInput") (reparse-symbol formal_parameters) [9270 9282]))                          
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [9245 9648]))                  
+                :type "class")
+                nil [2334 9651]))          
+      :file "Ser.java"
+      :pointmax 9652
+      :fsize 9651
+      :lastmodtime '(22500 20592 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ZoneRules.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.time.zone" package nil nil [1845 1868])
+            ("java.io.DataInput" include nil nil [1870 1895])
+            ("java.io.DataOutput" include nil nil [1896 1922])
+            ("java.io.IOException" include nil nil [1923 1950])
+            ("java.io.InvalidObjectException" include nil nil [1951 1989])
+            ("java.io.ObjectInputStream" include nil nil [1990 2023])
+            ("java.io.Serializable" include nil nil [2024 2052])
+            ("java.time.Duration" include nil nil [2053 2079])
+            ("java.time.Instant" include nil nil [2080 2105])
+            ("java.time.LocalDate" include nil nil [2106 2133])
+            ("java.time.LocalDateTime" include nil nil [2134 2165])
+            ("java.time.ZoneId" include nil nil [2166 2190])
+            ("java.time.ZoneOffset" include nil nil [2191 2219])
+            ("java.time.Year" include nil nil [2220 2242])
+            ("java.util.ArrayList" include nil nil [2243 2270])
+            ("java.util.Arrays" include nil nil [2271 2295])
+            ("java.util.Collections" include nil nil [2296 2325])
+            ("java.util.List" include nil nil [2326 2348])
+            ("java.util.Objects" include nil nil [2349 2374])
+            ("java.util.concurrent.ConcurrentHashMap" include nil nil [2375 2421])
+            ("java.util.concurrent.ConcurrentMap" include nil nil [2422 2464])
+            ("ZoneRules" type
+               (:typemodifiers ("public" "final")
+                :interfaces ("Serializable")
+                :members 
+                  ( ("serialVersionUID" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [3695 3761])
+                    ("LAST_CACHED_YEAR" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3835 3884])
+                    ("standardTransitions" variable
+                       (:dereference 1
+                        :typemodifiers ("private" "final")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [3979 4020])
+                    ("standardOffsets" variable
+                       (:dereference 1
+                        :typemodifiers ("private" "final")
+                        :type "ZoneOffset")
+                        (reparse-symbol class_member_declaration) [4070 4113])
+                    ("savingsInstantTransitions" variable
+                       (:dereference 1
+                        :typemodifiers ("private" "final")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [4199 4246])
+                    ("savingsLocalTransitions" variable
+                       (:dereference 1
+                        :typemodifiers ("private" "final")
+                        :type "LocalDateTime")
+                        (reparse-symbol class_member_declaration) [4466 4520])
+                    ("wallOffsets" variable
+                       (:dereference 1
+                        :typemodifiers ("private" "final")
+                        :type "ZoneOffset")
+                        (reparse-symbol class_member_declaration) [4566 4605])
+                    ("lastRules" variable
+                       (:dereference 1
+                        :typemodifiers ("private" "final")
+                        :type "ZoneOffsetTransitionRule")
+                        (reparse-symbol class_member_declaration) [4648 4699])
+                    ("EMPTY_LONG_ARRAY" variable
+                       (:dereference 1
+                        :typemodifiers ("private" "static" "final")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [4975 5034])
+                    ("EMPTY_LASTRULES" variable
+                       (:dereference 1
+                        :typemodifiers ("private" "static" "final")
+                        :type "ZoneOffsetTransitionRule")
+                        (reparse-symbol class_member_declaration) [5095 5201])
+                    ("EMPTY_LDT_ARRAY" variable
+                       (:dereference 1
+                        :typemodifiers ("private" "static" "final")
+                        :type "LocalDateTime")
+                        (reparse-symbol class_member_declaration) [5256 5332])
+                    ("of" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("baseStandardOffset" variable (:type "ZoneOffset") (reparse-symbol formal_parameters) [5899 5928])
+                            ("baseWallOffset" variable (:type "ZoneOffset") (reparse-symbol formal_parameters) [5961 5986])
+                            ("" variable (:type "standardOffsetTransitionList") (reparse-symbol formal_parameters) [6046 6074])
+                            ("" variable (:type "transitionList") (reparse-symbol formal_parameters) [6134 6148])
+                            ("" variable (:type "lastRules") (reparse-symbol formal_parameters) [6212 6221]))                          
+                        :type "ZoneRules")
+                        (reparse-symbol class_member_declaration) [5872 6738])
+                    ("of" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("offset" variable (:type "ZoneOffset") (reparse-symbol formal_parameters) [7007 7024]))                          
+                        :type "ZoneRules")
+                        (reparse-symbol class_member_declaration) [6980 7121])
+                    ("ZoneRules" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("baseStandardOffset" variable (:type "ZoneOffset") (reparse-symbol formal_parameters) [7616 7645])
+                            ("baseWallOffset" variable (:type "ZoneOffset") (reparse-symbol formal_parameters) [7661 7686])
+                            ("" variable (:type "standardOffsetTransitionList") (reparse-symbol formal_parameters) [7729 7757])
+                            ("" variable (:type "transitionList") (reparse-symbol formal_parameters) [7800 7814])
+                            ("" variable (:type "lastRules") (reparse-symbol formal_parameters) [7861 7870]))                          )
+                        (reparse-symbol class_member_declaration) [7606 9904])
+                    ("ZoneRules" function
+                       (:constructor-flag t
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("standardTransitions" variable
+                               (:dereference 1
+                                :type "long")
+                                (reparse-symbol formal_parameters) [10310 10336])
+                            ("standardOffsets" variable
+                               (:dereference 1
+                                :type "ZoneOffset")
+                                (reparse-symbol formal_parameters) [10360 10388])
+                            ("savingsInstantTransitions" variable
+                               (:dereference 1
+                                :type "long")
+                                (reparse-symbol formal_parameters) [10412 10444])
+                            ("wallOffsets" variable
+                               (:dereference 1
+                                :type "ZoneOffset")
+                                (reparse-symbol formal_parameters) [10468 10492])
+                            ("lastRules" variable
+                               (:dereference 1
+                                :type "ZoneOffsetTransitionRule")
+                                (reparse-symbol formal_parameters) [10516 10552]))                          )
+                        (reparse-symbol class_member_declaration) [10292 11888])
+                    ("ZoneRules" function
+                       (:constructor-flag t
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("offset" variable (:type "ZoneOffset") (reparse-symbol formal_parameters) [12148 12165]))                          )
+                        (reparse-symbol class_member_declaration) [12130 12520])
+                    ("readObject" function
+                       (:throws ("InvalidObjectException")
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("s" variable (:type "ObjectInputStream") (reparse-symbol formal_parameters) [12694 12713]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [12670 12840])
+                    ("writeReplace" function
+                       (:typemodifiers ("private")
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [15243 15322])
+                    ("writeExternal" function
+                       (:throws ("IOException")
+                        :arguments 
+                          ( ("out" variable (:type "DataOutput") (reparse-symbol formal_parameters) [15502 15516]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [15483 16210])
+                    ("readExternal" function
+                       (:throws ("IOException" "ClassNotFoundException")
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("in" variable (:type "DataInput") (reparse-symbol formal_parameters) [16444 16456]))                          
+                        :type "ZoneRules")
+                        (reparse-symbol class_member_declaration) [16414 17749])
+                    ("isFixedOffset" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [17931 18023])
+                    ("getOffset" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("instant" variable (:type "Instant") (reparse-symbol formal_parameters) [18509 18524]))                          
+                        :type "ZoneOffset")
+                        (reparse-symbol class_member_declaration) [18481 19635])
+                    ("getOffset" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("localDateTime" variable (:type "LocalDateTime") (reparse-symbol formal_parameters) [21397 21424]))                          
+                        :type "ZoneOffset")
+                        (reparse-symbol class_member_declaration) [21369 21649])
+                    ("getValidOffsets" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("localDateTime" variable (:type "LocalDateTime") (reparse-symbol formal_parameters) [24076 24103]))                          )
+                        (reparse-symbol class_member_declaration) [24060 24395])
+                    ("getTransition" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("localDateTime" variable (:type "LocalDateTime") (reparse-symbol formal_parameters) [26197 26224]))                          
+                        :type "ZoneOffsetTransition")
+                        (reparse-symbol class_member_declaration) [26155 26377])
+                    ("getOffsetInfo" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("dt" variable (:type "LocalDateTime") (reparse-symbol formal_parameters) [26412 26428]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [26383 28507])
+                    ("findOffsetInfo" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("dt" variable (:type "LocalDateTime") (reparse-symbol formal_parameters) [28762 28778])
+                            ("trans" variable (:type "ZoneOffsetTransition") (reparse-symbol formal_parameters) [28780 28806]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [28732 29505])
+                    ("findTransitionArray" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("year" variable (:type "int") (reparse-symbol formal_parameters) [29736 29744]))                          
+                        :type "ZoneOffsetTransition[]")
+                        (reparse-symbol class_member_declaration) [29685 30377])
+                    ("getStandardOffset" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("instant" variable (:type "Instant") (reparse-symbol formal_parameters) [30990 31005]))                          
+                        :type "ZoneOffset")
+                        (reparse-symbol class_member_declaration) [30954 31422])
+                    ("getDaylightSavings" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("instant" variable (:type "Instant") (reparse-symbol formal_parameters) [32402 32417]))                          
+                        :type "Duration")
+                        (reparse-symbol class_member_declaration) [32367 32743])
+                    ("isDaylightSavings" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("instant" variable (:type "Instant") (reparse-symbol formal_parameters) [33455 33470]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [33422 33560])
+                    ("isValidOffset" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("localDateTime" variable (:type "LocalDateTime") (reparse-symbol formal_parameters) [34234 34261])
+                            ("offset" variable (:type "ZoneOffset") (reparse-symbol formal_parameters) [34263 34280]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [34205 34353])
+                    ("nextTransition" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("instant" variable (:type "Instant") (reparse-symbol formal_parameters) [35022 35037]))                          
+                        :type "ZoneOffsetTransition")
+                        (reparse-symbol class_member_declaration) [34979 36444])
+                    ("previousTransition" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("instant" variable (:type "Instant") (reparse-symbol formal_parameters) [37141 37156]))                          
+                        :type "ZoneOffsetTransition")
+                        (reparse-symbol class_member_declaration) [37094 38807])
+                    ("findYear" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("epochSecond" variable (:type "long") (reparse-symbol formal_parameters) [38834 38850])
+                            ("offset" variable (:type "ZoneOffset") (reparse-symbol formal_parameters) [38852 38869]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [38813 39105])
+                    ("getTransitions" function (:constructor-flag t) (reparse-symbol class_member_declaration) [39781 40110])
+                    ("getTransitionRules" function (:constructor-flag t) (reparse-symbol class_member_declaration) [41365 41464])
+                    ("equals" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("otherRules" variable (:type "Object") (reparse-symbol formal_parameters) [42037 42054]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [42015 42654])
+                    ("hashCode" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [42803 43089])
+                    ("toString" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [43228 43363]))                  
+                :type "class")
+                nil [3589 43366]))          
+      :file "ZoneRules.java"
+      :pointmax 43367
+      :fsize 43366
+      :lastmodtime '(22500 20592 0 0)
+      :unmatched-syntax '((GT 41363 . 41364) (PUBLIC 41327 . 41333) (LT 41338 . 41339) (GT 39779 . 39780) (PUBLIC 39747 . 39753) (LT 39758 . 39759) (GT 24058 . 24059) (PUBLIC 24036 . 24042) (LT 24047 . 24048) (GT 7859 . 7860) (IDENTIFIER 7830 . 7834) (LT 7834 . 7835) (GT 7798 . 7799) (IDENTIFIER 7773 . 7777) (LT 7777 . 7778) (GT 7727 . 7728) (IDENTIFIER 7702 . 7706) (LT 7706 . 7707) (GT 6210 . 6211) (IDENTIFIER 6181 . 6185) (LT 6185 . 6186) (GT 6132 . 6133) (IDENTIFIER 6107 . 6111) (LT 6111 . 6112) (GT 6044 . 6045) (IDENTIFIER 6019 . 6023) (LT 6023 . 6024) (SEMICOLON 4918 . 4919) (PAREN_BLOCK 4916 . 4918) (GT 4915 . 4916) (COMMA 4891 . 4892) (LT 4883 . 4884) (NEW 4862 . 4865) (EQ 4844 . 4845) (GT 4827 . 4828) (COMMA 4803 . 4804) (PRIVATE 4758 . 4765) (LT 4795 . 4796))))
+  :file "!Volumes!macHDD!jdk1.8.0_111!src!java!time!zone!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,8 @@
+#スペース文字で区切った数値リストを整列する
+
+print "要素をスペース文字で区切った数値のリストを入力してください＞";
+$numbers = <STDIN>;
+chomp($numbers);
+
+#ソートして表示
+print join(", ", sort{$a <=> $b} (split(/\s+/, $numbers))),"\n";

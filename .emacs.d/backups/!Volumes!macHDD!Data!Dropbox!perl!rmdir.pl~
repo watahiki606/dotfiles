@@ -1,0 +1,15 @@
+#指定したディレクトリを削除するスクリプト
+#rmdir.pl
+
+print "削除するディレクトリ名を指定してください>";
+$directory = <STDIN>;
+chomp($directory);
+
+if(-d $directory){
+    #ディレクトリがすでにある
+    #ディレクトリを削除
+    rmdir($directory) || die "$directoryを削除出来ません。:$!\n";
+}else{
+    #ディレクトリがないかディレクトリではない
+    print "$directoryは存在しません。またはディレクトリではありません。\n";
+}

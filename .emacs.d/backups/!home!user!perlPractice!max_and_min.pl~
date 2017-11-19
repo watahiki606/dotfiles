@@ -1,0 +1,14 @@
+use strict;
+use warnings;
+
+use Scalar::Util 'looks_like_number';
+
+#コマンドライン引数の受け取り
+my @nums = @ARGV;
+
+#引数が数値かどうかのチェック
+    foreach my $num (@nums){
+        die "Arguments must be numbers"
+            unless looks_like_number($num);
+    }
+

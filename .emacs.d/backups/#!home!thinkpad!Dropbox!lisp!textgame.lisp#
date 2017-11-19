@@ -1,0 +1,132 @@
+;;連想リストを使って景色を描写する
+(defparameter *nodes* '((living-room(you are in the living-room.
+                                     a wizard is snoring loudly on the couch.))
+                        (garden(you are in a beautiful garden.
+                                there is a well in front of you.))
+                        (attic(you are in the attic.
+                               there is a giant welding torch in the corner.))))
+;;情景を描写する
+(assoc 'garden *nodes*)
+
+;;assocを使って場所を描写するdescribe-location関数を書く
+(defun describe-location(location nodes)
+  (cadr (assoc location nodes)))
+
+;;場所と*nodes*リストを渡して使う
+(describe-location 'living-room *nodes*)
+
+;;通り道を描写する
+(defparameter *edges* '((living-room(garden west door)
+                         (attic upstairs ladder))
+                        (garden (living-room east door))
+                        (attic(living-room downstairs ladder))))
+;;必要なエッジの名前からテキストによる説明を得るdescribe-path
+(defun describe-path(edge)
+  `(there is a ,(caddr edge) going ,(cadr edge) from here.))
+
+;;複数の通り道を一度に描写する
+(defun describe-paths(location edges)
+  (apply #'append (mapcar #'describe-path (cdr (assoc location edges)))))
+;;ゲーム世界に存在するオブジェクトのリスト
+(defparameter *objects* '(whiskey bucket frog chain))
+;;オブジェクトの場所を管理する変数*object-locations*、オブジェクトとその場所をalistで表現する
+(defparameter *object-locations* '((whiskey living-room)
+                                   (bucket living-room)
+                                   (chain garden)
+                                   (frog garden)))
+
+;;(describe-paths 'living-room *edges*)
+
+;;与えられた場所から見えるオブジェクトのリストを返す関数
+(defun objects-at(loc objs obj-locs)
+  (labels ((at-loc-p (obj)
+                     (eq (cadr (assoc obj obj-locs)) loc)))
+    (remove-if-not #'at-loc-p objs)))
+
+;;(objects-at 'living-room *object* *object-locations*)
+
+;;ある場所で見えるオブジェクトを描写する
+(defun describe-objects (loc objs obj-loc)
+  (labels ((describe-obj (obj)
+             `(you see a ,obj on the floor.)))
+    (apply #'append (mapcar #'describe-obj (objects-at loc objs obj-loc)))))
+;;describe-objectsの使用例
+(describe-objects 'living-room *objects* *object-locations*)
+
+;;すべてを描写する
+;;現在地を保持する変数*location*
+(defparameter *location* 'living-room)
+
+;;すべてを描写する関数look
+(defun look()
+  (append (describe-location *location* *nodes*)
+          (describe-paths *location* *edges*)
+          (describe-objects *location* *objects* *object-locations*)))
+
+(look)
+
+;;ゲームの世界を動き回る
+(defun walk(direction)
+  (let ((next (find direction
+                    (cdr (assoc *location* *edges*))
+                    :key #'cadr)))
+    (if next
+        (progn (setf *location* (car next))
+               (look))
+        '(you cannot go that way.))))
+
+;;(walk 'west)
+
+;;オブジェクトを手に取る
+(defun pickup (object)
+  (cond((member object
+                (objects-at *location* *objects* *object-locations*))
+        (push (list object 'body) *object-locations*)
+        `(you are now carrying the ,object))
+       (t '(you cannot get that.))))
+
+(walk 'east)
+(pickup 'whiskey)
+
+(defun inventry()
+  (cons 'items- (objects-at 'body *objects* *object-locations*)))
+
+(inventry)
+
+(defvar *arch-enemy* nil)
+(defun pudding-eater (person)
+  (cond ((eq person 'henry) (setf *arch-enemy* 'stupid-lisp-alien)
+         '(curse you lisp alien - you ate my pudding))
+        ((eq person 'johnny)(setf *arc-enemy* 'useless-old-johnny)
+         '(i hope you choked on my pudding johnny))
+        (t '(why you eat my pudding stranger ?))))
+(pudding-eater 'johnny)
+==>(I HOPE YOU CHOKED ON MY PUDDING JOHNNY)
+
+*arc-enemy*
+==>USELESS-OLD-JOHNNY
+
+(pudding-eater 'george-clooney)
+==>(WHY YOU EAT MY PUDDING STRANGER ?)
+
+(defun pudding-eater(person)
+  (case person
+    ((henry) (setf *arch-enemy* 'stupid-lisp-alien)
+     '(curse you lisp alien - you ate my pudding))
+    ((johnny) (setf *arch-enemy* 'useless-old-johnny)
+     '(i hope you choked on my pudding johnny))
+    (otherwise '(why you eat my pudding stranger ?))))
+(pudding-eater 'jhonny)
+
+(defparameter *is-it-even* nil);;*IS-IT-EVEN*
+(or (oddp 4) (setf *is-it-even* t));;T
+*is-it-even*;;T
+
+;;奇数を与えると変数の値が変わらないことがわかる。
+(defparameter *is-it-even* nil);;*IS-IT-EVEN*
+(or (oddp 5) (setf *is-it-even* t));;T
+*is-it-even*;;NIL
+
+(equal (list 1 2 3) (list 1 2 3))
+
+(eq (list 1 2 3) (list 1 2 3))

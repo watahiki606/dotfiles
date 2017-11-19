@@ -1,0 +1,15 @@
+import java.lang.reflect.Executable;
+import java.util.function.Supplier;
+
+public class Example {
+public static void main(String[] args){
+	execute(() -> new Parent());
+	execute(Child::new);
+	Supplier<Parent> parent = () -> new Parent();
+	Parent p = parent.get();
+	p.doIt();
+}
+static void execute(Supplier<Parent> parent){
+	parent.get().doIt();
+}
+}

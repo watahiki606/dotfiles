@@ -1,0 +1,396 @@
+;; Object StampedLock/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "StampedLock/"
+  :tables
+  (list
+    (semanticdb-table "Basic.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util.Iterator" include nil nil [1502 1528])
+            ("java.util.concurrent.Phaser" include nil nil [1529 1564])
+            ("java.util.concurrent.TimeUnit" include nil nil [1565 1602])
+            ("java.util.concurrent.atomic.AtomicInteger" include nil nil [1650 1699])
+            ("java.util.concurrent.locks.Lock" include nil nil [1700 1739])
+            ("java.util.concurrent.locks.ReadWriteLock" include nil nil [1740 1788])
+            ("java.util.concurrent.locks.StampedLock" include nil nil [1789 1835])
+            ("Basic" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("checkResult" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("l" variable (:type "Locker") (reparse-symbol formal_parameters) [1887 1895])
+                            ("" variable (:type "c") (reparse-symbol formal_parameters) [1924 1925]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1863 2396])
+                    ("toTheStartingGate" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("gate" variable (:type "Phaser") (reparse-symbol formal_parameters) [2636 2647]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2606 2781])
+                    ("Locker" type
+                       (:typemodifiers ("static" "abstract")
+                        :superclasses "Thread"
+                        :members 
+                          ( ("count" variable
+                               (:typemodifiers ("static")
+                                :type "AtomicInteger")
+                                (reparse-symbol class_member_declaration) [2841 2891])
+                            ("thrown" variable
+                               (:typemodifiers ("private" "volatile")
+                                :type "Throwable")
+                                (reparse-symbol class_member_declaration) [2900 2934])
+                            ("stamp" variable
+                               (:typemodifiers ("private" "volatile")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [2943 2971])
+                            ("thrown" function
+                               (:typemodifiers ("protected")
+                                :arguments 
+                                  ( ("thrown" variable (:type "Throwable") (reparse-symbol formal_parameters) [3003 3019]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [2981 3046])
+                            ("thrown" function
+                               (:typemodifiers ("public")
+                                :type "Throwable")
+                                (reparse-symbol class_member_declaration) [3055 3099])
+                            ("stamp" function
+                               (:typemodifiers ("protected")
+                                :arguments 
+                                  ( ("stamp" variable (:type "long") (reparse-symbol formal_parameters) [3129 3139]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [3108 3164])
+                            ("stamp" function
+                               (:typemodifiers ("public")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [3173 3210])
+                            ("Locker" function (:constructor-flag t) (reparse-symbol class_member_declaration) [3220 3268])
+                            ("Locker" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("name" variable (:type "String") (reparse-symbol formal_parameters) [3285 3296]))                                  )
+                                (reparse-symbol class_member_declaration) [3278 3407]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [2787 3413])
+                    ("Reader" type
+                       (:typemodifiers ("static" "abstract")
+                        :superclasses "Locker"
+                        :members 
+                          ( ("Reader" function (:constructor-flag t) (reparse-symbol class_member_declaration) [3473 3502])
+                            ("Reader" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("name" variable (:type "String") (reparse-symbol formal_parameters) [3518 3529]))                                  )
+                                (reparse-symbol class_member_declaration) [3511 3547]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [3419 3553])
+                    ("reader" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("sl" variable
+                               (:typemodifiers ("final")
+                                :type "StampedLock")
+                                (reparse-symbol formal_parameters) [3580 3600])
+                            ("gate" variable
+                               (:typemodifiers ("final")
+                                :type "Phaser")
+                                (reparse-symbol formal_parameters) [3602 3619]))                          
+                        :type "Reader")
+                        (reparse-symbol class_member_declaration) [3559 3971])
+                    ("readerView" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("sl" variable
+                               (:typemodifiers ("final")
+                                :type "StampedLock")
+                                (reparse-symbol formal_parameters) [4002 4022])
+                            ("gate" variable
+                               (:typemodifiers ("final")
+                                :type "Phaser")
+                                (reparse-symbol formal_parameters) [4024 4041]))                          
+                        :type "Reader")
+                        (reparse-symbol class_member_declaration) [3977 4428])
+                    ("reader" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("sl" variable (:type "StampedLock") (reparse-symbol formal_parameters) [4455 4469])
+                            ("gate" variable (:type "Phaser") (reparse-symbol formal_parameters) [4471 4482])
+                            ("view" variable (:type "boolean") (reparse-symbol formal_parameters) [4484 4496]))                          
+                        :type "Reader")
+                        (reparse-symbol class_member_declaration) [4434 4568])
+                    ("interruptibleReader" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("sl" variable
+                               (:typemodifiers ("final")
+                                :type "StampedLock")
+                                (reparse-symbol formal_parameters) [4608 4628])
+                            ("timeout" variable
+                               (:typemodifiers ("final")
+                                :type "long")
+                                (reparse-symbol formal_parameters) [4668 4686])
+                            ("unit" variable
+                               (:typemodifiers ("final")
+                                :type "TimeUnit")
+                                (reparse-symbol formal_parameters) [4726 4745])
+                            ("gate" variable
+                               (:typemodifiers ("final")
+                                :type "Phaser")
+                                (reparse-symbol formal_parameters) [4785 4802]))                          
+                        :type "Reader")
+                        (reparse-symbol class_member_declaration) [4574 5374])
+                    ("interruptibleReaderView" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("sl" variable
+                               (:typemodifiers ("final")
+                                :type "StampedLock")
+                                (reparse-symbol formal_parameters) [5418 5438])
+                            ("timeout" variable
+                               (:typemodifiers ("final")
+                                :type "long")
+                                (reparse-symbol formal_parameters) [5482 5500])
+                            ("unit" variable
+                               (:typemodifiers ("final")
+                                :type "TimeUnit")
+                                (reparse-symbol formal_parameters) [5544 5563])
+                            ("gate" variable
+                               (:typemodifiers ("final")
+                                :type "Phaser")
+                                (reparse-symbol formal_parameters) [5607 5624]))                          
+                        :type "Reader")
+                        (reparse-symbol class_member_declaration) [5380 6212])
+                    ("interruptibleReader" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("sl" variable
+                               (:typemodifiers ("final")
+                                :type "StampedLock")
+                                (reparse-symbol formal_parameters) [6252 6272])
+                            ("timeout" variable
+                               (:typemodifiers ("final")
+                                :type "long")
+                                (reparse-symbol formal_parameters) [6312 6330])
+                            ("unit" variable
+                               (:typemodifiers ("final")
+                                :type "TimeUnit")
+                                (reparse-symbol formal_parameters) [6370 6389])
+                            ("gate" variable
+                               (:typemodifiers ("final")
+                                :type "Phaser")
+                                (reparse-symbol formal_parameters) [6429 6446])
+                            ("view" variable
+                               (:typemodifiers ("final")
+                                :type "boolean")
+                                (reparse-symbol formal_parameters) [6486 6504]))                          
+                        :type "Reader")
+                        (reparse-symbol class_member_declaration) [6218 6652])
+                    ("Writer" type
+                       (:typemodifiers ("static" "abstract")
+                        :superclasses "Locker"
+                        :members 
+                          ( ("Writer" function (:constructor-flag t) (reparse-symbol class_member_declaration) [6712 6741])
+                            ("Writer" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("name" variable (:type "String") (reparse-symbol formal_parameters) [6757 6768]))                                  )
+                                (reparse-symbol class_member_declaration) [6750 6786]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [6658 6792])
+                    ("writer" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("sl" variable
+                               (:typemodifiers ("final")
+                                :type "StampedLock")
+                                (reparse-symbol formal_parameters) [6819 6839])
+                            ("gate" variable
+                               (:typemodifiers ("final")
+                                :type "Phaser")
+                                (reparse-symbol formal_parameters) [6841 6858]))                          
+                        :type "Writer")
+                        (reparse-symbol class_member_declaration) [6798 7216])
+                    ("writerView" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("sl" variable
+                               (:typemodifiers ("final")
+                                :type "StampedLock")
+                                (reparse-symbol formal_parameters) [7247 7267])
+                            ("gate" variable
+                               (:typemodifiers ("final")
+                                :type "Phaser")
+                                (reparse-symbol formal_parameters) [7269 7286]))                          
+                        :type "Writer")
+                        (reparse-symbol class_member_declaration) [7222 7667])
+                    ("writer" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("sl" variable (:type "StampedLock") (reparse-symbol formal_parameters) [7694 7708])
+                            ("gate" variable (:type "Phaser") (reparse-symbol formal_parameters) [7710 7721])
+                            ("view" variable (:type "boolean") (reparse-symbol formal_parameters) [7723 7735]))                          
+                        :type "Writer")
+                        (reparse-symbol class_member_declaration) [7673 7807])
+                    ("interruptibleWriter" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("sl" variable
+                               (:typemodifiers ("final")
+                                :type "StampedLock")
+                                (reparse-symbol formal_parameters) [7847 7867])
+                            ("timeout" variable
+                               (:typemodifiers ("final")
+                                :type "long")
+                                (reparse-symbol formal_parameters) [7907 7925])
+                            ("unit" variable
+                               (:typemodifiers ("final")
+                                :type "TimeUnit")
+                                (reparse-symbol formal_parameters) [7965 7984])
+                            ("gate" variable
+                               (:typemodifiers ("final")
+                                :type "Phaser")
+                                (reparse-symbol formal_parameters) [8024 8041]))                          
+                        :type "Writer")
+                        (reparse-symbol class_member_declaration) [7813 8616])
+                    ("interruptibleWriterView" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("sl" variable
+                               (:typemodifiers ("final")
+                                :type "StampedLock")
+                                (reparse-symbol formal_parameters) [8660 8680])
+                            ("timeout" variable
+                               (:typemodifiers ("final")
+                                :type "long")
+                                (reparse-symbol formal_parameters) [8724 8742])
+                            ("unit" variable
+                               (:typemodifiers ("final")
+                                :type "TimeUnit")
+                                (reparse-symbol formal_parameters) [8786 8805])
+                            ("gate" variable
+                               (:typemodifiers ("final")
+                                :type "Phaser")
+                                (reparse-symbol formal_parameters) [8849 8866]))                          
+                        :type "Writer")
+                        (reparse-symbol class_member_declaration) [8622 9448])
+                    ("interruptibleWriter" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("sl" variable
+                               (:typemodifiers ("final")
+                                :type "StampedLock")
+                                (reparse-symbol formal_parameters) [9488 9508])
+                            ("timeout" variable
+                               (:typemodifiers ("final")
+                                :type "long")
+                                (reparse-symbol formal_parameters) [9548 9566])
+                            ("unit" variable
+                               (:typemodifiers ("final")
+                                :type "TimeUnit")
+                                (reparse-symbol formal_parameters) [9606 9625])
+                            ("gate" variable
+                               (:typemodifiers ("final")
+                                :type "Phaser")
+                                (reparse-symbol formal_parameters) [9665 9682])
+                            ("view" variable
+                               (:typemodifiers ("final")
+                                :type "boolean")
+                                (reparse-symbol formal_parameters) [9722 9740]))                          
+                        :type "Writer")
+                        (reparse-symbol class_member_declaration) [9454 9888])
+                    ("readerIterator" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("sl" variable
+                               (:typemodifiers ("final")
+                                :type "StampedLock")
+                                (reparse-symbol formal_parameters) [10007 10027])
+                            ("gate" variable
+                               (:typemodifiers ("final")
+                                :type "Phaser")
+                                (reparse-symbol formal_parameters) [10072 10089]))                          )
+                        (reparse-symbol class_member_declaration) [9992 10752])
+                    ("writerIterator" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("sl" variable
+                               (:typemodifiers ("final")
+                                :type "StampedLock")
+                                (reparse-symbol formal_parameters) [10871 10891])
+                            ("gate" variable
+                               (:typemodifiers ("final")
+                                :type "Phaser")
+                                (reparse-symbol formal_parameters) [10936 10953]))                          )
+                        (reparse-symbol class_member_declaration) [10856 11616])
+                    ("realMain" function
+                       (:throws ("Throwable")
+                        :typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [11651 11664]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [11622 24142])
+                    ("passed" variable
+                       (:typemodifiers ("static" "volatile")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [24219 24250])
+                    ("failed" variable
+                       (:typemodifiers ("static" "volatile")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [24251 24262])
+                    ("pass" function
+                       (:typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [24267 24297])
+                    ("fail" function
+                       (:typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [24302 24352])
+                    ("fail" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("msg" variable (:type "String") (reparse-symbol formal_parameters) [24374 24384]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [24357 24420])
+                    ("unexpected" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("t" variable (:type "Throwable") (reparse-symbol formal_parameters) [24448 24459]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [24425 24493])
+                    ("check" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("cond" variable (:type "boolean") (reparse-symbol formal_parameters) [24516 24528]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [24498 24562])
+                    ("equal" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("x" variable (:type "Object") (reparse-symbol formal_parameters) [24585 24593])
+                            ("y" variable (:type "Object") (reparse-symbol formal_parameters) [24595 24603]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [24567 24709])
+                    ("main" function
+                       (:throws ("Throwable")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [24738 24751]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [24714 24987]))                  
+                :type "class")
+                nil [1837 24989]))          
+      :file "Basic.java"
+      :pointmax 24990
+      :fsize 24989
+      :lastmodtime '(22652 57086 505208 350000)
+      :unmatched-syntax '((GT 10854 . 10855) (STATIC 10832 . 10838) (LT 10847 . 10848) (GT 9990 . 9991) (STATIC 9968 . 9974) (LT 9983 . 9984) (SEMICOLON 2971 . 2972) (GT 1922 . 1923) (EXTENDS 1905 . 1912) (QUESTION 1903 . 1904) (IDENTIFIER 1897 . 1902) (LT 1902 . 1903) (MULT 1647 . 1648) (DOT 1646 . 1647) (IDENTIFIER 1638 . 1646) (DOT 1637 . 1638) (IDENTIFIER 1627 . 1637) (DOT 1626 . 1627) (IDENTIFIER 1622 . 1626) (DOT 1621 . 1622) (IMPORT 1603 . 1609) (STATIC 1610 . 1616) (IDENTIFIER 1617 . 1621))))
+  :file "!home!thinkpad!jdk8!jdk!test!java!util!concurrent!locks!StampedLock!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

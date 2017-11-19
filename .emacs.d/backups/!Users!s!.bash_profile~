@@ -1,0 +1,11 @@
+if [ -f ~./bashrc ]; then
+  . ~/.bashrc
+fi 
+
+export ORACLE_HOME=/Users/s/oracle
+export SQLPATH=$ORACLE_HOME/instantclient_12_1/
+
+export PATH="$HOME/.rbenv/bin:$PATH:$SQLPATH"
+export ORACLE_SID=orcl
+eval "$(rbenv init -)"
+eval "$(rbenv init -)"

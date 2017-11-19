@@ -1,0 +1,204 @@
+;; Object util/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "util/"
+  :tables
+  (list
+    (semanticdb-table "Objects.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util" package nil nil [218 236])
+            ("java.util.function.Supplier" include nil nil [238 273])
+            ("Objects" type
+               (:typemodifiers ("public" "final")
+                :members 
+                  ( ("Objects" function
+                       (:constructor-flag t
+                        :typemodifiers ("private"))
+                        (reparse-symbol class_member_declaration) [604 706])
+                    ("equals" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("a" variable (:type "Object") (reparse-symbol formal_parameters) [1391 1399])
+                            ("b" variable (:type "Object") (reparse-symbol formal_parameters) [1401 1409]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [1362 1473])
+                    ("deepEquals" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("a" variable (:type "Object") (reparse-symbol formal_parameters) [2267 2275])
+                            ("b" variable (:type "Object") (reparse-symbol formal_parameters) [2277 2285]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [2234 2464])
+                    ("hashCode" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("o" variable (:type "Object") (reparse-symbol formal_parameters) [2777 2785]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [2750 2839])
+                    ("hash" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("" variable (:type "values") (reparse-symbol formal_parameters) [3907 3913]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3874 3962])
+                    ("toString" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("o" variable (:type "Object") (reparse-symbol formal_parameters) [4391 4399]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [4361 4442])
+                    ("toString" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("o" variable (:type "Object") (reparse-symbol formal_parameters) [4985 4993])
+                            ("nullDefault" variable (:type "String") (reparse-symbol formal_parameters) [4995 5013]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [4955 5079])
+                    ("compare" function
+                       (:arguments 
+                          ( ("a" variable (:type "T") (reparse-symbol formal_parameters) [5926 5929])
+                            ("b" variable (:type "T") (reparse-symbol formal_parameters) [5931 5934])
+                            ("" variable (:type "c") (reparse-symbol formal_parameters) [5958 5959]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [5914 6016])
+                    ("requireNonNull" function
+                       (:arguments 
+                          ( ("obj" variable (:type "T") (reparse-symbol formal_parameters) [6641 6646]))                          
+                        :type "T")
+                        (reparse-symbol class_member_declaration) [6624 6746])
+                    ("requireNonNull" function
+                       (:arguments 
+                          ( ("obj" variable (:type "T") (reparse-symbol formal_parameters) [7706 7711])
+                            ("message" variable (:type "String") (reparse-symbol formal_parameters) [7713 7727]))                          
+                        :type "T")
+                        (reparse-symbol class_member_declaration) [7689 7834])
+                    ("isNull" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("obj" variable (:type "Object") (reparse-symbol formal_parameters) [8369 8379]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [8340 8416])
+                    ("nonNull" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("obj" variable (:type "Object") (reparse-symbol formal_parameters) [8961 8971]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [8931 9008])
+                    ("requireNonNull" function
+                       (:arguments 
+                          ( ("obj" variable (:type "T") (reparse-symbol formal_parameters) [10042 10047])
+                            ("" variable (:type "messageSupplier") (reparse-symbol formal_parameters) [10066 10081]))                          
+                        :type "T")
+                        (reparse-symbol class_member_declaration) [10025 10202]))                  
+                :type "class")
+                nil [571 10204]))          
+      :file "Objects.java"
+      :pointmax 10205
+      :fsize 10204
+      :lastmodtime '(22500 20589 0 0)
+      :unmatched-syntax '((GT 10064 . 10065) (IDENTIFIER 10049 . 10057) (LT 10057 . 10058) (GT 10023 . 10024) (PUBLIC 10007 . 10013) (LT 10021 . 10022) (GT 7687 . 7688) (PUBLIC 7671 . 7677) (LT 7685 . 7686) (GT 6622 . 6623) (PUBLIC 6606 . 6612) (LT 6620 . 6621) (GT 5956 . 5957) (SUPER 5949 . 5954) (QUESTION 5947 . 5948) (IDENTIFIER 5936 . 5946) (LT 5946 . 5947) (GT 5912 . 5913) (PUBLIC 5896 . 5902) (LT 5910 . 5911) (DOT 3905 . 3906) (IDENTIFIER 3897 . 3903) (DOT 3904 . 3905)))
+    (semanticdb-table "HashSet.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util" package nil nil [218 236])
+            ("java.io.InvalidObjectException" include nil nil [238 276]))          
+      :file "HashSet.java"
+      :pointmax 12855
+      :fsize 12854
+      :lastmodtime '(22500 20591 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 3298 . 12854) (IDENTIFIER 3285 . 3297) (DOT 3284 . 3285) (IDENTIFIER 3282 . 3284) (DOT 3281 . 3282) (IDENTIFIER 3277 . 3281) (COMMA 3275 . 3276) (IDENTIFIER 3266 . 3275) (COMMA 3264 . 3265) (GT 3263 . 3264) (IDENTIFIER 3262 . 3263) (LT 3261 . 3262) (IDENTIFIER 3258 . 3261) (IMPLEMENTS 3247 . 3257) (GT 3241 . 3242) (IDENTIFIER 3240 . 3241) (LT 3239 . 3240) (IDENTIFIER 3228 . 3239) (EXTENDS 3220 . 3227) (GT 3214 . 3215) (IDENTIFIER 3213 . 3214) (PUBLIC 3192 . 3198) (LT 3212 . 3213)))
+    (semanticdb-table "Map.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util" package nil nil [218 236])
+            ("java.util.function.BiConsumer" include nil nil [238 275])
+            ("java.util.function.BiFunction" include nil nil [276 313])
+            ("java.util.function.Function" include nil nil [314 349])
+            ("java.io.Serializable" include nil nil [350 378]))          
+      :file "Map.java"
+      :pointmax 53228
+      :fsize 53227
+      :lastmodtime '(22500 20590 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 5801 . 53227) (GT 5799 . 5800) (IDENTIFIER 5798 . 5799) (COMMA 5797 . 5798) (IDENTIFIER 5796 . 5797) (PUBLIC 5775 . 5781) (LT 5795 . 5796)))
+    (semanticdb-table "Set.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util" package nil nil [218 236]))          
+      :file "Set.java"
+      :pointmax 17840
+      :fsize 17839
+      :lastmodtime '(22500 20591 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 3027 . 17839) (GT 3025 . 3026) (IDENTIFIER 3024 . 3025) (LT 3023 . 3024) (IDENTIFIER 3013 . 3023) (EXTENDS 3005 . 3012) (GT 3003 . 3004) (IDENTIFIER 3002 . 3003) (PUBLIC 2981 . 2987) (LT 3001 . 3002)))
+    (semanticdb-table "Collection.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util" package nil nil [218 236])
+            ("java.util.function.Predicate" include nil nil [238 274])
+            ("java.util.stream.Stream" include nil nil [275 306])
+            ("java.util.stream.StreamSupport" include nil nil [307 345]))          
+      :file "Collection.java"
+      :pointmax 27820
+      :fsize 27819
+      :lastmodtime '(22500 20591 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 6328 . 27819) (GT 6326 . 6327) (IDENTIFIER 6325 . 6326) (LT 6324 . 6325) (IDENTIFIER 6316 . 6324) (EXTENDS 6308 . 6315) (GT 6306 . 6307) (IDENTIFIER 6305 . 6306) (PUBLIC 6277 . 6283) (LT 6304 . 6305)))
+    (semanticdb-table "AbstractSet.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util" package nil nil [218 236]))          
+      :file "AbstractSet.java"
+      :pointmax 6552
+      :fsize 6551
+      :lastmodtime '(22500 20590 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 1421 . 6551) (GT 1419 . 1420) (IDENTIFIER 1418 . 1419) (LT 1417 . 1418) (IDENTIFIER 1414 . 1417) (IMPLEMENTS 1403 . 1413) (GT 1401 . 1402) (IDENTIFIER 1400 . 1401) (LT 1399 . 1400) (IDENTIFIER 1381 . 1399) (EXTENDS 1373 . 1380) (GT 1371 . 1372) (IDENTIFIER 1370 . 1371) (PUBLIC 1336 . 1342) (LT 1369 . 1370)))
+    (semanticdb-table "AbstractMap.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util" package nil nil [218 236])
+            ("java.util.Map.Entry" include nil nil [237 264]))          
+      :file "AbstractMap.java"
+      :pointmax 29309
+      :fsize 29308
+      :lastmodtime '(22500 20591 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 1958 . 29308) (GT 1956 . 1957) (IDENTIFIER 1955 . 1956) (COMMA 1954 . 1955) (IDENTIFIER 1953 . 1954) (LT 1952 . 1953) (IDENTIFIER 1949 . 1952) (IMPLEMENTS 1938 . 1948) (GT 1936 . 1937) (IDENTIFIER 1935 . 1936) (COMMA 1934 . 1935) (IDENTIFIER 1933 . 1934) (PUBLIC 1899 . 1905) (LT 1932 . 1933)))
+    (semanticdb-table "Iterator.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util" package nil nil [218 236])
+            ("java.util.function.Consumer" include nil nil [238 273]))          
+      :file "Iterator.java"
+      :pointmax 3381
+      :fsize 3380
+      :lastmodtime '(22500 20590 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 1032 . 3380) (GT 1030 . 1031) (IDENTIFIER 1029 . 1030) (PUBLIC 1003 . 1009) (LT 1028 . 1029)))
+    (semanticdb-table "Deque.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util" package nil nil [363 381]))          
+      :file "Deque.java"
+      :pointmax 23075
+      :fsize 23074
+      :lastmodtime '(22500 20590 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 6435 . 23074) (GT 6433 . 6434) (IDENTIFIER 6432 . 6433) (LT 6431 . 6432) (IDENTIFIER 6426 . 6431) (EXTENDS 6418 . 6425) (GT 6416 . 6417) (IDENTIFIER 6415 . 6416) (PUBLIC 6392 . 6398) (LT 6414 . 6415)))
+    (semanticdb-table "ArrayDeque.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util" package nil nil [306 324])
+            ("java.io.Serializable" include nil nil [326 354])
+            ("java.util.function.Consumer" include nil nil [355 390]))          
+      :file "ArrayDeque.java"
+      :pointmax 32900
+      :fsize 32899
+      :lastmodtime '(22500 20591 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 2775 . 32899) (IDENTIFIER 2762 . 2774) (COMMA 2760 . 2761) (IDENTIFIER 2751 . 2760) (COMMA 2749 . 2750) (GT 2748 . 2749) (IDENTIFIER 2747 . 2748) (LT 2746 . 2747) (IDENTIFIER 2741 . 2746) (IMPLEMENTS 2730 . 2740) (GT 2701 . 2702) (IDENTIFIER 2700 . 2701) (LT 2699 . 2700) (IDENTIFIER 2681 . 2699) (EXTENDS 2673 . 2680) (GT 2671 . 2672) (IDENTIFIER 2670 . 2671) (PUBLIC 2646 . 2652) (LT 2669 . 2670)))
+    (semanticdb-table "AbstractCollection.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util" package nil nil [218 236]))          
+      :file "AbstractCollection.java"
+      :pointmax 15894
+      :fsize 15893
+      :lastmodtime '(22500 20591 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 1728 . 15893) (GT 1726 . 1727) (IDENTIFIER 1725 . 1726) (LT 1724 . 1725) (IDENTIFIER 1714 . 1724) (IMPLEMENTS 1703 . 1713) (GT 1701 . 1702) (IDENTIFIER 1700 . 1701) (PUBLIC 1659 . 1665) (LT 1699 . 1700))))
+  :file "!Volumes!3TB!download!jdk1.8.0_111!src!java!util!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

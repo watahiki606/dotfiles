@@ -1,0 +1,53 @@
+;; Object 4-15/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "4-15/"
+  :tables
+  (list
+    (semanticdb-table "DrivingCar.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util.function.*" include nil nil [1 29])
+            ("Car" type
+               (:members 
+                  ( ("run" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [51 132]))                  
+                :type "class")
+                nil [31 134])
+            ("Bus" type
+               (:superclasses "Car"
+                :members 
+                  ( ("run" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [167 249]))                  
+                :type "class")
+                nil [135 251])
+            ("DrivigCar" type
+               (:members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [302 315]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [278 397])
+                    ("run" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("" variable (:type "car") (reparse-symbol formal_parameters) [436 439]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [406 458]))                  
+                :type "class")
+                nil [252 460]))          
+      :file "DrivingCar.java"
+      :pointmax 461
+      :fsize 460
+      :lastmodtime '(22655 23183 118593 414000)
+      :unmatched-syntax '((GT 434 . 435) (IDENTIFIER 422 . 430) (LT 430 . 431) (GT 430 . 431) (IDENTIFIER 418 . 426) (LT 426 . 427) (GT 430 . 431) (IDENTIFIER 418 . 426) (LT 426 . 427) (GT 430 . 431) (IDENTIFIER 418 . 426) (LT 426 . 427) (GT 430 . 431) (IDENTIFIER 418 . 426) (LT 426 . 427) (GT 430 . 431) (IDENTIFIER 418 . 426) (LT 426 . 427))))
+  :file "!home!thinkpad!Dropbox!projects!Java!4-15!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

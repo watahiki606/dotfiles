@@ -1,0 +1,10 @@
+print "1つめ>";
+$num1 = <STDIN>;
+chomp($num1);
+print "2つめ>";
+$num2 = <STDIN>;
+chomp($num2);
+
+$num1 += 0;
+$num2 += 0;
+print "$num1 & &num2 \n";

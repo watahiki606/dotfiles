@@ -1,0 +1,26 @@
+use strict;
+use warnings;
+
+my $students = [
+{num =>1, name => 'watanabe', address => 'xxx-1-23'},
+{num =>2, name => 'suzuki', address => 'yyy-5-43'},
+{num =>3, name => 'endo', address => 'zzz-9-23'},
+
+];
+print "$students->[0]->{name}\n";
+
+my $nums = [1,2,3];
+print "$nums->[0]\n";
+
+push @$students,
+    {num=>4,name=>'kato',address=>'aaa-3-15'};
+#
+print "$students->[3]->{name}\n";
+
+#カンマ区切りで出力
+foreach my $student (@$students){
+    my $num = $student->{num};
+    my $name = $student->{name};
+    my $address = $student->{address};
+    print join(',', $num,$name,$address) . "\n";
+}

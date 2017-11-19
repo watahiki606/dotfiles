@@ -1,0 +1,8 @@
+use strict;
+use warnings;
+
+foreach my $i((5..1)){
+    print ' ' x $i;
+    print "*";
+    print "\n";
+}

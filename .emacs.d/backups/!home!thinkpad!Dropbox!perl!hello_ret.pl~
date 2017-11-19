@@ -1,0 +1,14 @@
+#戻り値を持つhello_retサブルーチンの呼び出し
+
+#サブルーチン呼び出し
+$string = &hello_ret("花子");
+
+#戻り値を表示
+print "戻り値： $string";
+
+#サブルーチンの定義
+sub hello_ret{
+    my($name) = @_;
+    #文字列を返す
+    "こんにちは、私は$nameです。\n";
+}

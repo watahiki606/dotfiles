@@ -1,0 +1,8 @@
+ORCL =
+(DESCRIPTION =
+ (ADDRESS = (PROTOCOL = TCP)(HOST = thinkpad.windows)(PORT = 1521)
+  )
+ (CONNECT_DATA =
+  (SERVICE_NAME= orcl)
+  )
+ )

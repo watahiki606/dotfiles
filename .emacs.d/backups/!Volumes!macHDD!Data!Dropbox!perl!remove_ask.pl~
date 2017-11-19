@@ -1,0 +1,26 @@
+#ファイル名を引数として受け取り、ファイルの有無を確認した後、
+# 「＜ファイル名＞を削除しますか？(Y/N):」というメッセージを出して、Yが押された時のみファイルを削除するスクリプト
+
+#ファイルの削除時に確認する
+#remove_ask.pl
+
+$filename = $ARGV[0];
+
+if(-f $filename){
+    while(){
+        print "$filenameを削除しますか？(Y/N):";
+        $answer = <STDIN>;
+        chomp($answer);
+
+        if($answer eq 'Y'){
+            unlink($filename) or die "$filenameは削除できませんでした:$!\n";
+            last;
+        }elsif($answer eq 'N'){
+            last;
+        }else{
+            print "無効な値が入力されました。\n";
+        }
+    }
+}else{
+    print "$filenameは存在しません。\n";
+}

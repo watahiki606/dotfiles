@@ -1,0 +1,238 @@
+;; Object chrono/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "chrono/"
+  :tables
+  (list
+    (semanticdb-table "Era.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.time.chrono" package nil nil [1840 1865])
+            ("java.time.DateTimeException" include nil nil [1968 2003])
+            ("java.time.temporal.UnsupportedTemporalTypeException" include nil nil [2004 2063])
+            ("java.time.format.DateTimeFormatterBuilder" include nil nil [2064 2113])
+            ("java.time.format.TextStyle" include nil nil [2114 2148])
+            ("java.time.temporal.ChronoField" include nil nil [2149 2187])
+            ("java.time.temporal.Temporal" include nil nil [2188 2223])
+            ("java.time.temporal.TemporalAccessor" include nil nil [2224 2267])
+            ("java.time.temporal.TemporalAdjuster" include nil nil [2268 2311])
+            ("java.time.temporal.TemporalField" include nil nil [2312 2352])
+            ("java.time.temporal.TemporalQueries" include nil nil [2353 2395])
+            ("java.time.temporal.TemporalQuery" include nil nil [2396 2436])
+            ("java.time.temporal.ValueRange" include nil nil [2437 2474])
+            ("java.util.Locale" include nil nil [2475 2499])
+            ("Era" type
+               (:typemodifiers ("public")
+                :interfaces ("TemporalAdjuster" "TemporalAccessor")
+                :members 
+                  ( ("getValue" function (:type "int") (reparse-symbol interface_member_declaration) [4234 4249])
+                    ("isSupported" function
+                       (:arguments 
+                          ( ("field" variable (:type "TemporalField") (reparse-symbol formal_parameters) [5298 5317]))                          
+                        :type "boolean")
+                        (reparse-symbol interface_member_declaration) [5278 5472])
+                    ("range" function
+                       (:arguments 
+                          ( ("field" variable (:type "TemporalField") (reparse-symbol formal_parameters) [6913 6932]))                          
+                        :type "ValueRange")
+                        (reparse-symbol interface_member_declaration) [6896 6993])
+                    ("get" function
+                       (:arguments 
+                          ( ("field" variable (:type "TemporalField") (reparse-symbol formal_parameters) [8495 8514]))                          
+                        :type "int")
+                        (reparse-symbol interface_member_declaration) [8487 8642])
+                    ("getLong" function
+                       (:arguments 
+                          ( ("field" variable (:type "TemporalField") (reparse-symbol formal_parameters) [9879 9898]))                          
+                        :type "long")
+                        (reparse-symbol interface_member_declaration) [9866 10150])
+                    ("query" function
+                       (:arguments 
+                          ( ("" variable (:type "query") (reparse-symbol formal_parameters) [11205 11210]))                          
+                        :type "R")
+                        (reparse-symbol interface_member_declaration) [11180 11362])
+                    ("adjustInto" function
+                       (:arguments 
+                          ( ("temporal" variable (:type "Temporal") (reparse-symbol formal_parameters) [12469 12486]))                          
+                        :type "Temporal")
+                        (reparse-symbol interface_member_declaration) [12449 12542])
+                    ("getDisplayName" function
+                       (:arguments 
+                          ( ("style" variable (:type "TextStyle") (reparse-symbol formal_parameters) [13279 13294])
+                            ("locale" variable (:type "Locale") (reparse-symbol formal_parameters) [13296 13309]))                          
+                        :type "String")
+                        (reparse-symbol interface_member_declaration) [13257 13421]))                  
+                :type "interface")
+                nil [3483 13541]))          
+      :file "Era.java"
+      :pointmax 13542
+      :fsize 13541
+      :lastmodtime '(22500 20592 0 0)
+      :unmatched-syntax '((DEFAULT 13249 . 13256) (IDENTIFIER 12427 . 12436) (DEFAULT 12441 . 12448) (GT 11203 . 11204) (IDENTIFIER 11188 . 11201) (LT 11201 . 11202) (GT 11178 . 11179) (LT 11176 . 11177) (DEFAULT 11168 . 11175) (IDENTIFIER 11119 . 11136) (PAREN_BLOCK 11136 . 11149) (IDENTIFIER 9844 . 9853) (DEFAULT 9858 . 9865) (IDENTIFIER 8424 . 8433) (DEFAULT 8479 . 8486) (IDENTIFIER 6849 . 6858) (DEFAULT 6888 . 6895) (IDENTIFIER 5256 . 5265) (DEFAULT 5270 . 5277) (IDENTIFIER 1961 . 1965) (DOT 1960 . 1961) (IDENTIFIER 1950 . 1960) (DOT 1949 . 1950) (IDENTIFIER 1941 . 1949) (DOT 1940 . 1941) (IDENTIFIER 1936 . 1940) (DOT 1935 . 1936) (IMPORT 1917 . 1923) (STATIC 1924 . 1930) (IDENTIFIER 1931 . 1935) (IDENTIFIER 1912 . 1915) (DOT 1911 . 1912) (IDENTIFIER 1900 . 1911) (DOT 1899 . 1900) (IDENTIFIER 1891 . 1899) (DOT 1890 . 1891) (IDENTIFIER 1886 . 1890) (DOT 1885 . 1886) (IMPORT 1867 . 1873) (STATIC 1874 . 1880) (IDENTIFIER 1881 . 1885)))
+    (semanticdb-table "JapaneseEra.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.time.chrono" package nil nil [1840 1865])
+            ("java.io.DataInput" include nil nil [1979 2004])
+            ("java.io.DataOutput" include nil nil [2005 2031])
+            ("java.io.IOException" include nil nil [2032 2059])
+            ("java.io.InvalidObjectException" include nil nil [2060 2098])
+            ("java.io.ObjectInputStream" include nil nil [2099 2132])
+            ("java.io.ObjectStreamException" include nil nil [2133 2170])
+            ("java.io.Serializable" include nil nil [2171 2199])
+            ("java.time.DateTimeException" include nil nil [2200 2235])
+            ("java.time.LocalDate" include nil nil [2236 2263])
+            ("java.time.temporal.ChronoField" include nil nil [2264 2302])
+            ("java.time.temporal.TemporalField" include nil nil [2303 2343])
+            ("java.time.temporal.UnsupportedTemporalTypeException" include nil nil [2344 2403])
+            ("java.time.temporal.ValueRange" include nil nil [2404 2441])
+            ("java.util.Arrays" include nil nil [2442 2466])
+            ("java.util.Objects" include nil nil [2467 2492])
+            ("sun.util.calendar.CalendarDate" include nil nil [2494 2532])
+            ("JapaneseEra" type
+               (:typemodifiers ("public" "final")
+                :interfaces ("Era" "Serializable")
+                :members 
+                  ( ("ERA_OFFSET" variable
+                       (:typemodifiers ("static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3098 3130])
+                    ("ERA_CONFIG" variable
+                       (:dereference 1
+                        :typemodifiers ("static" "final")
+                        :type "sun.util.calendar.Era")
+                        (reparse-symbol class_member_declaration) [3136 3184])
+                    ("MEIJI" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "JapaneseEra")
+                        (reparse-symbol class_member_declaration) [3313 3399])
+                    ("TAISHO" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "JapaneseEra")
+                        (reparse-symbol class_member_declaration) [3527 3614])
+                    ("SHOWA" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "JapaneseEra")
+                        (reparse-symbol class_member_declaration) [3741 3828])
+                    ("HEISEI" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "JapaneseEra")
+                        (reparse-symbol class_member_declaration) [3953 4039])
+                    ("N_ERA_CONSTANTS" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [4162 4236])
+                    ("serialVersionUID" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [4288 4354])
+                    ("KNOWN_ERAS" variable
+                       (:dereference 1
+                        :typemodifiers ("private" "static" "final")
+                        :type "JapaneseEra")
+                        (reparse-symbol class_member_declaration) [4413 4459])
+                    ("eraValue" variable
+                       (:typemodifiers ("private" "final" "transient")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [5094 5131])
+                    ("since" variable
+                       (:typemodifiers ("private" "final" "transient")
+                        :type "LocalDate")
+                        (reparse-symbol class_member_declaration) [5169 5209])
+                    ("JapaneseEra" function
+                       (:constructor-flag t
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("eraValue" variable (:type "int") (reparse-symbol formal_parameters) [5424 5436])
+                            ("since" variable (:type "LocalDate") (reparse-symbol formal_parameters) [5438 5453]))                          )
+                        (reparse-symbol class_member_declaration) [5404 5524])
+                    ("getPrivateEra" function (:type "sun.util.calendar.Era") (reparse-symbol class_member_declaration) [5792 5883])
+                    ("of" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("japaneseEra" variable (:type "int") (reparse-symbol formal_parameters) [6530 6545]))                          
+                        :type "JapaneseEra")
+                        (reparse-symbol class_member_declaration) [6501 6777])
+                    ("valueOf" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("japaneseEra" variable (:type "String") (reparse-symbol formal_parameters) [7235 7253]))                          
+                        :type "JapaneseEra")
+                        (reparse-symbol class_member_declaration) [7201 7542])
+                    ("values" function
+                       (:typemodifiers ("public" "static")
+                        :type "JapaneseEra[]")
+                        (reparse-symbol class_member_declaration) [7850 7955])
+                    ("from" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("date" variable (:type "LocalDate") (reparse-symbol formal_parameters) [8233 8247]))                          
+                        :type "JapaneseEra")
+                        (reparse-symbol class_member_declaration) [8209 8628])
+                    ("toJapaneseEra" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("privateEra" variable (:type "sun.util.calendar.Era") (reparse-symbol formal_parameters) [8667 8699]))                          
+                        :type "JapaneseEra")
+                        (reparse-symbol class_member_declaration) [8634 8902])
+                    ("privateEraFrom" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("isoDate" variable (:type "LocalDate") (reparse-symbol formal_parameters) [8952 8969]))                          
+                        :type "sun.util.calendar.Era")
+                        (reparse-symbol class_member_declaration) [8908 9217])
+                    ("ordinal" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("eraValue" variable (:type "int") (reparse-symbol formal_parameters) [9490 9502]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [9463 9553])
+                    ("getValue" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [9988 10042])
+                    ("range" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("field" variable (:type "TemporalField") (reparse-symbol formal_parameters) [11561 11580]))                          
+                        :type "ValueRange")
+                        (reparse-symbol class_member_declaration) [11537 11725])
+                    ("getAbbreviation" function (:type "String") (reparse-symbol class_member_declaration) [11809 11993])
+                    ("getName" function (:type "String") (reparse-symbol class_member_declaration) [11999 12081])
+                    ("toString" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [12101 12159])
+                    ("readObject" function
+                       (:throws ("InvalidObjectException")
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("s" variable (:type "ObjectInputStream") (reparse-symbol formal_parameters) [12411 12430]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [12387 12557])
+                    ("writeReplace" function
+                       (:typemodifiers ("private")
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [12990 13080])
+                    ("writeExternal" function
+                       (:throws ("IOException")
+                        :arguments 
+                          ( ("out" variable (:type "DataOutput") (reparse-symbol formal_parameters) [13105 13119]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [13086 13187])
+                    ("readExternal" function
+                       (:throws ("IOException")
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("in" variable (:type "DataInput") (reparse-symbol formal_parameters) [13225 13237]))                          
+                        :type "JapaneseEra")
+                        (reparse-symbol class_member_declaration) [13193 13345]))                  
+                :type "class")
+                nil [2908 13348]))          
+      :file "JapaneseEra.java"
+      :pointmax 13349
+      :fsize 13348
+      :lastmodtime '(22500 20592 0 0)
+      :unmatched-syntax '((STATIC 4465 . 4471) (SEMICOLON 5034 . 5035) (IDENTIFIER 1973 . 1976) (DOT 1972 . 1973) (IDENTIFIER 1961 . 1972) (DOT 1960 . 1961) (IDENTIFIER 1952 . 1960) (DOT 1951 . 1952) (IDENTIFIER 1947 . 1951) (DOT 1946 . 1947) (IMPORT 1928 . 1934) (STATIC 1935 . 1941) (IDENTIFIER 1942 . 1946) (IDENTIFIER 1911 . 1926) (DOT 1910 . 1911) (IDENTIFIER 1898 . 1910) (DOT 1897 . 1898) (IDENTIFIER 1891 . 1897) (DOT 1890 . 1891) (IDENTIFIER 1886 . 1890) (DOT 1885 . 1886) (IMPORT 1867 . 1873) (STATIC 1874 . 1880) (IDENTIFIER 1881 . 1885))))
+  :file "!Volumes!macHDD!jdk1.8.0_111!src!java!time!chrono!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

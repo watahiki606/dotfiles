@@ -1,0 +1,17 @@
+# hello_packageを呼び出す
+# hello_package_call.pl
+
+#パッケージ呼び出し
+use hello_package;
+
+#パッケージ名をつけずに呼び出し
+&hello("太郎");
+
+#パッケージ名をつけて呼び出し
+&hello::hello("太郎");
+
+#同名のサブルーチンを定義
+sub hello{
+    my($name) = @_;
+    print "さようなら、$nameさん。\n";
+}

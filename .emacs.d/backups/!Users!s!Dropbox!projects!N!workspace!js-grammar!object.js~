@@ -1,0 +1,8 @@
+(function(){
+    'use strict';
+    if(confirm('OKを押して10秒だと思ったら何かキーを押してください')){
+        //TODO スタート処理
+        console.log('スタートしました');
+    }
+})();
+

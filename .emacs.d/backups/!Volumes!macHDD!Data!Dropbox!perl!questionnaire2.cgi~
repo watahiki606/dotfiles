@@ -1,0 +1,71 @@
+#!/usr/bin/perl
+#このcgiプログラム・スクリプトはUNIXでは実行権限を与えておく必要がある
+#(chmod a+x questionnaire.cgi)
+
+#アンケート処理CGIプログラム・スクリプト
+#ユーザーが使っているOSの合計を調べる
+#questionnaire.cgi
+
+#モジュール読み込み
+use CGI;
+$query = new CGI;
+
+#統計ファイルの存在チェック
+if(-f "../data/statistic.log"){
+    #存在するならファイルをオープンする。失敗したらエラーページを表示
+    open(F, "../data/statistic.log")|| &error("ファイル /data/statistic.logをオープン出来ません($!)。\n");
+    while(<F>){
+        #改行文字を除く
+        chomp();
+        #名前とOSを取得
+        ($name, $os) = split(/\t/);
+        #配列@nametotalに名前を蓄積
+        push(@nametotal, $name);
+        #ハッシュ$ostotalに合計値を蓄積
+        $ostotal{$os}++;
+    }
+    close(F);
+}
+
+#アンケートを解析
+#名前からタブ文字を取り除く(タブ文字をファイルのでーたの区切りとして使っているため)
+$name = $query->param('name');
+$name =~ s/\t//g;
+#名前に重複がないか解析
+foreach(@nametotal){
+    if($_ eq $name){
+        #等しい物があった時にはエラーページを表示
+        &error("お名前 $name はすでに登録されています\n");
+    }
+}
+
+#変数OSに入っているOS名をキーとする値をインクリメント
+$ostotal{$query->param('os')}++;
+
+#記録に追加。失敗したらエラーページを表示
+open(F, ">>../data/statistic.log")|| &error("ファイル /data/statistic.logに書き込めません($!)。\n");
+print F $name, "\t", $query->param('os'), "\n";
+close(F);
+
+#表示 (UNIXではEUC-JPとする)
+print $query->header(-charset=>'EUC-JP'),
+    $query->start_html(-title=>"現在のアンケート結果");
+print "<h2>使用OS</h2>\n";
+print "<ul>\n";
+#合計数を表示
+print "<li><strong>$os</strong>: $count</li>\n" while(($os, $count) = each(%ostotal));
+print "</ul>\n";
+print $query->end_html();
+
+sub error{
+    #エラーページ表示のサブルーチン
+    my($message) = @_;
+
+    print $query->header(-charset=>'EUC-JP'),
+        $query->start_html(-title=>"エラー");
+    print "<h1>エラーが発生しました</h1>\n";
+    print $message;
+    print $query->end_html();
+    #異常終了
+    exit(1);
+}

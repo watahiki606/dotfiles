@@ -1,0 +1,41 @@
+#簡単なWebブラウザ
+#browser.pl
+
+#モジュールの使用宣言
+use IO::Socket;
+
+#URLを入力
+print "URLを指定してください＞";
+$url = <STDIN>;
+
+#URLをホスト名とファイルパスに分割
+chomp($url);
+if($url =~ /http:\/\/([^\/]+)(\/.*)/){
+    $host = $1;
+    $file = $2;
+}else{
+    die "そのURLには対応していません。\n";
+}
+
+#ソケットオブジェクト作成
+$client_socket = new IO::Socket::INET(
+    PeerAddr => $host,
+    PeerPort => 'http',
+    Proto => 'tcp',
+    TimeOut => '5'
+);
+unless($client_socket){
+    print "Socket Error:$!\n";
+}
+
+#入力をサーバーに送信
+print "$host $file" . "\n";
+print $client_socket "GET $file HTTP/1.0\n\n";
+
+#出力を取得し、表示(複数行が返ってくるので、取り終わるまで繰り返す)
+while($receive = <$client_socket>){
+    print $receive;
+}
+
+#ソケットを閉じる
+$client_socket->close();

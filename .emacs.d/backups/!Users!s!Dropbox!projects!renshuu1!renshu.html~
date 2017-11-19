@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script>
+         document.onkeydown = pageMove;
+
+         function pageMove(){
+             if(event.keyCode==66){
+                 history.back();
+             }
+             if(event.keyCode==70){
+                 history.forward();
+             }
+         }
+         
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+#excec関数による実行
+#excec.pl
+
+#lsを実行
+excec("ls");
+print "エラーが発生しました:$!\n";

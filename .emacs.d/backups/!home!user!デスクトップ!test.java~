@@ -1,0 +1,9 @@
+public class Main{
+        int a;
+        int b;
+        string google;
+        string facebook;
+        public static void main(String args[]){
+                System.out.println("hello");
+        }
+}

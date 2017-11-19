@@ -1,0 +1,6 @@
+use strict;
+use warnings;
+
+my $str = 'The price is 300yen. The distance is 120km.';
+$str =~ /((\d+)([A-Za-z]+))/g;
+print "\$& = $&\n";

@@ -1,0 +1,19 @@
+<script type="text/javascript">
+ //サブウインドウを表すWindowオブジェクトを格納する変数
+ var subwin;
+ //サブウィンドウを開くボタンクリック時に実行
+ function win_open(){
+     subwin = window.open('http://www.wings.msn.to/', 'Sample',
+     'width=600,height=30,scrollbars=yes,ocation=yes');
+ }
+ //サブウィンドウを閉じるボタンクリック時に実行
+ function win_close(){
+     //変数subwinが空でなく、サブウィンドウが閉じられていない時にのみクローズ
+     if(subwin && !subwin.closed){
+         subwin.close();
+     }
+ }
+</script>
+
+<input type="button" value="サブウィンドウを開く" onclick="win_open()"/>
+<input type="button" value="サブウィンドウを閉じる" onclick="win_close()"/>

@@ -1,0 +1,121 @@
+;; Object exec/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "exec/"
+  :tables
+  (list
+    (semanticdb-table "WinCommand.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.io.*" include nil nil [1178 1195])
+            ("java.util.*" include nil nil [1196 1215])
+            ("StreamDrainer" type
+               (:superclasses "Thread"
+                :members 
+                  ( ("is" variable
+                       (:typemodifiers ("private" "final")
+                        :type "InputStream")
+                        (reparse-symbol class_member_declaration) [1292 1321])
+                    ("os" variable
+                       (:typemodifiers ("private" "final")
+                        :type "ByteArrayOutputStream")
+                        (reparse-symbol class_member_declaration) [1326 1395])
+                    ("StreamDrainer" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("is" variable (:type "InputStream") (reparse-symbol formal_parameters) [1421 1435]))                          )
+                        (reparse-symbol class_member_declaration) [1400 1454])
+                    ("run" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1459 1620])
+                    ("toString" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1625 1675]))                  
+                :type "class")
+                nil [1251 1677])
+            ("CommandRunner" type
+               (:members 
+                  ( ("generator" variable
+                       (:typemodifiers ("private" "static")
+                        :type "Random")
+                        (reparse-symbol class_member_declaration) [1705 1752])
+                    ("exitValue" variable
+                       (:typemodifiers ("public" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1757 1784])
+                    ("out" variable
+                       (:typemodifiers ("public" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1789 1813])
+                    ("err" variable
+                       (:typemodifiers ("public" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1818 1842])
+                    ("CommandRunner" function
+                       (:constructor-flag t
+                        :throws ("Exception")
+                        :arguments 
+                          ( ("" variable (:type "args") (reparse-symbol formal_parameters) [1871 1875]))                          )
+                        (reparse-symbol class_member_declaration) [1847 2382]))                  
+                :type "class")
+                nil [1679 2384])
+            ("WinCommand" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("failed" variable
+                       (:typemodifiers ("private" "static")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [2416 2446])
+                    ("fail" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("msg" variable (:type "String") (reparse-symbol formal_parameters) [2477 2487]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2452 2553])
+                    ("outputOf" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("" variable (:type "args") (reparse-symbol formal_parameters) [2600 2604]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2559 2991])
+                    ("checkCD" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("" variable (:type "filespecs") (reparse-symbol formal_parameters) [3035 3044]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2997 3507])
+                    ("checkDir" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("dirname" variable (:type "String") (reparse-symbol formal_parameters) [3542 3556]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3513 3679])
+                    ("writeFile" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("filename" variable (:type "String") (reparse-symbol formal_parameters) [3715 3730])
+                            ("contents" variable (:type "String") (reparse-symbol formal_parameters) [3732 3747]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3685 4005])
+                    ("main" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [4035 4048]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4011 6536]))                  
+                :type "class")
+                nil [2386 6538]))          
+      :file "WinCommand.java"
+      :pointmax 6539
+      :fsize 6538
+      :lastmodtime '(22652 57088 293227 49000)
+      :unmatched-syntax '((DOT 3033 . 3034) (IDENTIFIER 3025 . 3031) (DOT 3032 . 3033) (DOT 2598 . 2599) (IDENTIFIER 2590 . 2596) (DOT 2597 . 2598) (DOT 1869 . 1870) (IDENTIFIER 1861 . 1867) (DOT 1868 . 1869) (MULT 1247 . 1248) (DOT 1246 . 1247) (IDENTIFIER 1240 . 1246) (DOT 1239 . 1240) (IDENTIFIER 1235 . 1239) (DOT 1234 . 1235) (IMPORT 1216 . 1222) (STATIC 1223 . 1229) (IDENTIFIER 1230 . 1234))))
+  :file "!home!thinkpad!jdk8!jdk!test!java!lang!Runtime!exec!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

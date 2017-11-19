@@ -1,0 +1,446 @@
+;; Object time/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "time/"
+  :tables
+  (list
+    (semanticdb-table "ZonedDateTime.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.time" package nil nil [1845 1863])
+            ("java.io.DataOutput" include nil nil [2050 2076])
+            ("java.io.IOException" include nil nil [2077 2104])
+            ("java.io.ObjectInput" include nil nil [2105 2132])
+            ("java.io.InvalidObjectException" include nil nil [2133 2171])
+            ("java.io.ObjectInputStream" include nil nil [2172 2205])
+            ("java.io.Serializable" include nil nil [2206 2234])
+            ("java.time.chrono.ChronoZonedDateTime" include nil nil [2235 2279])
+            ("java.time.format.DateTimeFormatter" include nil nil [2280 2322])
+            ("java.time.format.DateTimeParseException" include nil nil [2323 2370])
+            ("java.time.temporal.ChronoField" include nil nil [2371 2409])
+            ("java.time.temporal.ChronoUnit" include nil nil [2410 2447])
+            ("java.time.temporal.Temporal" include nil nil [2448 2483])
+            ("java.time.temporal.TemporalAccessor" include nil nil [2484 2527])
+            ("java.time.temporal.TemporalAdjuster" include nil nil [2528 2571])
+            ("java.time.temporal.TemporalAmount" include nil nil [2572 2613])
+            ("java.time.temporal.TemporalField" include nil nil [2614 2654])
+            ("java.time.temporal.TemporalQueries" include nil nil [2655 2697])
+            ("java.time.temporal.TemporalQuery" include nil nil [2698 2738])
+            ("java.time.temporal.TemporalUnit" include nil nil [2739 2778])
+            ("java.time.temporal.UnsupportedTemporalTypeException" include nil nil [2779 2838])
+            ("java.time.temporal.ValueRange" include nil nil [2839 2876])
+            ("java.time.zone.ZoneOffsetTransition" include nil nil [2877 2920])
+            ("java.time.zone.ZoneRules" include nil nil [2921 2953])
+            ("java.util.List" include nil nil [2954 2976])
+            ("java.util.Objects" include nil nil [2977 3002]))          
+      :file "ZonedDateTime.java"
+      :pointmax 104808
+      :fsize 104807
+      :lastmodtime '(22500 20592 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 6989 . 104807) (IDENTIFIER 6976 . 6988) (COMMA 6974 . 6975) (GT 6973 . 6974) (IDENTIFIER 6964 . 6973) (PUBLIC 6882 . 6888) (LT 6963 . 6964) (IDENTIFIER 2033 . 2047) (DOT 2032 . 2033) (IDENTIFIER 2021 . 2032) (DOT 2020 . 2021) (IDENTIFIER 2012 . 2020) (DOT 2011 . 2012) (IDENTIFIER 2007 . 2011) (DOT 2006 . 2007) (IMPORT 1988 . 1994) (STATIC 1995 . 2001) (IDENTIFIER 2002 . 2006) (IDENTIFIER 1972 . 1986) (DOT 1971 . 1972) (IDENTIFIER 1960 . 1971) (DOT 1959 . 1960) (IDENTIFIER 1951 . 1959) (DOT 1950 . 1951) (IDENTIFIER 1946 . 1950) (DOT 1945 . 1946) (IMPORT 1927 . 1933) (STATIC 1934 . 1940) (IDENTIFIER 1941 . 1945) (IDENTIFIER 1910 . 1925) (DOT 1909 . 1910) (IDENTIFIER 1898 . 1909) (DOT 1897 . 1898) (IDENTIFIER 1889 . 1897) (DOT 1888 . 1889) (IDENTIFIER 1884 . 1888) (DOT 1883 . 1884) (IMPORT 1865 . 1871) (STATIC 1872 . 1878) (IDENTIFIER 1879 . 1883)))
+    (semanticdb-table "LocalDateTime.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.time" package nil nil [1845 1863])
+            ("java.io.DataInput" include nil nil [2381 2406])
+            ("java.io.DataOutput" include nil nil [2407 2433])
+            ("java.io.IOException" include nil nil [2434 2461])
+            ("java.io.InvalidObjectException" include nil nil [2462 2500])
+            ("java.io.ObjectInputStream" include nil nil [2501 2534])
+            ("java.io.Serializable" include nil nil [2535 2563])
+            ("java.time.chrono.ChronoLocalDateTime" include nil nil [2564 2608])
+            ("java.time.format.DateTimeFormatter" include nil nil [2609 2651])
+            ("java.time.format.DateTimeParseException" include nil nil [2652 2699])
+            ("java.time.temporal.ChronoField" include nil nil [2700 2738])
+            ("java.time.temporal.ChronoUnit" include nil nil [2739 2776])
+            ("java.time.temporal.Temporal" include nil nil [2777 2812])
+            ("java.time.temporal.TemporalAccessor" include nil nil [2813 2856])
+            ("java.time.temporal.TemporalAdjuster" include nil nil [2857 2900])
+            ("java.time.temporal.TemporalAmount" include nil nil [2901 2942])
+            ("java.time.temporal.TemporalField" include nil nil [2943 2983])
+            ("java.time.temporal.TemporalQueries" include nil nil [2984 3026])
+            ("java.time.temporal.TemporalQuery" include nil nil [3027 3067])
+            ("java.time.temporal.TemporalUnit" include nil nil [3068 3107])
+            ("java.time.temporal.UnsupportedTemporalTypeException" include nil nil [3108 3167])
+            ("java.time.temporal.ValueRange" include nil nil [3168 3205])
+            ("java.time.zone.ZoneRules" include nil nil [3206 3238])
+            ("java.util.Objects" include nil nil [3239 3264]))          
+      :file "LocalDateTime.java"
+      :pointmax 89943
+      :fsize 89942
+      :lastmodtime '(22500 20592 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 5151 . 89942) (IDENTIFIER 5138 . 5150) (COMMA 5136 . 5137) (GT 5135 . 5136) (IDENTIFIER 5126 . 5135) (PUBLIC 5026 . 5032) (LT 5125 . 5126) (IDENTIFIER 2364 . 2378) (DOT 2363 . 2364) (IDENTIFIER 2352 . 2363) (DOT 2351 . 2352) (IDENTIFIER 2343 . 2351) (DOT 2342 . 2343) (IDENTIFIER 2338 . 2342) (DOT 2337 . 2338) (IMPORT 2319 . 2325) (STATIC 2326 . 2332) (IDENTIFIER 2333 . 2337) (IDENTIFIER 2302 . 2317) (DOT 2301 . 2302) (IDENTIFIER 2292 . 2301) (DOT 2291 . 2292) (IDENTIFIER 2287 . 2291) (DOT 2286 . 2287) (IMPORT 2268 . 2274) (STATIC 2275 . 2281) (IDENTIFIER 2282 . 2286) (IDENTIFIER 2250 . 2266) (DOT 2249 . 2250) (IDENTIFIER 2240 . 2249) (DOT 2239 . 2240) (IDENTIFIER 2235 . 2239) (DOT 2234 . 2235) (IMPORT 2216 . 2222) (STATIC 2223 . 2229) (IDENTIFIER 2230 . 2234) (IDENTIFIER 2198 . 2214) (DOT 2197 . 2198) (IDENTIFIER 2188 . 2197) (DOT 2187 . 2188) (IDENTIFIER 2183 . 2187) (DOT 2182 . 2183) (IMPORT 2164 . 2170) (STATIC 2171 . 2177) (IDENTIFIER 2178 . 2182) (IDENTIFIER 2148 . 2162) (DOT 2147 . 2148) (IDENTIFIER 2138 . 2147) (DOT 2137 . 2138) (IDENTIFIER 2133 . 2137) (DOT 2132 . 2133) (IMPORT 2114 . 2120) (STATIC 2121 . 2127) (IDENTIFIER 2128 . 2132) (IDENTIFIER 2099 . 2112) (DOT 2098 . 2099) (IDENTIFIER 2089 . 2098) (DOT 2088 . 2089) (IDENTIFIER 2084 . 2088) (DOT 2083 . 2084) (IMPORT 2065 . 2071) (STATIC 2072 . 2078) (IDENTIFIER 2079 . 2083) (IDENTIFIER 2048 . 2063) (DOT 2047 . 2048) (IDENTIFIER 2038 . 2047) (DOT 2037 . 2038) (IDENTIFIER 2033 . 2037) (DOT 2032 . 2033) (IMPORT 2014 . 2020) (STATIC 2021 . 2027) (IDENTIFIER 2028 . 2032) (IDENTIFIER 1998 . 2012) (DOT 1997 . 1998) (IDENTIFIER 1988 . 1997) (DOT 1987 . 1988) (IDENTIFIER 1983 . 1987) (DOT 1982 . 1983) (IMPORT 1964 . 1970) (STATIC 1971 . 1977) (IDENTIFIER 1978 . 1982) (IDENTIFIER 1948 . 1962) (DOT 1947 . 1948) (IDENTIFIER 1938 . 1947) (DOT 1937 . 1938) (IDENTIFIER 1933 . 1937) (DOT 1932 . 1933) (IMPORT 1914 . 1920) (STATIC 1921 . 1927) (IDENTIFIER 1928 . 1932) (IDENTIFIER 1899 . 1912) (DOT 1898 . 1899) (IDENTIFIER 1889 . 1898) (DOT 1888 . 1889) (IDENTIFIER 1884 . 1888) (DOT 1883 . 1884) (IMPORT 1865 . 1871) (STATIC 1872 . 1878) (IDENTIFIER 1879 . 1883)))
+    (semanticdb-table "Month.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.time" package nil nil [1845 1863])
+            ("java.time.chrono.Chronology" include nil nil [1978 2013])
+            ("java.time.chrono.IsoChronology" include nil nil [2014 2052])
+            ("java.time.format.DateTimeFormatterBuilder" include nil nil [2053 2102])
+            ("java.time.format.TextStyle" include nil nil [2103 2137])
+            ("java.time.temporal.ChronoField" include nil nil [2138 2176])
+            ("java.time.temporal.Temporal" include nil nil [2177 2212])
+            ("java.time.temporal.TemporalAccessor" include nil nil [2213 2256])
+            ("java.time.temporal.TemporalAdjuster" include nil nil [2257 2300])
+            ("java.time.temporal.TemporalField" include nil nil [2301 2341])
+            ("java.time.temporal.TemporalQueries" include nil nil [2342 2384])
+            ("java.time.temporal.TemporalQuery" include nil nil [2385 2425])
+            ("java.time.temporal.UnsupportedTemporalTypeException" include nil nil [2426 2485])
+            ("java.time.temporal.ValueRange" include nil nil [2486 2523])
+            ("java.util.Locale" include nil nil [2524 2548]))          
+      :file "Month.java"
+      :pointmax 23520
+      :fsize 23519
+      :lastmodtime '(22500 20592 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 3613 . 23519) (IDENTIFIER 3596 . 3612) (COMMA 3594 . 3595) (IDENTIFIER 3578 . 3594) (IMPLEMENTS 3567 . 3577) (IDENTIFIER 3561 . 3566) (PUBLIC 3549 . 3555) (IDENTIFIER 3556 . 3560) (IDENTIFIER 1969 . 1975) (DOT 1968 . 1969) (IDENTIFIER 1958 . 1968) (DOT 1957 . 1958) (IDENTIFIER 1949 . 1957) (DOT 1948 . 1949) (IDENTIFIER 1944 . 1948) (DOT 1943 . 1944) (IMPORT 1925 . 1931) (STATIC 1932 . 1938) (IDENTIFIER 1939 . 1943) (IDENTIFIER 1910 . 1923) (DOT 1909 . 1910) (IDENTIFIER 1898 . 1909) (DOT 1897 . 1898) (IDENTIFIER 1889 . 1897) (DOT 1888 . 1889) (IDENTIFIER 1884 . 1888) (DOT 1883 . 1884) (IMPORT 1865 . 1871) (STATIC 1872 . 1878) (IDENTIFIER 1879 . 1883)))
+    (semanticdb-table "Instant.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.time" package nil nil [1845 1863])
+            ("java.io.DataInput" include nil nil [2423 2448])
+            ("java.io.DataOutput" include nil nil [2449 2475])
+            ("java.io.IOException" include nil nil [2476 2503])
+            ("java.io.InvalidObjectException" include nil nil [2504 2542])
+            ("java.io.ObjectInputStream" include nil nil [2543 2576])
+            ("java.io.Serializable" include nil nil [2577 2605])
+            ("java.time.format.DateTimeFormatter" include nil nil [2606 2648])
+            ("java.time.format.DateTimeParseException" include nil nil [2649 2696])
+            ("java.time.temporal.ChronoField" include nil nil [2697 2735])
+            ("java.time.temporal.ChronoUnit" include nil nil [2736 2773])
+            ("java.time.temporal.Temporal" include nil nil [2774 2809])
+            ("java.time.temporal.TemporalAccessor" include nil nil [2810 2853])
+            ("java.time.temporal.TemporalAdjuster" include nil nil [2854 2897])
+            ("java.time.temporal.TemporalAmount" include nil nil [2898 2939])
+            ("java.time.temporal.TemporalField" include nil nil [2940 2980])
+            ("java.time.temporal.TemporalQueries" include nil nil [2981 3023])
+            ("java.time.temporal.TemporalQuery" include nil nil [3024 3064])
+            ("java.time.temporal.TemporalUnit" include nil nil [3065 3104])
+            ("java.time.temporal.UnsupportedTemporalTypeException" include nil nil [3105 3164])
+            ("java.time.temporal.ValueRange" include nil nil [3165 3202])
+            ("java.util.Objects" include nil nil [3203 3228]))          
+      :file "Instant.java"
+      :pointmax 61618
+      :fsize 61617
+      :lastmodtime '(22500 20592 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 9372 . 61617) (IDENTIFIER 9359 . 9371) (COMMA 9357 . 9358) (GT 9356 . 9357) (IDENTIFIER 9349 . 9356) (PUBLIC 9264 . 9270) (LT 9348 . 9349) (IDENTIFIER 2415 . 2420) (DOT 2414 . 2415) (IDENTIFIER 2404 . 2414) (DOT 2403 . 2404) (IDENTIFIER 2395 . 2403) (DOT 2394 . 2395) (IDENTIFIER 2390 . 2394) (DOT 2389 . 2390) (IMPORT 2371 . 2377) (STATIC 2378 . 2384) (IDENTIFIER 2385 . 2389) (IDENTIFIER 2365 . 2369) (DOT 2364 . 2365) (IDENTIFIER 2354 . 2364) (DOT 2353 . 2354) (IDENTIFIER 2345 . 2353) (DOT 2344 . 2345) (IDENTIFIER 2340 . 2344) (DOT 2339 . 2340) (IMPORT 2321 . 2327) (STATIC 2328 . 2334) (IDENTIFIER 2335 . 2339) (IDENTIFIER 2305 . 2319) (DOT 2304 . 2305) (IDENTIFIER 2293 . 2304) (DOT 2292 . 2293) (IDENTIFIER 2284 . 2292) (DOT 2283 . 2284) (IDENTIFIER 2279 . 2283) (DOT 2278 . 2279) (IMPORT 2260 . 2266) (STATIC 2267 . 2273) (IDENTIFIER 2274 . 2278) (IDENTIFIER 2243 . 2258) (DOT 2242 . 2243) (IDENTIFIER 2231 . 2242) (DOT 2230 . 2231) (IDENTIFIER 2222 . 2230) (DOT 2221 . 2222) (IDENTIFIER 2217 . 2221) (DOT 2216 . 2217) (IMPORT 2198 . 2204) (STATIC 2205 . 2211) (IDENTIFIER 2212 . 2216) (IDENTIFIER 2181 . 2196) (DOT 2180 . 2181) (IDENTIFIER 2169 . 2180) (DOT 2168 . 2169) (IDENTIFIER 2160 . 2168) (DOT 2159 . 2160) (IDENTIFIER 2155 . 2159) (DOT 2154 . 2155) (IMPORT 2136 . 2142) (STATIC 2143 . 2149) (IDENTIFIER 2150 . 2154) (IDENTIFIER 2119 . 2134) (DOT 2118 . 2119) (IDENTIFIER 2107 . 2118) (DOT 2106 . 2107) (IDENTIFIER 2098 . 2106) (DOT 2097 . 2098) (IDENTIFIER 2093 . 2097) (DOT 2092 . 2093) (IMPORT 2074 . 2080) (STATIC 2081 . 2087) (IDENTIFIER 2088 . 2092) (IDENTIFIER 2054 . 2072) (DOT 2053 . 2054) (IDENTIFIER 2044 . 2053) (DOT 2043 . 2044) (IDENTIFIER 2039 . 2043) (DOT 2038 . 2039) (IMPORT 2020 . 2026) (STATIC 2027 . 2033) (IDENTIFIER 2034 . 2038) (IDENTIFIER 2002 . 2018) (DOT 2001 . 2002) (IDENTIFIER 1992 . 2001) (DOT 1991 . 1992) (IDENTIFIER 1987 . 1991) (DOT 1986 . 1987) (IMPORT 1968 . 1974) (STATIC 1975 . 1981) (IDENTIFIER 1982 . 1986) (IDENTIFIER 1951 . 1966) (DOT 1950 . 1951) (IDENTIFIER 1941 . 1950) (DOT 1940 . 1941) (IDENTIFIER 1936 . 1940) (DOT 1935 . 1936) (IMPORT 1917 . 1923) (STATIC 1924 . 1930) (IDENTIFIER 1931 . 1935) (IDENTIFIER 1899 . 1915) (DOT 1898 . 1899) (IDENTIFIER 1889 . 1898) (DOT 1888 . 1889) (IDENTIFIER 1884 . 1888) (DOT 1883 . 1884) (IMPORT 1865 . 1871) (STATIC 1872 . 1878) (IDENTIFIER 1879 . 1883)))
+    (semanticdb-table "Clock.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.time" package nil nil [1845 1863])
+            ("java.io.Serializable" include nil nil [1970 1998])
+            ("java.util.Objects" include nil nil [1999 2024])
+            ("java.util.TimeZone" include nil nil [2025 2051])
+            ("Clock" type
+               (:typemodifiers ("public" "abstract")
+                :members 
+                  ( ("systemUTC" function
+                       (:typemodifiers ("public" "static")
+                        :type "Clock")
+                        (reparse-symbol class_member_declaration) [6171 6258])
+                    ("systemDefaultZone" function
+                       (:typemodifiers ("public" "static")
+                        :type "Clock")
+                        (reparse-symbol class_member_declaration) [7247 7350])
+                    ("system" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("zone" variable (:type "ZoneId") (reparse-symbol formal_parameters) [8061 8072]))                          
+                        :type "Clock")
+                        (reparse-symbol class_member_declaration) [8034 8165])
+                    ("tickSeconds" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("zone" variable (:type "ZoneId") (reparse-symbol formal_parameters) [9289 9300]))                          
+                        :type "Clock")
+                        (reparse-symbol class_member_declaration) [9257 9371])
+                    ("tickMinutes" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("zone" variable (:type "ZoneId") (reparse-symbol formal_parameters) [10437 10448]))                          
+                        :type "Clock")
+                        (reparse-symbol class_member_declaration) [10405 10519])
+                    ("tick" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("baseClock" variable (:type "Clock") (reparse-symbol formal_parameters) [12375 12390])
+                            ("tickDuration" variable (:type "Duration") (reparse-symbol formal_parameters) [12392 12413]))                          
+                        :type "Clock")
+                        (reparse-symbol class_member_declaration) [12350 13148])
+                    ("fixed" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("fixedInstant" variable (:type "Instant") (reparse-symbol formal_parameters) [13927 13947])
+                            ("zone" variable (:type "ZoneId") (reparse-symbol formal_parameters) [13949 13960]))                          
+                        :type "Clock")
+                        (reparse-symbol class_member_declaration) [13901 14128])
+                    ("offset" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("baseClock" variable (:type "Clock") (reparse-symbol formal_parameters) [15153 15168])
+                            ("offsetDuration" variable (:type "Duration") (reparse-symbol formal_parameters) [15170 15193]))                          
+                        :type "Clock")
+                        (reparse-symbol class_member_declaration) [15126 15475])
+                    ("Clock" function
+                       (:constructor-flag t
+                        :typemodifiers ("protected"))
+                        (reparse-symbol class_member_declaration) [15620 15645])
+                    ("getZone" function
+                       (:typemodifiers ("public" "abstract")
+                        :type "ZoneId")
+                        (reparse-symbol class_member_declaration) [16062 16095])
+                    ("withZone" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("zone" variable (:type "ZoneId") (reparse-symbol formal_parameters) [16584 16595]))                          
+                        :type "Clock")
+                        (reparse-symbol class_member_declaration) [16553 16597])
+                    ("millis" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [17591 17660])
+                    ("instant" function
+                       (:typemodifiers ("public" "abstract")
+                        :type "Instant")
+                        (reparse-symbol class_member_declaration) [18077 18111])
+                    ("equals" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("obj" variable (:type "Object") (reparse-symbol formal_parameters) [18649 18659]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [18627 18702])
+                    ("hashCode" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [19027 19090])
+                    ("SystemClock" type
+                       (:typemodifiers ("static" "final")
+                        :interfaces ("Serializable")
+                        :superclasses "Clock"
+                        :members 
+                          ( ("serialVersionUID" variable
+                               (:typemodifiers ("private" "static" "final")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [19386 19452])
+                            ("zone" variable
+                               (:typemodifiers ("private" "final")
+                                :type "ZoneId")
+                                (reparse-symbol class_member_declaration) [19461 19487])
+                            ("SystemClock" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("zone" variable (:type "ZoneId") (reparse-symbol formal_parameters) [19509 19520]))                                  )
+                                (reparse-symbol class_member_declaration) [19497 19563])
+                            ("getZone" function
+                               (:typemodifiers ("public")
+                                :type "ZoneId")
+                                (reparse-symbol class_member_declaration) [19590 19650])
+                            ("withZone" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("zone" variable (:type "ZoneId") (reparse-symbol formal_parameters) [19699 19710]))                                  
+                                :type "Clock")
+                                (reparse-symbol class_member_declaration) [19677 19870])
+                            ("millis" function
+                               (:typemodifiers ("public")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [19897 19976])
+                            ("instant" function
+                               (:typemodifiers ("public")
+                                :type "Instant")
+                                (reparse-symbol class_member_declaration) [20003 20090])
+                            ("equals" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("obj" variable (:type "Object") (reparse-symbol formal_parameters) [20139 20149]))                                  
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [20117 20310])
+                            ("hashCode" function
+                               (:typemodifiers ("public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [20337 20410])
+                            ("toString" function
+                               (:typemodifiers ("public")
+                                :type "String")
+                                (reparse-symbol class_member_declaration) [20437 20521]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [19307 20527])
+                    ("FixedClock" type
+                       (:typemodifiers ("static" "final")
+                        :interfaces ("Serializable")
+                        :superclasses "Clock"
+                        :members 
+                          ( ("serialVersionUID" variable
+                               (:typemodifiers ("private" "static" "final")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [20818 20884])
+                            ("instant" variable
+                               (:typemodifiers ("private" "final")
+                                :type "Instant")
+                                (reparse-symbol class_member_declaration) [20893 20923])
+                            ("zone" variable
+                               (:typemodifiers ("private" "final")
+                                :type "ZoneId")
+                                (reparse-symbol class_member_declaration) [20932 20958])
+                            ("FixedClock" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("fixedInstant" variable (:type "Instant") (reparse-symbol formal_parameters) [20979 20999])
+                                    ("zone" variable (:type "ZoneId") (reparse-symbol formal_parameters) [21001 21012]))                                  )
+                                (reparse-symbol class_member_declaration) [20968 21096])
+                            ("getZone" function
+                               (:typemodifiers ("public")
+                                :type "ZoneId")
+                                (reparse-symbol class_member_declaration) [21123 21183])
+                            ("withZone" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("zone" variable (:type "ZoneId") (reparse-symbol formal_parameters) [21232 21243]))                                  
+                                :type "Clock")
+                                (reparse-symbol class_member_declaration) [21210 21411])
+                            ("millis" function
+                               (:typemodifiers ("public")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [21438 21513])
+                            ("instant" function
+                               (:typemodifiers ("public")
+                                :type "Instant")
+                                (reparse-symbol class_member_declaration) [21540 21604])
+                            ("equals" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("obj" variable (:type "Object") (reparse-symbol formal_parameters) [21653 21663]))                                  
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [21631 21895])
+                            ("hashCode" function
+                               (:typemodifiers ("public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [21922 22012])
+                            ("toString" function
+                               (:typemodifiers ("public")
+                                :type "String")
+                                (reparse-symbol class_member_declaration) [22039 22138]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [20741 22144])
+                    ("OffsetClock" type
+                       (:typemodifiers ("static" "final")
+                        :interfaces ("Serializable")
+                        :superclasses "Clock"
+                        :members 
+                          ( ("serialVersionUID" variable
+                               (:typemodifiers ("private" "static" "final")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [22399 22465])
+                            ("baseClock" variable
+                               (:typemodifiers ("private" "final")
+                                :type "Clock")
+                                (reparse-symbol class_member_declaration) [22474 22504])
+                            ("offset" variable
+                               (:typemodifiers ("private" "final")
+                                :type "Duration")
+                                (reparse-symbol class_member_declaration) [22513 22543])
+                            ("OffsetClock" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("baseClock" variable (:type "Clock") (reparse-symbol formal_parameters) [22565 22580])
+                                    ("offset" variable (:type "Duration") (reparse-symbol formal_parameters) [22582 22597]))                                  )
+                                (reparse-symbol class_member_declaration) [22553 22684])
+                            ("getZone" function
+                               (:typemodifiers ("public")
+                                :type "ZoneId")
+                                (reparse-symbol class_member_declaration) [22711 22786])
+                            ("withZone" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("zone" variable (:type "ZoneId") (reparse-symbol formal_parameters) [22835 22846]))                                  
+                                :type "Clock")
+                                (reparse-symbol class_member_declaration) [22813 23044])
+                            ("millis" function
+                               (:typemodifiers ("public")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [23071 23176])
+                            ("instant" function
+                               (:typemodifiers ("public")
+                                :type "Instant")
+                                (reparse-symbol class_member_declaration) [23203 23292])
+                            ("equals" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("obj" variable (:type "Object") (reparse-symbol formal_parameters) [23341 23351]))                                  
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [23319 23594])
+                            ("hashCode" function
+                               (:typemodifiers ("public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [23621 23715])
+                            ("toString" function
+                               (:typemodifiers ("public")
+                                :type "String")
+                                (reparse-symbol class_member_declaration) [23742 23846]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [22321 23852])
+                    ("TickClock" type
+                       (:typemodifiers ("static" "final")
+                        :interfaces ("Serializable")
+                        :superclasses "Clock"
+                        :members 
+                          ( ("serialVersionUID" variable
+                               (:typemodifiers ("private" "static" "final")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [24106 24172])
+                            ("baseClock" variable
+                               (:typemodifiers ("private" "final")
+                                :type "Clock")
+                                (reparse-symbol class_member_declaration) [24181 24211])
+                            ("tickNanos" variable
+                               (:typemodifiers ("private" "final")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [24220 24249])
+                            ("TickClock" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("baseClock" variable (:type "Clock") (reparse-symbol formal_parameters) [24269 24284])
+                                    ("tickNanos" variable (:type "long") (reparse-symbol formal_parameters) [24286 24300]))                                  )
+                                (reparse-symbol class_member_declaration) [24259 24393])
+                            ("getZone" function
+                               (:typemodifiers ("public")
+                                :type "ZoneId")
+                                (reparse-symbol class_member_declaration) [24420 24495])
+                            ("withZone" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("zone" variable (:type "ZoneId") (reparse-symbol formal_parameters) [24544 24555]))                                  
+                                :type "Clock")
+                                (reparse-symbol class_member_declaration) [24522 24754])
+                            ("millis" function
+                               (:typemodifiers ("public")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [24781 24933])
+                            ("instant" function
+                               (:typemodifiers ("public")
+                                :type "Instant")
+                                (reparse-symbol class_member_declaration) [24960 25408])
+                            ("equals" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("obj" variable (:type "Object") (reparse-symbol formal_parameters) [25457 25467]))                                  
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [25435 25705])
+                            ("hashCode" function
+                               (:typemodifiers ("public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [25732 25849])
+                            ("toString" function
+                               (:typemodifiers ("public")
+                                :type "String")
+                                (reparse-symbol class_member_declaration) [25876 25999]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [24029 26005]))                  
+                :type "class")
+                nil [5259 26008]))          
+      :file "Clock.java"
+      :pointmax 26009
+      :fsize 26008
+      :lastmodtime '(22500 20592 0 0)
+      :unmatched-syntax '((IDENTIFIER 1951 . 1967) (DOT 1950 . 1951) (IDENTIFIER 1941 . 1950) (DOT 1940 . 1941) (IDENTIFIER 1936 . 1940) (DOT 1935 . 1936) (IMPORT 1917 . 1923) (STATIC 1924 . 1930) (IDENTIFIER 1931 . 1935) (IDENTIFIER 1899 . 1915) (DOT 1898 . 1899) (IDENTIFIER 1889 . 1898) (DOT 1888 . 1889) (IDENTIFIER 1884 . 1888) (DOT 1883 . 1884) (IMPORT 1865 . 1871) (STATIC 1872 . 1878) (IDENTIFIER 1879 . 1883))))
+  :file "!Volumes!macHDD!jdk1.8.0_111!src!java!time!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

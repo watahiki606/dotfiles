@@ -1,0 +1,2 @@
+HelloWorld | List cannot be resolved to a type
+HelloWorld | ArrayList is a raw type. References to generic type ArrayList<E> should be parameterized

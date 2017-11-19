@@ -1,0 +1,25 @@
+;; Object stream/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "stream/"
+  :tables
+  (list
+    (semanticdb-table "Collector.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util.stream" package nil nil [217 242])
+            ("java.util.Collections" include nil nil [244 273])
+            ("java.util.EnumSet" include nil nil [274 299])
+            ("java.util.Objects" include nil nil [300 325])
+            ("java.util.Set" include nil nil [326 347])
+            ("java.util.function.BiConsumer" include nil nil [348 385])
+            ("java.util.function.BinaryOperator" include nil nil [386 427])
+            ("java.util.function.Function" include nil nil [428 463])
+            ("java.util.function.Supplier" include nil nil [464 499]))          
+      :file "Collector.java"
+      :pointmax 15355
+      :fsize 15354
+      :lastmodtime '(22500 20590 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 8995 . 15354) (GT 8993 . 8994) (IDENTIFIER 8992 . 8993) (COMMA 8990 . 8991) (IDENTIFIER 8989 . 8990) (COMMA 8987 . 8988) (IDENTIFIER 8986 . 8987) (PUBLIC 8959 . 8965) (LT 8985 . 8986))))
+  :file "!Volumes!3TB!download!jdk1.8.0_111!src!java!util!stream!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

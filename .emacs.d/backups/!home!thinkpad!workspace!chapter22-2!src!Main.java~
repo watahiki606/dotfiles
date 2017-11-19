@@ -1,0 +1,23 @@
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+
+public class Main {
+	public static void main(String[] args) throws Exception {
+PropertyChangeListener listener = new PropertyChangeListener() {
+	
+	@Override
+	public void propertyChange(PropertyChangeEvent evt) {
+		System.out.println(evt.getPropertyName() + "was changed from " + evt.getOldValue() + " to " + evt.getNewValue());
+		
+	}
+};
+
+MyBean bean = new MyBean();
+bean.addWidthListener(listener);
+bean.addHeightListner(listener);
+
+bean.setHeight(10);
+
+	}
+}
+

@@ -1,0 +1,8 @@
+use strict;
+use warnings;
+
+opendir(DIR,';tmp') or die "$!";
+foreach my $entry(sort(readdir(DIR))){
+    print "$entry\n";
+}
+closedir(DIR);

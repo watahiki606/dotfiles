@@ -1,0 +1,16 @@
+#最長一致と最短一致
+
+$html =<<EOT;
+<HTML>
+<HEAD>
+<TITLE>My Home Page</TITLE>
+</HEAD>
+<BODY>
+<H1>This is my home page</H1>
+</BODY>
+</HTML>
+EOT
+
+while($html =~ /<.+>/g){
+    print "$&\n";
+}

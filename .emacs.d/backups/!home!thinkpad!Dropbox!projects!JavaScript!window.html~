@@ -1,0 +1,5 @@
+<script>
+ <input type="button" value="scrollTo" onclick="window.scrollTo(0,200)"/>
+ <input type="button" value="moveBy" onclick="moveBy(100,100)"/>
+ <input type="button" value="resizeBy" onclick="window.resizeBy(50,50)"/>
+</script>

@@ -1,0 +1,201 @@
+;; Object chatserver/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "chatserver/"
+  :tables
+  (list
+    (semanticdb-table "ChatTest.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.io.*" include nil nil [1276 1293])
+            ("java.net.InetSocketAddress" include nil nil [1294 1328])
+            ("java.net.Socket" include nil nil [1329 1352])
+            ("java.util.ArrayList" include nil nil [1353 1380])
+            ("java.util.Collections" include nil nil [1381 1410])
+            ("java.util.List" include nil nil [1411 1433])
+            ("java.util.concurrent.CyclicBarrier" include nil nil [1434 1476])
+            ("ChatTest" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("listeningPort" variable
+                       (:typemodifiers ("public" "static")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1506 1542])
+                    ("main" function
+                       (:throws ("Throwable")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [1572 1585]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1548 1829])
+                    ("startServer" function
+                       (:throws ("IOException")
+                        :typemodifiers ("private" "static")
+                        :type "ChatServer")
+                        (reparse-symbol class_member_declaration) [1835 2119])
+                    ("testStartStop" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2125 2254])
+                    ("testPortOpen" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2260 2649])
+                    ("testAsksForName" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2655 3188])
+                    ("testUseName" function
+                       (:throws ("Throwable")
+                        :typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3194 3403])
+                    ("testConnectDisconnectConnect" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3409 3652])
+                    ("testUsernameAndMessage" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3658 3889])
+                    ("testDontReceiveMessageInNameState" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3895 4144])
+                    ("assertEqual" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("" variable (:type "exception") (reparse-symbol formal_parameters) [4198 4207])
+                            ("value" variable (:type "Object") (reparse-symbol formal_parameters) [4209 4221])
+                            ("expected" variable (:type "Object") (reparse-symbol formal_parameters) [4223 4238]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4150 4623])
+                    ("performDontReceiveMessageInNameState" function
+                       (:throws ("Exception")
+                        :typemodifiers ("private" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4629 6309])
+                    ("waitForJoin" function
+                       (:throws ("IOException")
+                        :typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("reader" variable (:type "BufferedReader") (reparse-symbol formal_parameters) [6347 6368])
+                            ("s" variable (:type "String") (reparse-symbol formal_parameters) [6370 6378]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6315 6564])
+                    ("performTestUsernameAndMessage" function
+                       (:throws ("Exception")
+                        :typemodifiers ("private" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6570 8227])
+                    ("performTestConnectDisconnectConnect" function
+                       (:throws ("Exception")
+                        :typemodifiers ("private" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8233 10410])
+                    ("performTestUseName" function
+                       (:throws ("Exception")
+                        :typemodifiers ("private" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [10416 12382])
+                    ("readAvailableString" function
+                       (:throws ("IOException")
+                        :typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("reader" variable (:type "Reader") (reparse-symbol formal_parameters) [12430 12443]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [12388 12522])
+                    ("readAvailableString" function
+                       (:throws ("IOException")
+                        :typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("reader" variable (:type "Reader") (reparse-symbol formal_parameters) [12570 12583])
+                            ("now" variable (:type "boolean") (reparse-symbol formal_parameters) [12585 12596]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [12528 12970])
+                    ("ChatConnection" type
+                       (:typemodifiers ("private" "abstract" "static")
+                        :interfaces ("Runnable")
+                        :members 
+                          ( ("exception" variable
+                               (:typemodifiers ("public")
+                                :type "Exception")
+                                (reparse-symbol class_member_declaration) [13051 13078])
+                            ("run" function
+                               (:typemodifiers ("public")
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [13106 13583])
+                            ("run" function
+                               (:throws ("Exception")
+                                :typemodifiers ("public" "abstract")
+                                :arguments 
+                                  ( ("socket" variable (:type "Socket") (reparse-symbol formal_parameters) [13618 13631])
+                                    ("reader" variable (:type "BufferedReader") (reparse-symbol formal_parameters) [13633 13654])
+                                    ("writer" variable (:type "Writer") (reparse-symbol formal_parameters) [13656 13669]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [13593 13688]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [12976 13694])
+                    ("FlushingWriter" type
+                       (:typemodifiers ("private" "static")
+                        :superclasses "Writer"
+                        :members 
+                          ( ("delegate" variable
+                               (:typemodifiers ("public" "final")
+                                :type "Writer")
+                                (reparse-symbol class_member_declaration) [13761 13790])
+                            ("FlushingWriter" function
+                               (:constructor-flag t
+                                :typemodifiers ("private")
+                                :arguments 
+                                  ( ("delegate" variable (:type "Writer") (reparse-symbol formal_parameters) [13823 13838]))                                  )
+                                (reparse-symbol class_member_declaration) [13800 13889])
+                            ("write" function
+                               (:throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("cbuf" variable
+                                       (:dereference 1
+                                        :type "char")
+                                        (reparse-symbol formal_parameters) [13935 13946])
+                                    ("off" variable (:type "int") (reparse-symbol formal_parameters) [13948 13955])
+                                    ("len" variable (:type "int") (reparse-symbol formal_parameters) [13957 13964]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [13917 14040])
+                            ("flush" function
+                               (:throws ("IOException")
+                                :typemodifiers ("public")
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [14068 14148])
+                            ("close" function
+                               (:throws ("IOException")
+                                :typemodifiers ("public")
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [14176 14256])
+                            ("write" function
+                               (:throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("str" variable (:type "String") (reparse-symbol formal_parameters) [14302 14312]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [14284 14395]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [13700 14401]))                  
+                :type "class")
+                nil [1478 14403]))          
+      :file "ChatTest.java"
+      :pointmax 14404
+      :fsize 14403
+      :lastmodtime '(22652 57087 297216 633000)
+      :unmatched-syntax '((GT 4196 . 4197) (IDENTIFIER 4182 . 4186) (LT 4186 . 4187))))
+  :file "!home!thinkpad!jdk8!jdk!test!sample!chatserver!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3//DTD HTML 4.0//EN">
+    <!--簡単なアンケートのHTML
+    questionnaire.html-->
+    <html>
+    <head>
+    <title>アンケートの例</title>
+    </head>
+
+    <body>
+    <h1>アンケートの例</h1>
+
+    <p>次の質問にお応えください</p>
+
+    <form action="cgi-bin/quiestionnaire.cgi" method="post">
+    <dl>
+    <dt>お名前</dt>
+    <dd><input type="text name="name value=""></dd>
+    <dt>最もよくお使いになっているOS</dt>
+    <dd>
+    <ul>
+    <li><iput type="radio" name="os"
+    value="Wsindows"
+    checked>Windows</li>
+    <li><input type="radio" name="os"
+    value="Linux">Linux</li>
+    <li><input type="radio" name ="os"
+    value="FreeBSD">FreeBSD</li>
+    <li><input type="radio" name ="os"
+    value="Solaris">Solaris</li>
+    <li><input type="radio" name="os"
+    value="MacOS">MacOS</li>
+    <li><input type="radio" name="os"
+    value="Other">その他</li>
+    </ul>
+    </dd>
+    </dl>
+    <p>
+    <input type="submit" name="send" value="送信"><br>
+    <input type="reset" value="リセット">
+    </p>
+    </form>
+    </body>
+    </html>

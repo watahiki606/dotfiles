@@ -1,0 +1,38 @@
+import java.nio.file.*;
+class Test {
+        public static void main(String[] args){
+                FileSystem file = FileSystems.getDefault();
+                Iterable<Path> root = file.getRootDirectories();
+                for(Path p : root){
+                        System.out.println(p + " ");
+                }
+                System.out.println();
+                for(String att : file.supportedFileAttributeViews()){
+
+                        System.out.println(att + " ");
+                }
+        }
+}
+System.out.println(
+        
+        );
+synchronized (this) {
+        Thread t = new Thread(try {
+                        
+                } catch (Exception ex) {
+                }) {
+                public void run() {
+                        try {
+                                
+                        } catch (Exception ex) {
+                        } finally {
+while (condition) {
+        
+}                        }
+                }
+        }.start();
+}
+try {
+        
+} catch (Exception ex) {
+}

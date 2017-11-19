@@ -1,0 +1,42 @@
+;; Object instrument/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "instrument/"
+  :tables
+  (list
+    (semanticdb-table "ClassDefinition.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.lang.instrument" package nil nil [218 247])
+            ("ClassDefinition" type
+               (:typemodifiers ("public" "final")
+                :members 
+                  ( ("mClassFile" variable
+                       (:dereference 1
+                        :typemodifiers ("private" "final")
+                        :type "byte")
+                        (reparse-symbol class_member_declaration) [774 808])
+                    ("ClassDefinition" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "theClass") (reparse-symbol formal_parameters) [1285 1293])
+                            ("theClassFile" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [1319 1339]))                          )
+                        (reparse-symbol class_member_declaration) [1245 1528])
+                    ("getDefinitionClass" function (:constructor-flag t) (reparse-symbol class_member_declaration) [1664 1715])
+                    ("getDefinitionClassFile" function
+                       (:typemodifiers ("public")
+                        :type "byte[]")
+                        (reparse-symbol class_member_declaration) [1852 1929]))                  
+                :type "class")
+                nil [594 1931]))          
+      :file "ClassDefinition.java"
+      :pointmax 1932
+      :fsize 1931
+      :lastmodtime '(22500 20588 0 0)
+      :unmatched-syntax '((GT 1658 . 1659) (QUESTION 1657 . 1658) (PUBLIC 1644 . 1650) (LT 1656 . 1657) (GT 1283 . 1284) (QUESTION 1282 . 1283) (IDENTIFIER 1276 . 1281) (LT 1281 . 1282) (SEMICOLON 710 . 711) (GT 702 . 703) (QUESTION 701 . 702) (PRIVATE 681 . 688) (LT 700 . 701))))
+  :file "!Volumes!macHDD!jdk1.8.0_111!src!java!lang!instrument!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

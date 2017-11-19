@@ -1,0 +1,15 @@
+import java.nio.file.*;
+class Test {
+        public static void main(String[] args){
+                FileSystem file = FileSystems.getDefault();
+                Iterable<Path> root = file.getRootDirectories();
+                for(Path p : root){
+                        System.out.println(p + " ");
+                }
+                System.out.println();
+                for(String att : file.supportedFileAttributeViews()){
+
+                        System.out.println(att + " ");
+                }
+        }
+}

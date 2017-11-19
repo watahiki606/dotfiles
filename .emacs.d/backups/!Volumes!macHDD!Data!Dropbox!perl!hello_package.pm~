@@ -1,0 +1,11 @@
+#パッケージ化したhelloモジュール
+# hello_package.pm
+
+# helloという名前でパッケージを定義
+package hello;
+
+#このサブルーチンはhello::helloとして呼び出す
+sub hello{
+    my($name) = @_;
+    print "こんにちは、$nameさん。\n";
+}

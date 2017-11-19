@@ -1,0 +1,26 @@
+#File::Copyを使ってファイルをコピー
+#copy.pl
+
+#モジュール呼び出し
+use File::Copy;
+
+if(@ARGV != 2){
+    #引数が2つ以上の時には使い方を表示
+    &usage();
+}
+
+#モジュールのルーチン実行
+copy($ARGV[0], $ARGV[1]);
+
+print "コピー中2エラーが発生しました($!)。\n" if($!);
+
+#使い方を表示
+sub usage{
+    print <<EOT
+copy.pl:ファイルのコピー
+
+copy.pl コピー元ファイル名 コピー先ファイル名
+EOT
+        ;
+    exit(1);
+}

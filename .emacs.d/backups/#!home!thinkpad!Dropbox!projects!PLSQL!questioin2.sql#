@@ -1,0 +1,373 @@
+set echo on
+set serveroutput on
+set linesize 300
+
+
+-- create or replace function dfit return number is
+--   cnt number := 0;
+--   begin
+--   cnt := cnt + 1;
+--   return 45;
+--   end dfit;
+-- /
+-- create or replace procedure p(i in number default dfit()) is
+--   begin
+--   dbms_output.put_line(i);
+--   end p;
+-- /
+--   declare
+--   cnt number := dfit();
+--   begin for j in 1..3 loop
+--   p(j);
+--   end loop;
+-- --return;
+--   dbms_output.put_line('cnt: '|| cnt );
+--   p();
+--   dbms_output.put_line('cnt: '|| cnt);
+--   end;
+--   /
+-- select * from emp;
+
+
+---7
+--   declare
+-- cursor   c_emp_cursor is
+-- select empno, job from emp
+-- where deptno = 30;
+--   begin
+--   for emp_record in c_emp_cursor
+--   loop
+--   dbms_output.put_line( emp_record.empno||' '||emp_record.job);
+--   end loop;
+--   end;
+--  /
+
+
+--8
+--   declare
+-- var emp.deptno%type;
+--   begin
+
+-- select deptno  into var from emp  where deptno = '30' and empno = '79000';
+
+--   END;
+--   /
+
+--14
+  -- declare
+  -- in_string varchar2(25) := 'This is my test string.';
+  -- out_string varchar2(25);
+  -- procedure double(original in varchar2,
+  --   new_string out varchar2    )is
+  -- begin
+  -- new_string := original || ' + ' || original;
+  -- exception
+  -- when value_error then
+  -- dbms_output.put_line('Output buffre not long enough.');
+  -- commit;
+  -- end;
+  -- begin
+  -- double(in_string, out_string);
+  -- dbms_output.put_line(in_string || ' - ' || out_string);
+  -- end;
+  -- /
+
+
+  --select sysdate from dual;
+
+  --17
+    -- declare
+    -- type population is table of number
+    -- index by varchar2(64);
+    -- city_population population;
+    -- i varchar2(64);
+    -- begin
+    -- city_population('Smallville') := 20000;
+    -- city_population('Midland') := 750000;
+    -- city_population('Megalopolis') := 10000000;
+    -- city_population('Smallville') := 2000;
+    -- i := city_population.first;
+    -- while i is not null loop
+    -- dbms_output.put_line('Population of ' || i || ' is ' || to_char(city_population(i)));
+    -- i := city_population.next(i);
+    -- end loop;
+    -- end;
+    -- /
+
+
+    --    select * from emp E1 ,emp  E2
+    -- select *
+    -- from emp E1
+    --   left join emp E2
+    --   on E2.deptno = '30'
+    --   and E2.empno = E1.empno
+    --  inner join emp E3
+    --  on E3.deptno = '30';
+
+
+      --desc emp
+      --desc dept
+
+      --       show parameter user_dump_dest
+
+      --        desc emp
+
+
+ --      create or replace package curs_pkg is
+--         procedure open;
+--         procedure next(p_n number := 1);
+--         procedure close;
+--         end curs_pkg;
+--         /
+--       create or replace package body curs_pkg is
+--         cursor cur_c is
+--       select empno from emp;
+--         procedure open is
+--         begin
+--         if not cur_c%isopen then
+--         open cur_c;
+--         end if;
+--         end open;
+--         procedure next(p_n number := 1) is
+--         v_emp_id emp.empno%type;
+--         begin
+--         for count in 1 .. p_n loop
+--         fetch cur_c into v_emp_id;
+--         exit when cur_c%notfound;
+--         dbms_output.put_line('Id: ' ||(v_emp_id));
+--         end loop;
+--         end next;
+--         procedure close is
+--         begin
+--         if cur_c%isopen then
+--         close cur_c;
+--         end if;
+--         end close;
+--         end curs_pkg;
+--         /
+
+--         begin
+--         curs_pkg.open;
+--         curs_pkg.next(108);
+-- curs_pkg.close;
+-- end;
+ -- /
+
+
+-- set serveroutput on
+-- create or replace package test_pack
+--   is
+--   procedure employee_ename(name varchar2);
+--   procedure employee_empno(eno number);
+--   pub_no number:=0;
+--   end;
+--   /
+-- create or replace package body test_pack
+--   is
+--   pri_no number:=0;
+
+--   procedure employee_ename(name varchar2)
+--   is
+--   begin
+-- select sal into pri_no from emp
+-- where ename = name;
+--   dbms_output.put_line(pri_no);
+--   end employee_ename;
+
+--   procedure employee_empno(eno number)
+--   is
+--   begin
+-- select sal into pub_no from emp
+-- where empno = eno;
+--   dbms_output.put_line(pub_no);
+--   end employee_empno;
+--   end;
+--  / 
+--   begin
+--   test_pack.employee_empno(7369);
+--   end;
+-- /
+
+
+--select table_name from user_tables;
+
+-- create or replace procedure wording is
+--   type Definition is record(
+--     word varchar2(20),
+-- meaning varchar2(200)
+-- );
+-- lexicon Definition;
+-- --ネスト
+-- procedure add_entry (word_list IN OUT Definition) is
+-- begin
+-- word_list.word := 'addrdvark';
+-- lexicon.word := 'addrdwolf';
+-- end add_entry;
+-- --ここまでネスト
+-- begin
+-- add_entry(lexicon);
+-- --dbms_output.put_line(word_list.word);--ネスト内の変数は参照できない
+-- dbms_output.put_line(lexicon.word);
+-- end wording;
+-- /
+
+--   declare
+--   type EmproRecTyp is record(
+--     emp_name varchar2(30),
+--     salary number(8,2));
+-- function highest_salary return EmproRecTyp is
+-- emp_info EmproRecTyp;
+-- cursor cur_emp_cursor is
+
+-- select ename, sal
+-- from emp
+-- where sal = 2500;
+-- --  (select MAX(sal) from emp);
+
+--   begin
+--   for emp_info in cur_emp_cursor
+--   loop
+--   return emp_info;
+--   end loop;
+--   end highest_salary;
+
+--   begin dbms_output.put_line('Emp: '|| highest_salary().emp_name||
+--     ' earns the highest salary of '||highest_salary().salary);
+--   end;
+-- /
+
+
+--   declare
+--   emp_name employee.last_name%type;
+--   emp_job employee.job_id%type;
+--   cursor cl is
+-- select last_name, job_id from employees
+-- where job_id like '%clerk%' and maneger_id > 120;
+--   begin
+--   for emp_name in cl loop
+--   dbms_output.put_line('name = '|| emp_name || ', Job = ' || emp_job);
+--   end loop;
+--   end;
+-- /
+
+--select * from dept where exists(select * from emp);
+--select * from emp where job = 'SALESMAN';
+
+--60
+ --  declare
+--   status varchar2(10) not null default 'true';
+--   net_value number := 555;
+--   done boolean;
+--   valid_id boolean := true;
+--   begin
+--   done := (net_value > 100);
+--   status := valid_id;
+--   end;
+-- /
+
+--61
+--decodeはplsqlで使えない？
+--12cでは使えるようだ
+--   declare
+--   v_sal number;
+--   v_name varchar2(30);
+--   v_tenure number;
+--   v_hire_date date;
+--   begin
+-- select avg(sal) into v_sal from emp;
+-- select hiredate
+-- --,ename
+--   ,decode(sal, 5900, ename,'NA')
+-- into v_hire_date, v_name
+-- from emp
+-- where empno = 7934;
+--  v_tenure := months_between(current_date, v_hire_date); 
+--   end;
+--   /
+
+--64
+-- set serveroutput on
+--   variable n1 number
+--   variable n2 number
+-- --create or replace procedure proc1
+-- --  (:n1 in out number, :n2 in out number)
+-- --  is
+--   begin
+--   :n1 := 20;
+--  -- dbms_output.put_line(:n1);
+--   :n2 := 30;
+--   --dbms_output.put_line(:n2);
+--   end;
+-- /
+
+
+
+--69
+-- SELECT * FROM ALL_DIRECTORIES ; 
+-- create or replace directory my_dir as 'C:\app\oracle';
+--   grant read on directory my_dir to public;
+
+-- create or replace procedure read_file1(dirname varchar2, txtfile varchar2) is
+--   f_file utl_file.file_type;
+--   v_buffer varchar2(200);
+--   begin
+--   f_file := utl_file.fopen(dirname,txtfile,'R');
+--   loop
+--   utl_file.get_line(f_file,v_buffer);
+-- dbms_output.put_line(v_buffer);
+--   end loop;
+-- --  EXCEPTION
+-- --  WHEN   NO_DATA_FOUND  THEN
+--   UTL_FILE.FCLOSE(f_file);
+--   end read_file1;
+--   /
+--   exec read_file1('MY_DIR','test.txt');
+
+--78
+ --  declare
+--   emp_num number(6) := 7934;
+--   salary  number;
+--   function increase (emp_num number)
+--   return number is
+--   inc_amt number;
+--   begin
+-- select sal into salary from emp where empno = emp_num;
+--   inc_amt := salary * .10;
+--   return inc_amt;
+--   end;
+--   procedure raise_salary (emp_id number) is
+--   amt number;
+--   begin
+--   amt := increase(emp_num);
+-- update emp set sal = sal + amt where empno = emp_id;
+--   end raise_salary;
+--   begin
+--   raise_salary(emp_num);
+--   commit;
+--   end;
+-- /
+
+--96
+set serveroutput on
+
+  declare
+  past_due EXCEPTION;
+  acct_num number;
+  begin
+  declare
+ -- past_due EXCEPTION;
+  acct_num number;
+  due_date date := sysdate - 1;
+  todays_date date := sysdate;
+  begin
+  if due_date < todays_date then
+  raise past_due;
+  end if;
+  end;
+  EXCEPTION
+  when past_due then
+  dbms_output.put_line('Handling Past_DUE exception.');
+  when others then
+  dbms_output.put_line('couuld not recognize exception');
+  end;
+/

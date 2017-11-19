@@ -1,0 +1,26 @@
+use strict;
+use warnings;
+
+#while(defined(my $line = <STDIN>)){
+#    print "I saw $line";
+#}
+# foreach(<STDIN>){
+#     print "I saw $_";
+# }
+my $user = 'thinkpad';
+my $days_to_die = 2016;
+printf "Hello, %s; your password expires in %d days!\n"
+    ,$user, $days_to_die;
+printf "%2d\n", 2e3;
+printf "%4d\n", 2e3;
+printf "%6d\n", 42;
+printf "%6d\n", 2e3;
+printf "%d\n", 42;
+
+printf "Monthly interest rate: %.2f%%\n",5.25/12;
+printf "Monthly interest rate: %.2f\\n",5.25/12;
+
+my @items = qw(wilma dino pebbles);
+printf "The items are:\n".("%10s\n" x @items), @items;
+
+

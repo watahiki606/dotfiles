@@ -1,0 +1,14 @@
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script type="text/javascript">
+ //className.html
+ //外部スタイルシートで定義されたスタイル(スタイルクラス)にアクセスするには
+ //classNameプロバティを使用する。
+ function changeStyle(elem, clazz){
+     //指定要素に対して、スタイルクラスclazzを適用する
+     elem.className = clazz;
+ }
+</script>
+
+<div onmouseover="changeStyle(this, 'highlight')"
+     onmouseout="changeStyle(this, 'normal)">
+    マウスを乗せると色が変わります。</div>

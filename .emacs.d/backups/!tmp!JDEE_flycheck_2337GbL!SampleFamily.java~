@@ -1,0 +1,14 @@
+abstract class SampleFamily {
+        public abstract int getInt();
+}
+class Child extends Sampl
+
+
+
+
+
+
+
+
+
+

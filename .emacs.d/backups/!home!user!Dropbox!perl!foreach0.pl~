@@ -1,0 +1,12 @@
+use strict;
+use warnings;
+
+my @name = ('hiroshi yuki','hanako sato','tomura ');
+foreach my $item(@name){
+    print "$item\n";
+}
+
+@name = ('hiroshi yuki','hanako sato','tomura ');
+foreach my $item(sort()@name){
+    print "$item\n";
+}

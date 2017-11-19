@@ -1,0 +1,19 @@
+#ハッシュのリファレンスを受け取り、キーと値を逆にして返すサブルーチン
+
+#サブルーチン実行前
+%hash = (
+    "太郎"=>"tarou",
+    "花子"=>"hanako",
+    "次郎"=>"jirou",
+);
+print "$key => $value\n" while(($key, $value) = each(%hash));
+
+&sub_hush(\%hash);
+
+sub sub_hush{
+    my($reference_hush) = @_;
+    foreach($key){
+    $reference_hush = reverse($$reference_hush{$key});        
+    }
+
+}

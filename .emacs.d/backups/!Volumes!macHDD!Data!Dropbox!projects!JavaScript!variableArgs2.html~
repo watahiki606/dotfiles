@@ -1,0 +1,16 @@
+<script>
+ function printf(format){
+     //引数の２番め以降を順番に処理
+     for (var i = 1; i < arguments.length; i++){
+         var pattern = new RegExp('\\{' + (i - 1) + '\\}', 'g');
+         format = format.replace(pattern,arguments[i]);
+     }
+     document.writeln(format);
+ }
+ printf('こんにちは、{0}さん。私は{1}です。', 'tanaka', 'yamada');
+</script>
+ 
+<script>
+ //printf()は第一引数で指定された書式文字列に含まれるプレイスホルダ（パラメータの置き場所:{1},{2},...）を第二引数以降の値で置き換えたものを出力する関数
+ printf('hello,{0} Im{1}','Jhon', 'Mary');
+</script>

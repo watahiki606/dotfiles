@@ -1,0 +1,14 @@
+public class Start {
+    int a;
+    int b;
+    int c;
+    int d;
+    String facebook;
+    String google;
+    String amazon;
+    String[] site;
+
+    public static void main(String args[]){
+	System.out.println("こんにちは");
+    }
+}

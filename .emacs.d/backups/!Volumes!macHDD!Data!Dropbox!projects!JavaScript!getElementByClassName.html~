@@ -1,0 +1,20 @@
+<script type="text/javascript">
+ //getElementByClassNameメソッドでclass属性をキーに要素を取得する。
+ //ページロード時に実行するイベントハンドラ
+ window.onload = function(){
+     //リンクリストを格納する配列
+     var result = [];
+     //「class="my"」である要素を取得
+     var list = document.getElementByClassName('my');
+     //リスト(NodeListオブジェクト)から順に要素を取り出し、そのhref属性を配列resultに格納
+     for(var i = 0; i < list.length; i++){
+         result.push(list.item(i).href);
+     }
+     //配列の内容を改行区切りで連結し、ダイアログ表示
+     window.alert(result.join('\n'));
+ }
+</script>
+
+<a href="http://www.wings.msn.to/" class="my">サーバーサイド技術の学び舎 -WINGS</a><br />
+<a href="http://www.web-deli.com/" class="my">WebDeli</a><br />
+<a href="http://www.atmarkit.co.jp/fdotnet/ajaxjs/index/">Ajax時代のJavaScriptプログラミング再入門</a><br />

@@ -1,0 +1,670 @@
+<p>Q1</p>
+<p>SIMULATION<br />On a Linux system with shadow passwords enabled, which file in the file system contains the password hashes<br />of all local users? (Specify the full name of the file, including path.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> /etc/shadow</span></p>
+<p>Q2</p>
+<p>Which of the following commands connects to the remote host example.com which has OpenSSH listening on<br />TCP port 2222? (Choose TWO correct answers.)</p>
+<p>A.<br /> ssh &ndash;port 2222 example.com</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> ssh -p 2222 example.com</font> </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> ssh -o Port=2222 example.com</font> </p>
+<p>D.<br /> ssh -o GatewayPort=2222 example.com </p>
+<p>E.<br /> ssh example.com:2222 <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q3</p>
+<p>Which of the following commands can be used to limit the amount of memory a user may use?</p>
+<p>A.<br /> umask</p>
+<p>B.<br /> usermod </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> ulimit</font> </p>
+<p>D.<br /> passwd </p>
+<p>E.<br /> chage <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q4</p>
+<p>What is a purpose of an SSH host key?A. It must be sent by any SSH client in addition to a user key in order to identify the client&rsquo;s host.</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> It provides the server&rsquo;s identity information to connecting SSH clients.</font></p>
+<p>C.<br /> It is the root key by which all user SSH keys must be signed.</p>
+<p>D.<br /> It authenticates any user that logs into a remote machine from the key&rsquo;s host.</p>
+<p>E.<br /> It is used by system services like cron, syslog or a backup job to automatically connect to remote hosts.</p>
+<p>Q5</p>
+<p>SIMULATION<br />Which directory holds the files that configure the xinetd service when using several configuration files instead of<br />an integrated configuration file? (Specify the full path to the directory.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> /etc/xinetd.d/ -or- /etc/xinetd.d</span></p>
+<p>Q6</p>
+<p>SIMULATION<br />Which file lists which users can execute commands using sudo? (Specify the full name of the file, including<br />path.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> /etc/sudoers</span></p>
+<p>Q7</p>
+<p>SIMULATION<br />Which file contains a set of services and hosts that will be allowed to connect to the server by going through a<br />TCP Wrapper program such as tcpd? (Specify the full name of the file, including path.)https://<br />lh3.googleusercontent.com/-5cd-clmKnbk/AAAAAAAAAAI/AAAAAAAAADM/-SXesH19Ido/s46-c-k-no/photo.jpg</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> /etc/hosts.allow</span></p>
+<p>Q8</p>
+<p>Which of the following commands preloads and manages keys that are used for automatic authentication while<br />logging in to other machines using SSH?</p>
+<p>A.<br /> sshd</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> ssh-agent</font> </p>
+<p>C.<br /> ssh-keygen </p>
+<p>D.<br /> ssh-add <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q9</p>
+<p>Which of the following find commands will print out a list of files owned by root and with the SUID bit set in /usr?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> find /usr -uid 0 -perm +4000</font></p>
+<p>B.<br /> find -user root +mode +s /usr </p>
+<p>C.<br /> find -type suid -username root -d /usr </p>
+<p>D.<br /> find /usr -ls \\*s\\* -u root </p>
+<p>E.<br /> find /usr -suid -perm +4000 <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q10</p>
+<p>Which configuration file would be edited to change default options for the OpenSSH server?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> /etc/ssh/sshd_config</font></p>
+<p>B.<br /> /etc/ssh/ssh </p>
+<p>C.<br /> /etc/ssh/server </p>
+<p>D.<br /> /etc/ssh/ssh_config </p>
+<p>E.<br /> /etc/ssh/ssh_server <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q11</p>
+<p>When trying to unmount a device it is reported as being busy. Which of the following commands could be used<br />to determine which process is causing this?</p>
+<p>A.<br /> debug</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> lsof</font> </p>
+<p>C.<br /> nessus </p>
+<p>D.<br /> strace </p>
+<p>E.<br /> traceroute <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q12</p>
+<p>Which command is used to set restrictions on the size of a core file that is created for a user when a program<br />crashes?</p>
+<p>A.<br /> core</p>
+<p>B.<br /> edquota </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> ulimit</font> </p>
+<p>D.<br /> quota <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q13</p>
+<p>Which of the following programs uses the hosts.allow file to perform its main task of checking for access<br />control restrictions to system services?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> tcpd</font></p>
+<p>B.<br /> inetd </p>
+<p>C.<br /> fingerd </p>
+<p>D.<br /> mountd </p>
+<p>E.<br /> xinetd <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q14</p>
+<p>SIMULATION<br />Which keyword must be listed in the hosts option of the Name Service Switch configuration file in order to make<br />host lookups consult the /etc/hosts file?</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> files</span></p>
+<p>Q15</p>
+<p>SIMULATION<br />In an xinetd configuration file, which attribute specifies the network address that will be used to provide the<br />service?</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> bind -or- interface</span></p>
+<p>Q16</p>
+<p>SIMULATION<br />What argument to the -type option of find will match files that are symbolic links? (Specify only the argument<br />and no other options or words.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> 1</span></p>
+<p>Q17</p>
+<p>SIMULATION<br />With X11 forwarding in ssh, what environment variable is automatically set in the remote host shell that is not<br />set when X11 forwarding is not enabled? (Specify only the environment variable without any additional<br />commands or values.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> DISPLAY -or- $DISPLAY</span></p>
+<p>Q18</p>
+<p>SIMULATION<br />The presence of what file will temporarily prevent all users except root from logging into the system? (Specify<br />the full name of the file, including path.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> /etc/nologin</span></p>
+<p>Q19</p>
+<p>Which configuration file would be edited to change the default options for outbound SSH sessions?</p>
+<p>A.<br /> /etc/ssh/sshd_config</p>
+<p>B.<br /> /etc/ssh/ssh </p>
+<p>C.<br /> /etc/ssh/client </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> /etc/ssh/ssh_config</font> </p>
+<p>E.<br /> /etc/ssh/ssh_client <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q20</p>
+<p>On a regular users workstation the route command takes a long time before printing out the routing table.<br />Which of the following errors does that indicate?</p>
+<p>A.<br /> The local routing information may be corrupted and must be re-validated using a routing protocol.</p>
+<p>B.<br /> One of the routers in the routing table is not available which causes the automatic router failure detection <br />mechanism (ARF-D) to wait for a timeout. </p>
+<p>C.<br /> There may accidentally be more than one default router in which case a default router election has to be <br />done on the network in order to choose one router as the default. </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> DNS resolution may not be working as route by default tries to resolve names of routers and destinations <br />and may run into a timeout.</font> <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q21</p>
+<p>Which of the following keywords can be used in the file /etc/resolv.conf? (Choose TWO correct answers.)</p>
+<p>A.<br /> substitute</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> nameserver</font> </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> search</font> </p>
+<p>D.<br /> lookup </p>
+<p>E.<br /> method <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q22</p>
+<p>Which of the following is a valid IPv6 address?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> 2001:db8:3241::1</font></p>
+<p>B.<br /> 2001::db8:4581::1 </p>
+<p>C.<br /> 2001:db8:0g41::1 </p>
+<p>D.<br /> 2001%db8%9990%%1 </p>
+<p>E.<br /> 2001.db8.819f..1 <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q23</p>
+<p>Given the following routing table:</p>
+<p><a href="//cdn.briefmenow.org/wp-content/uploads/102-400-v1/1.jpg"><img alt="" class="aligncenter size-full" src="//cdn.briefmenow.org/wp-content/uploads/102-400-v1/1.jpg" /></a></p>
+<p>How would an outgoing packet to the destination 192.168.2.150 be handled?</p>
+<p>A.<br /> It would be passed to the default router 192.168.178.1 on wlan0.</p>
+<p>B.<br /> It would be directly transmitted on the device eth0. </p>
+<p>C.<br /> It would be passed to the default router 255.255.255.0 on eth0. </p>
+<p>D.<br /> It would be directly transmitted on the device wlan0. </p>
+<p class="rightAnswer">E.<br /><font color="#333333"> It would be passed to the router 192.168.1.1 on eth0.</font> <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q24</p>
+<p>Which of the following programs can be used to determine the routing path to a given destination?</p>
+<p>A.<br /> dig</p>
+<p>B.<br /> netstat </p>
+<p>C.<br /> ping </p>
+<p>D.<br /> route </p>
+<p class="rightAnswer">E.<br /><font color="#333333"> traceroute</font> <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q25</p>
+<p>What of the following can be done by the command ifconfig? (Choose TWO correct answers.)</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> Set a network interface active or inactive.</font></p>
+<p>B.<br /> Specify the kernel module to be used with a network interface. </p>
+<p>C.<br /> Allow regular users to change the network configuration of a network interface. </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> Change the netmask used on a network interface.</font> </p>
+<p>E.<br /> Specify which network services are available on a network interface. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q26</p>
+<p>Which of the following tools used for DNS debugging, reports not only the response from the name server but<br />also details about the query?</p>
+<p>A.<br /> dnsq</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> dig</font> </p>
+<p>C.<br /> hostname </p>
+<p>D.<br /> dnslookup </p>
+<p>E.<br /> zoneinfo <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q27</p>
+<p>SIMULATION<br />Which command, depending on its options, can display the open network connections, the routing tables, as<br />well as network interface statistics. (Specify ONLY the command without any path or parameters.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> netstat -or- /bin/netstat -or- ss -or- /usr/bin/ss</span></p>
+<p>Q28</p>
+<p>SIMULATION<br />Which port is the default server port for the HTTPS protocol? (Specify the port number using digits.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> 443</span></p>
+<p>Q29</p>
+<p>Which of the following IPv4 networks are reserved by IANA for private address assignment and private routing?<br />(Choose THREE correct answers.)</p>
+<p>A.<br /> 127.0.0.0/8</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> 10.0.0.0/8</font> </p>
+<p>C.<br /> 169.255.0.0/16 </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> 172.16.0.0/12</font> </p>
+<p class="rightAnswer">E.<br /><font color="#333333"> 192.168.0.0/16</font> <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q30</p>
+<p>SIMULATION<br />What is the lowest numbered unprivileged TCP port? (Specify the number in digits only.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> 1024</span></p>
+<p>Q31</p>
+<p>Which of the following statements is valid in the file /etc/nsswitch.conf?</p>
+<p>A.<br /> multi on</p>
+<p>B.<br /> 192.168.168.4 dns-server </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> hosts: files dns</font> </p>
+<p>D.<br /> include /etc/nsswitch.d/ <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q32</p>
+<p>What is true regarding TCP port 23?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> Port 23 is the well known port for the telnet service which is a plain text protocol that should no longer be <br />used.</font></p>
+<p>B.<br /> Port 23 is the well known port for the SSH service which provides secure logins. </p>
+<p>C.<br /> Port 23 is the well known port for the rlogin service which is SSL secured by default. </p>
+<p>D.<br /> Port 23 is the well known port for the system login services which are encrypted when the user runs the <br />starttls command in his login shell. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q33</p>
+<p>Which of the following may occur as a consequence of using the command ifconfig? (Choose THREE correct<br />answers.)</p>
+<p>A.<br /> New name servers may be added to the resolver configuration.</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> Network interfaces may become active or inactive.</font> </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> The routing table may change.</font> </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> IP addresses may change.</font> </p>
+<p>E.<br /> The system&rsquo;s host name may change. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q34</p>
+<p>Which of the following keywords can be used in the file /etc/nsswitch.conf to specify a source for host name<br />lookups? (Choose TWO correct answers.)</p>
+<p>A.<br /> resolv</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> dns</font> </p>
+<p>C.<br /> remote </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> files</font> </p>
+<p>E.<br /> hosts <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q35</p>
+<p>Which of the following lines are valid in the file /etc/hosts? (Choose TWO correct answers.)</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> 2001:db8::15 www.example.com www</font></p>
+<p>B.<br /> www.example.com www 203.0.13.15 </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> 203.0.113.15 www.example.com www</font> </p>
+<p>D.<br /> www.example.com,www 203.0.13.15,2001:db8::15 </p>
+<p>E.<br /> 2003.0.113.15,2001:db8::15 www.example.com www <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q36</p>
+<p>SIMULATION<br />Which command is used to set the hostname of the local system? (Specify ONLY the command without any<br />path or parameters.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> hostname</span></p>
+<p>Q37</p>
+<p>SIMULATION<br />Which parameter must be passed to ifconfig to activate a previously inactive network interface? (Specify the<br />parameter only without any command, path or additional options)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> up</span></p>
+<p>Q38</p>
+<p>What is true regarding a default route?</p>
+<p>A.<br /> The default route is always used first. When the default route is not available more specific routes are tried.</p>
+<p>B.<br /> When a default route is set, all other routes are disabled until the default route is deleted. </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> The default route is only used if there is not a more specific route to a destination host or network.</font> </p>
+<p>D.<br /> Without a default route, no network communication even in directly attached networks is possible. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q39</p>
+<p>Which of the following is true about IPv6?</p>
+<p>A.<br /> With IPv6, the TCP port numbers of most services have changed.</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> IPv6 no longer supports broadcast addresses.</font> </p>
+<p>C.<br /> IPv4 addresses can be used without any change with IPv6. </p>
+<p>D.<br /> IPv6 no longer supports multicast addresses. </p>
+<p>E.<br /> For IPv6, UDP and TCP have been replaced by the Rapid Transmission Protocol RTP. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q40</p>
+<p>Which of the following commands can be used to display the local routing table? (Choose TWO correct<br />answers.)</p>
+<p>A.<br /> ifconfig</p>
+<p>B.<br /> dig </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> netstat</font> </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> route</font> </p>
+<p>E.<br /> trackroute <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q41</p>
+<p>Which of the following details is NOT provided in any output from the netstat utility?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> broadcast services</font></p>
+<p>B.<br /> interface statistics </p>
+<p>C.<br /> masquerading connections </p>
+<p>D.<br /> network connections </p>
+<p>E.<br /> routing tables <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q42</p>
+<p>SIMULATION<br />With IPv6, how many bits have been used for the interface identifier of an unicast address? (Specify the<br />number using digits only.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> 64</span></p>
+<p>Q43</p>
+<p>Which of the following commands will help identify a broken router between the local and the remote machine?</p>
+<p>A.<br /> ps</p>
+<p>B.<br /> netstat </p>
+<p>C.<br /> nslookup </p>
+<p>D.<br /> ifconfig </p>
+<p class="rightAnswer">E.<br /><font color="#333333"> traceroute</font> <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q44</p>
+<p>What is the purpose of the nsswitch.conf file?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> It is used to configure where the C library looks for system information such as host names and userpasswords.</font></p>
+<p>B.<br /> It is used to configure network protocol port numbers such as for HTTP or SMTP. </p>
+<p>C.<br /> It is used to configure LDAP authentication services for the local system. </p>
+<p>D.<br /> It is used to configure which network services will be turned on during the next system boot. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q45</p>
+<p>What is the command to delete the default gateway from the system IP routing table? (Choose TWO correct<br />answers.)</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> route del default</font></p>
+<p>B.<br /> ifconfig unset default </p>
+<p>C.<br /> netstat -r default </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> ip route del default</font> </p>
+<p>E.<br /> sysctl ipv4.default_gw=0 <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q46</p>
+<p>Which of the following commands is used to rotate, compress, and mail system logs?</p>
+<p>A.<br /> rotatelog</p>
+<p>B.<br /> striplog </p>
+<p>C.<br /> syslogd &ndash;rotate </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> logrotate</font> </p>
+<p>E.<br /> logger <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q47</p>
+<p>What is true regarding the file ~/.forward?</p>
+<p>A.<br /> As it is owned by the MTA and not writable by the user, it must be edited using the editaliases command.</p>
+<p>B.<br /> After editing ~/.forward the user must run newaliases to make the mail server aware of the changes. </p>
+<p>C.<br /> Using ~/.forward, root may configure any email address whereas all other users may configure only their <br />own addresses. </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> When configured correctly, ~/.forward can be used to forward each incoming mail to more than one other <br />recipient.</font> <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q48</p>
+<p>What is true about the ntpdate command?</p>
+<p>A.<br /> It is the primary management command for the NTP time server.</p>
+<p>B.<br /> It updates the local system&rsquo;s date (i.e. day, month and year) but not the time (i.e. hours, minutes, seconds). </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> It queries one or more NTP time servers and adjusts the system time accordingly.</font> </p>
+<p>D.<br /> It sends the local system time to one or many remote NTP time servers for redistribution. </p>
+<p>E.<br /> It can be used by any user to set the user clock independently of the system clock. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q49</p>
+<p>What entry can be added to the syslog.conf file to have all syslog messages generated by a system displayed<br />on console 12?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> *.* /dev/tty12</font></p>
+<p>B.<br /> /var/log/messages | /dev/tty12 </p>
+<p>C.<br /> | /dev/tty12 </p>
+<p>D.<br /> syslog tty12 </p>
+<p>E.<br /> mail.* /dev/tty12 <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q50</p>
+<p>SIMULATION<br />Which command is used to sync the hardware clock to the system clock? (Specify ONLY the command without<br />any path or parameters.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> hwclock -or- /sbin/hwclock -or- /usr/sbin/hwclock</span></p>
+<p>Q51</p>
+<p>SIMULATION<br />Which command, available with all MTAs, is used to list the contents of the MTA&rsquo;s mail queue? (Specify ONLY<br />the command without any path or parameters.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> mailq</span></p>
+<p>Q52</p>
+<p>SIMULATION<br />Please specify the top directory containing the configuration files for the CUPS printing system. (Specify the full<br />path to the directory.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> /etc/cups -or- /etc/cups/</span></p>
+<p>Q53</p>
+<p>Which of the following is a legacy program provided by CUPS for sending files to the printer queues on the<br />command line?</p>
+<p>A.<br /> lpd</p>
+<p>B.<br /> lpp </p>
+<p>C.<br /> lpq </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> lpr</font> <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q54</p>
+<p>Which of the following is observed and corrected by a NTP client?</p>
+<p>A.<br /> The skew in time between the system clock and the hardware clock.</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> The skew in time between the system clock and the reference clock.</font> </p>
+<p>C.<br /> Changes in the time zone of the current computer&rsquo;s location. </p>
+<p>D.<br /> Adjustments needed to support Daylight Saving Time. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q55</p>
+<p>Which of the following are commonly used Mail Transfer Agent (MTA) applications? (Choose THREE correct<br />answers.)</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> Postfix</font></p>
+<p>B.<br /> Procmail </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> Sendmail</font> </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> Exim</font> </p>
+<p>E.<br /> SMTPd <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q56</p>
+<p>Which of the following parameters are used for journalctl to limit the time frame of the output? (Choose TWO<br />correct answers.)</p>
+<p>A.<br /> &ndash;from=</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> &ndash;since=</font> </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> &ndash;until=</font> </p>
+<p>D.<br /> &ndash;upto= </p>
+<p>E.<br /> &ndash;date= <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q57</p>
+<p>SIMULATION<br />After adding a new email alias to the configuration, which command must be run in order to ensure the MTA<br />knows about it? (Specify the command without any path but including all required parameters.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> newaliases -or- sendmail -bi</span></p>
+<p>Q58</p>
+<p>Why is the correct configuration of a system&rsquo;s time zone important?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> Because the conversion of Unix timestamps to local time relies on the time zone configuration.</font></p>
+<p>B.<br /> Because the time zone is saved as part of the modification times of files and cannot be changed after a file <br />is created. </p>
+<p>C.<br /> Because the environment variables LANG and LC_MESSAGES are, by default, set according to the time <br />zone. </p>
+<p>D.<br /> Because NTP chooses servers nearby based on the configured time zone. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q59</p>
+<p>What is true regarding the command sendmail?</p>
+<p>A.<br /> With any MTA, the sendmail command must be run periodically by the cron daemon.</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> All MTAs, including Postfix and Exim, provide a sendmail command.</font> </p>
+<p>C.<br /> The sendmail command prints the MTAs queue history of which mails have been sent successfully. </p>
+<p>D.<br /> It is only available when the sendmail MTA is installed. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q60</p>
+<p>Which file inside the CUPS configuration directory contains the definition of the printers?</p>
+<p>A.<br /> cups-devices.conf</p>
+<p>B.<br /> snmp.conf </p>
+<p>C.<br /> printcap.conf </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> printers.conf</font> </p>
+<p>E.<br /> cupsd.conf <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q61</p>
+<p>What is the purpose of the command mailq?</p>
+<p>A.<br /> It fetches new emails from a remote server using POP3 or IMAP.</p>
+<p>B.<br /> It is a multi-user mailing list manager. </p>
+<p>C.<br /> It is a proprietary tool contained only in the qmail MTA. </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> It queries the mail queue of the local MTA.</font> </p>
+<p>E.<br /> It is a command-line based tool for reading and writing emails. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q62</p>
+<p>Which of the following are syslog facilities? (Choose TWO correct answers.)</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> local7</font></p>
+<p class="rightAnswer">B.<br /><font color="#333333"> mail</font> </p>
+<p>C.<br /> advanced </p>
+<p>D.<br /> postmaster </p>
+<p>E.<br /> remote <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q63</p>
+<p>SIMULATION<br />Which option in the /etc/ntp.conf file specifies an external NTP source to be queried for time information?<br />(Specify ONLY the option without any values or parameters.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> server</span></p>
+<p>Q64</p>
+<p>SIMULATION<br />After configuring printing on a Linux server, the administrator sends a test file to one of the printers and it fails<br />to print. What command can be used to display the status of the printer&rsquo;s queue? (Specify ONLY the command<br />without any path or parameters.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> lpq</span></p>
+<p>Q65</p>
+<p>Which of the following tasks can be accomplished using the command date? (Choose TWO correct answers.)</p>
+<p>A.<br /> Synchronize the hardware and system clocks.</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> Output date and time in different formats.</font> </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> Set the system clock.</font> </p>
+<p>D.<br /> Set the hardware clock. </p>
+<p>E.<br /> Update the time via NTP. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q66</p>
+<p>Which of the following fields can be found in the /etc/group file? (Choose THREE correct answers.)</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> The list of users that belong to the group.</font></p>
+<p>B.<br /> The home directory of the group. </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> The name of the group.</font> </p>
+<p>D.<br /> The description of the group. </p>
+<p class="rightAnswer">E.<br /><font color="#333333"> The password of the group.</font> <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q67</p>
+<p>What is true regarding the command userdel &ndash;force &ndash;remove bob? (Choose TWO correct answers.)</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> The user bob is removed from the system&rsquo;s user database.</font></p>
+<p class="rightAnswer">B.<br /><font color="#333333"> The user bob&rsquo;s home directory is removed.</font> </p>
+<p>C.<br /> The locate database is updated to drop files owned by bob. </p>
+<p>D.<br /> All files owned by bob are remove from all mounted filesystems. </p>
+<p>E.<br /> In case bob was the last member of a group, that group is deleted. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q68</p>
+<p>What is true about the file /etc/localtime?</p>
+<p>A.<br /> It is a plain text file containing a string such as Europe/Berlin.</p>
+<p>B.<br /> It is created and maintained by the NTP service based on the geolocation of the system&rsquo;s IP address. </p>
+<p>C.<br /> It is a symlink to /sys/device/clock/ltime and always contains the current local time. </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> It is either a symlink to or a copy of a timezone information file such as /usr/share/zoneinfo/Europe/Berlin.</font> <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q69</p>
+<p>SIMULATION<br />Which command is used to add an empty group to the system? (Specify ONLY the command without any path<br />or parameters.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> groupadd -or- /usr/sbin/groupadd</span></p>
+<p>Q70</p>
+<p>What is NOT contained in the locale setting of the operating system?</p>
+<p>A.<br /> currency symbol</p>
+<p>B.<br /> language </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> timezone</font> </p>
+<p>D.<br /> thousands separator <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q71</p>
+<p>SIMULATION<br />In which file, if present, must all users be listed that are allowed to use the cron scheduling system? (Specify<br />the full name of the file, including path.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> /etc/cron.allow</span></p>
+<p>Q72</p>
+<p>Which commands can be used to change a user&rsquo;s account aging information? (Choose THREE correct<br />answers.)</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> usermod</font></p>
+<p class="rightAnswer">B.<br /><font color="#333333"> passwd</font> </p>
+<p>C.<br /> chattr </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> chage</font> </p>
+<p>E.<br /> chsh <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q73</p>
+<p>Which of the following commands should be added to /etc/bash_profile in order to change the language of<br />messages for an internationalized program to Portuguese (pt)?</p>
+<p>A.<br /> export LANGUAGE=&rdquo;pt&rdquo;</p>
+<p>B.<br /> export MESSAGE=&rdquo;pt&rdquo; </p>
+<p>C.<br /> export UI_MESSAGES=&rdquo;pt&rdquo; </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> export LC_MESSAGES=&rdquo;pt&rdquo;</font> </p>
+<p>E.<br /> export ALL_MESSAGES=&rdquo;pt&rdquo; <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q74</p>
+<p>Which of the following files assigns a user to its primary group?</p>
+<p>A.<br /> /etc/pgroup</p>
+<p>B.<br /> /etc/shadow </p>
+<p>C.<br /> /etc/group </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> /etc/passwd</font> </p>
+<p>E.<br /> /etc/gshadow <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q75</p>
+<p>Which of the following crontab entries will execute myscript at 30 minutes past every hour on Sundays?</p>
+<p>A.<br /> 0 * * * 30 myscript</p>
+<p>B.<br /> 30 * * * 6 myscript </p>
+<p>C.<br /> 30 0 * * 0 myscript </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> 30 0-23 * * 0 myscript</font> </p>
+<p>E.<br /> 0 0-23 * * 30 myscript <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q76</p>
+<p>To prevent a specific user from scheduling tasks with at, what should the administrator do?</p>
+<p>A.<br /> Add the specific user to /etc/at.allow file.</p>
+<p>B.<br /> Add the specific user to [deny] section in the /etc/atd.conf file. </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> Add the specific user to /etc/at.deny file.</font> </p>
+<p>D.<br /> Add the specific user to nojobs group. </p>
+<p>E.<br /> Run the following: atd &ndash;deny [user]. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q77</p>
+<p>SIMULATION<br />Which environment variable should be set in order to change the time zone for the commands run from within<br />the environment variable&rsquo;s scope? (Specify the variable name only.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> TZ</span></p>
+<p>Q78</p>
+<p>Each entry in a crontab must end with what character?</p>
+<p>A.<br /> Tab</p>
+<p>B.<br /> Space </p>
+<p>C.<br /> Backslash </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> Newline</font> <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q79</p>
+<p>Which file contains the date of the last change of a user&rsquo;s password?</p>
+<p>A.<br /> /etc/gshadow</p>
+<p>B.<br /> /etc/passwd </p>
+<p>C.<br /> /etc/pwdlog </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> /etc/shadow</font> </p>
+<p>E.<br /> /var/log/shadow <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q80</p>
+<p>Where are user specific crontabs stored?</p>
+<p>A.<br /> In the database file /etc/crontab.db which is shared by all users.</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> As individual per-user files within /var/spool/cron.</font> </p>
+<p>C.<br /> As individual per-user files in /etc/cron.user.d. </p>
+<p>D.<br /> In the .crontab file in the user&rsquo;s home directory. </p>
+<p>E.<br /> In the file /var/cron/user-crontab which is shared by all users. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q81</p>
+<p>Which of the following commands can remove a user from a group?</p>
+<p>A.<br /> grouprm</p>
+<p>B.<br /> groupmod </p>
+<p>C.<br /> passwd </p>
+<p>D.<br /> usergroups </p>
+<p class="rightAnswer">E.<br /><font color="#333333"> usermod <br /> </font> <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q82</p>
+<p>In case neither cron.allow nor cron.deny exist in /etc/, which of the following is true?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> Without additional configuration, no users may have user specific crontabs.</font></p>
+<p>B.<br /> Without additional configuration, all users may have user specific crontabs. </p>
+<p>C.<br /> The cron daemon will refuse to start and report missing files in the system&rsquo;s logfile. </p>
+<p>D.<br /> When a user creates a user specific crontab the system administrator must approve it explicitly. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q83</p>
+<p>What is the purpose of the iconv command?</p>
+<p>A.<br /> It converts bitmap images from one format to another such as PNG to JPEG.</p>
+<p>B.<br /> It verifies that the root directory tree complies to all conventions from the Filesystem Hierarchy Standard <br />(FHS). </p>
+<p>C.<br /> It displays additional meta information from icon files ending in .ico. </p>
+<p>D.<br /> It changes the mode of an inode in the ext4 file system. </p>
+<p class="rightAnswer">E.<br /><font color="#333333"> It converts files from one character encoding to another.</font> <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q84</p>
+<p>Which command can be used to delete a group from a Linux system?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> groupdel</font></p>
+<p>B.<br /> groupmod </p>
+<p>C.<br /> groups </p>
+<p>D.<br /> groupedit <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q85</p>
+<p>SIMULATION<br />The system&rsquo;s timezone may be set by linking /etc/localtime to an appropriate file in which directory? (Provide<br />the full path to the directory, without any country information)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> /usr/share/zoneinfo/</span></p>
+<p>Q86</p>
+<p>Which of the following fields are available in both the global /etc/crontab file as well as in user-specific crontab<br />files? (Select TWO correct answers)</p>
+<p>A.<br /> Year</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> Minute</font> </p>
+<p>C.<br /> Username </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> Command</font> <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q87</p>
+<p>SIMULATION<br />Which file specifies the user accounts that can NOT submit jobs via at or batch? (Provide the full path and<br />filename)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> /etc/at.deny</span></p>
+<p>Q88</p>
+<p>Which character in the password field of /etc/passwd is used to indicate that the encrypted password is stored<br />in /etc/shadow?</p>
+<p>A.<br /> *</p>
+<p>B.<br /> &ndash; </p>
+<p>C.<br /> s </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> x</font> <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q89</p>
+<p>Which of the following steps prevents a user from obtaining an interactive login session?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> Run the command chsh -s /bin/false with the user name.</font></p>
+<p>B.<br /> Set the UID for the user to 0. </p>
+<p>C.<br /> Remove the user from the group staff. </p>
+<p>D.<br /> Add the user to /etc/noaccess. </p>
+<p>E.<br /> Create a .nologin file in the user&rsquo;s home directory. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q90</p>
+<p>SIMULATION<br />What is the name of the simple graphical login manager that comes with a vanilla X11 installation? (Specify<br />ONLY the command without any path or parameters.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> xdm</span></p>
+<p>Q91</p>
+<p>Which of the following are tasks handled by a display manager like XDM or KDM? (Choose TWO correct<br />answers.)</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> Start and prepare the desktop environment for the user.</font></p>
+<p>B.<br /> Configure additional devices like new monitors or projectors when they are attached. </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> Handle the login of a user.</font> </p>
+<p>D.<br /> Lock the screen when the user was inactive for a configurable amount of time. </p>
+<p>E.<br /> Create an X11 configuration file for the current graphic devices and monitors. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q92</p>
+<p>For accessibility assistance, which of the following programs is an on-screen keyboard?</p>
+<p>A.<br /> xkb</p>
+<p>B.<br /> atkb </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> GOK</font> </p>
+<p>D.<br /> xOSK <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q93</p>
+<p>SIMULATION<br />What is the default name of the configuration file for the Xorg X11 server? (Specify the file name only without<br />any path.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> xorg.conf</span></p>
+<p>Q94</p>
+<p>Which of the following commands shows the current color depth of the X Server?</p>
+<p>A.<br /> xcd</p>
+<p>B.<br /> xcdepth </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> xwininfo</font> </p>
+<p>D.<br /> xcolordepth </p>
+<p>E.<br /> cat /etc/X11 <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q95</p>
+<p>How is a display manager started?</p>
+<p>A.<br /> It is started by a user using the command startx.</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> It is started like any other system service by the init system.</font> </p>
+<p>C.<br /> It is started by inetd when a remote hosts connects to the X11 port. </p>
+<p>D.<br /> It is started automatically when a X11 user logs in to the system console. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q96</p>
+<p>What is the purpose of a screen reader?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> It reads text displayed on the screen to blind or visually impaired people.</font></p>
+<p>B.<br /> It reads the parameters of the attached monitors and creates an appropriate X11 configuration. </p>
+<p>C.<br /> It displays lines and markers to help people use speed reading techniques. </p>
+<p>D.<br /> It manages and displays files that contain e-books. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q97</p>
+<p>SIMULATION<br />Which command can be used to investigate the properties for a particular window in X by clicking that window?<br />(Specify ONLY the command without any path or parameters.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> /usr/bin/xwininfo -or- xwininfo</span></p>
+<p>Q98</p>
+<p>The X11 configuration file xorg.conf is grouped into sections. How is the content of the section SectionName<br />associated with that section?</p>
+<p>A.<br /> It is placed in curly brackets as in Section SectionName { &hellip; }.</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> It is placed between a line containing Section &ldquo;SectionName&rdquo; and a line containing EndSection.</font> </p>
+<p>C.<br /> It is placed between the tags &lt;Section name=&rdquo;SectionName&rdquo;&gt; and &lt;/Section&gt; </p>
+<p>D.<br /> It is placed after the row [SectionName]. </p>
+<p>E.<br /> It is placed after an initial unindented Section &ldquo;SectionName&rdquo; and must be indented by exactly one tab <br />character. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q99</p>
+<p>Which file used by XDM specifies the default wallpaper?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> /etc/X11/xdm/Xsetup</font></p>
+<p>B.<br /> /etc/X11/xdm.conf </p>
+<p>C.<br /> /etc/X11/xdm/Defaults </p>
+<p>D.<br /> /etc/X11/defaults.conf <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q100</p>
+<p>SIMULATION<br />What command displays all aliases defined in the current shell? (Specify the command without any path<br />information)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> alias -or- alias -p</span></p>
+<p>Q101</p>
+<p>Which of the following are requirements in order to run a shell script like a regular command from anywhere in<br />the filesystem? (Choose THREE correct answers.)</p>
+<p>A.<br /> The user issuing the command must be in the group script.</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> The script file must be found in the $PATH.</font> </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> The script file must have the executable permission bit set.</font> </p>
+<p class="rightAnswer">D.<br /><font color="#333333"> The script must begin with a shebang-line (#!) that points to the correct interpreter.</font> </p>
+<p>E.<br /> The file system on which the script resides must be mounted with the option scripts. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q102</p>
+<p>What is the purpose of the file /etc/profile?</p>
+<p>A.<br /> It contains the welcome message that is displayed after login.</p>
+<p>B.<br /> It contains security profiles defining which users are allowed to log in. </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> It contains environment variables that are set when a user logs in.</font> </p>
+<p>D.<br /> It contains default application profiles for users that run an application for the first time. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q103</p>
+<p>Which of the following SQL queries counts the number of occurrences for each value of the field order_type in<br />the table orders?</p>
+<p>A.<br /> SELECT order_type,COUNT(*) FROM orders WHERE order_type=order_type;</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> SELECT order_type,COUNT(*) FROM orders GROUP BY order_type;</font> </p>
+<p>C.<br /> COUNT(SELECT order_type FROM orders); </p>
+<p>D.<br /> SELECT COUNT(*) FROM orders ORDER BY order_type; </p>
+<p>E.<br /> SELECT AUTO_COUNT FROM orders COUNT order_type; <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q104</p>
+<p>Which of the following commands lists all defined variables and functions within Bash?</p>
+<p>A.<br /> env</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> set</font> </p>
+<p>C.<br /> env -a </p>
+<p>D.<br /> echo $ENV <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q105</p>
+<p>Which of the following words is used to restrict the records that are returned from a SELECT SQL query based<br />on a supplied criteria for the values in the records?</p>
+<p>A.<br /> CASE</p>
+<p>B.<br /> FROM </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> WHERE</font> </p>
+<p>D.<br /> IF <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q106</p>
+<p>What output will the following command produce?<br />seq 1 5 20</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> 1 <br />61116</font></p>
+<p>B.<br /> 1 <br />5 <br />10 <br />15 </p>
+<p>C.<br /> 1 <br />234 </p>
+<p>D.<br /> 2 <br />345 </p>
+<p>E.<br /> 5 <br />10 <br />15 <br />20 <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q107</p>
+<p>When the command echo $$ outputs 12942, what is the meaning of 12942?</p>
+<p>A.<br /> It is the process ID of the echo command.</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> It is the process ID of the current shell.</font> </p>
+<p>C.<br /> It is the process ID of the last command executed. </p>
+<p>D.<br /> It is the process ID of the last command which has been placed in the background. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q108</p>
+<p>How can the existing environment variable FOOBAR be suppressed for the execution of the script./myscript<br />only?</p>
+<p>A.<br /> unset -v FOOBAR;./myscript</p>
+<p>B.<br /> set -a FOOBAR=&rdquo;&rdquo;;./myscript </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> env -u FOOBAR./myscript</font> </p>
+<p>D.<br /> env -i FOOBAR./myscript <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q109</p>
+<p>What is the difference between the commands test -e path and test -f path?</p>
+<p>A.<br /> They are equivalent options with the same behaviour.</p>
+<p>B.<br /> The -f option tests for a regular file. The -e option tests for an empty file. </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> Both options check the existence of the path. The -f option also confirms that it is a regular file.</font> </p>
+<p>D.<br /> The -f option tests for a regular file. The -e option tests for an executable file. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q110</p>
+<p>Which of the following files, when existing, affect the behavior of the Bash shell? (Choose TWO correct<br />answers.)</p>
+<p>A.<br /> ~/.bashconf</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> ~/.bashrc</font> </p>
+<p>C.<br /> ~/.bashdefaults </p>
+<p>D.<br /> ~/.bash_etc </p>
+<p class="rightAnswer">E.<br /><font color="#333333"> ~/.bash_profile</font> <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q111</p>
+<p>What is the purpose of the nsswitch.conf file?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> It is used to configure where the C library looks for system information such as host names and userpasswords.</font></p>
+<p>B.<br /> It is used to configure network protocol port numbers such as for HTTP or SMTP. </p>
+<p>C.<br /> It is used to configure LDAP authentication services for the local system. </p>
+<p>D.<br /> It is used to configure which network services will be turned on during the next system boot. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q112</p>
+<p>SIMULATION<br />By default, the contents of which directory will be copied to a new user&rsquo;s home directory when the account is<br />created by passing the -m option to the useradd command? (Specify the full path to the directory.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> /etc/skel</span></p>
+<p>Q113</p>
+<p>SIMULATION<br />What word is missing from the following SQL statement?<br />__________ count(*) from tablename;<br />(Please specify the missing word using lower-case letters only.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> select</span></p>
+<p>Q114</p>
+<p>After issuing:function myfunction { echo $1 $2 ; }<br />in Bash, which output does:<br />myfunction A B C<br />Produce?</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> A B</font></p>
+<p>B.<br /> A B C </p>
+<p>C.<br /> A C </p>
+<p>D.<br /> B C </p>
+<p>E.<br /> C B A <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q115</p>
+<p>What output will the command seq 10 produce?</p>
+<p>A.<br /> A continuous stream of numbers increasing in increments of 10 until stopped.</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> The numbers 1 through 10 with one number per line.</font> </p>
+<p>C.<br /> The numbers 0 through 9 with one number per line. </p>
+<p>D.<br /> The number 10 to standard output. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q116</p>
+<p>SIMULATION<br />What word is missing from the following SQL statement?<br />insert into tablename ________(909, &lsquo;text&rsquo;);<br />(Please specify the missing word using lower-case letters only.)</p>
+<p class="rightAnswer">Answer: <span style="color:#333333"> VALUES -or- values</span></p>
+<p>Q117</p>
+<p>Which command makes the shell variable named VARIABLE visible to subshells?</p>
+<p>A.<br /> export $VARIABLE</p>
+<p class="rightAnswer">B.<br /><font color="#333333"> export VARIABLE</font> </p>
+<p>C.<br /> set $VARIABLE </p>
+<p>D.<br /> set VARIABLE </p>
+<p>E.<br /> env VARIABLE <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q118</p>
+<p>When the command echo $ outputs 1, which of the following statements is true?</p>
+<p>A.<br /> It is the process ID of the echo command.</p>
+<p>B.<br /> It is the process ID of the current shell. </p>
+<p class="rightAnswer">C.<br /><font color="#333333"> It is the exit value of the command executed immediately before echo.</font> </p>
+<p>D.<br /> It is the exit value of the echo command. <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>
+<p>Q119</p>
+<p>What output will the following command sequence produce?<br />echo &lsquo;1 2 3 4 5 6&rsquo; | while read a b c; do<br />echo result: $c $b $a;<br />done</p>
+<p class="rightAnswer">A.<br /><font color="#333333"> result: 3 4 5 6 2 1</font></p>
+<p>B.<br /> result: 1 2 3 4 5 6 </p>
+<p>C.<br /> result: 6 5 4 </p>
+<p>D.<br /> result: 6 5 4 3 2 1 </p>
+<p>E.<br /> result: 3 2 1 <span class="itempropwp-wrap" itemscope="itemscope" itemtype="http://schema.org/Article"></span></p>

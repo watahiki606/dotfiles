@@ -1,0 +1,22 @@
+<script type="text/javascript">
+ //特定の条件下でのみある要素を入力可能、または不可能にしたい場合に利用するdisabledプロパティ
+ function process(){
+     var fmt = document.fm.fmt;
+     //ラジオボタン"fmt"を順に走査し、有効/無効を切り替え
+     for(var i = 0; i < fmt.length; i++){
+         //チェクボックスが非チェック状態(checkプロパティがfalse)の場合にラジオボタンを無効化
+         fmt[i].disabled = !document.fm.need.checked;
+     }
+ }
+</script>
+
+<form name="fm">
+    <label>
+        メールニュースの送信を希望：
+        <input type="checkbox" name ="need" value="1"
+               checked="checked" onclick="process()"/>
+    </label>
+    <br />
+    <label><input type="radio" name="fmt" value="plain"/>プレーン形式</label>
+    <label><input type="radio" name="fmt" value="html"/>HTML形式</label>
+</form>

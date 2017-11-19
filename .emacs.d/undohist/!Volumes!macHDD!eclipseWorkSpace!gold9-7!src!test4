@@ -1,0 +1,16 @@
+
+((digest . "86985e105f79b95d6bc918fb45ec7727") (undo-list nil (1 . 6) nil ("import java.io.*;
+import java.nio.file.*;
+
+public class Test {
+	public static void main(String[] args) {
+		Path p1 = Paths.get(\"/Volumes/macHDD/eclipseWorkSpace/gold9-7/src/Test.java\");
+		Path p2 = Paths.get(\"/Volumes/macHDD/eclipseWorkSpace/gold9-7/src/test2\");
+		try {
+			Files.copy(p1, p2);
+
+		} catch (IOException e) {
+			System.out.println(e);
+		}
+	}
+}" . 1) ((marker) . -18) ((marker) . -18) ((marker) . -42) ((marker) . -42) ((marker) . -43) ((marker) . -43) ((marker) . -63) ((marker) . -63) ((marker) . -105) ((marker) . -105) ((marker) . -186) ((marker) . -186) ((marker) . -263) ((marker) . -263) ((marker) . -271) ((marker) . -271) ((marker) . -294) ((marker) . -294) ((marker) . -295) ((marker) . -295) ((marker) . -323) ((marker) . -323) ((marker) . -349) ((marker) . -349) ((marker) . -353) ((marker) . -353) ((marker) . -356) ((marker) . -356) ((marker . 1) . -357) ((marker) . -357) nil ("w" . -1) nil (1 . 2) (t 22614 7090 0 0)))

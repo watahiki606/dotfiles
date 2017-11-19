@@ -1,0 +1,13 @@
+#joinを使って配列の要素を合成する
+#配列の各要素を文字「、」で区切って表示する。
+print "文字列を入力してください：";
+$string = <STDIN>;
+chomp($string);
+
+#スペース文字で区切る
+@words = split(/\s+/, $string);
+
+#各要素の間に,を入れて表示
+print join(",", @words), "\n";
+
+

@@ -1,0 +1,10 @@
+import java.util.*;
+import java.text.*;
+
+class Tet1211{
+        public static void main(String[] args) {
+                DateFormat df;
+                df = DateFromat.getDateInstance(DateFromat.DEFAULT, Locale.US);
+                System.out.println(df.format(new Date()));
+        }
+}

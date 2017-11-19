@@ -1,0 +1,32 @@
+<script type="text/javascript">
+    function getList(elem){
+    var result = '';
+    //配列を順番に走査し、選択状態を確認
+        for(var i = 0; i < elem.options.lentgh; i++){
+            //選択状態にあるものが見つかったら、変数resultにその値を追加
+            if(elem.option[i].selected){
+                result += elem.options[i].value + ',';
+            }
+        }
+        return result;
+    }
+
+ function show(){
+     window.alert(getList(document.fm.food));
+     return false;
+ }
+</script>
+
+<form name="fm" onsubmit="return show()">
+    一番好きな食べ物は？
+    <select name="food" multiple="multiple" size="4">
+        <option value="ラーメン">ラーメン</option>
+        <option value="餃子">餃子</option>
+        <option value="焼肉">焼肉</option>
+        <option value="そば">そば</option>
+        <option value="ピザ">ピザ</option>
+        <option value="うどん">うどん</option>
+    </select>
+    <input type="submit" value="送信"/>
+</form>
+    

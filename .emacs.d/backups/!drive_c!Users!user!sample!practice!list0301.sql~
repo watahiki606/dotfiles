@@ -1,0 +1,10 @@
+declare
+var number := 10;
+begin
+if var = 10 then
+DBMS_OUTPUT.PUT_LINE('値は１０');
+else
+DBMS_OUTPUT.PUT_LINE('値は10以外');
+end if;
+end;
+\

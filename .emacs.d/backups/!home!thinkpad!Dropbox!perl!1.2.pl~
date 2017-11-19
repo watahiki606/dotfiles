@@ -1,0 +1,15 @@
+use strict;
+use warnings;
+
+print 12340000;
+print "\n";
+print 12_340_000;
+print "\n";
+print 0xbc4b20;
+print "\n";
+print 0b1011_1100_0100_1011_0010_0000;
+print "\n";
+print 057045440;
+print "\n";
+print 1234e4;
+print "\n";

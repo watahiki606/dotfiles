@@ -1,0 +1,184 @@
+;; Object util/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "util/"
+  :tables
+  (list
+    (semanticdb-table "Trees.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("com.sun.source.util" package nil nil [218 246])
+            ("java.lang.reflect.Method" include nil nil [248 280])
+            ("javax.annotation.processing.ProcessingEnvironment" include nil nil [282 339])
+            ("javax.lang.model.element.AnnotationMirror" include nil nil [340 389])
+            ("javax.lang.model.element.AnnotationValue" include nil nil [390 438])
+            ("javax.lang.model.element.Element" include nil nil [439 479])
+            ("javax.lang.model.element.ExecutableElement" include nil nil [480 530])
+            ("javax.lang.model.element.TypeElement" include nil nil [531 575])
+            ("javax.lang.model.type.DeclaredType" include nil nil [576 618])
+            ("javax.lang.model.type.ErrorType" include nil nil [619 658])
+            ("javax.lang.model.type.TypeMirror" include nil nil [659 699])
+            ("javax.tools.Diagnostic" include nil nil [700 730])
+            ("javax.tools.JavaCompiler.CompilationTask" include nil nil [731 779])
+            ("com.sun.source.tree.CatchTree" include nil nil [781 818])
+            ("com.sun.source.tree.ClassTree" include nil nil [819 856])
+            ("com.sun.source.tree.CompilationUnitTree" include nil nil [857 904])
+            ("com.sun.source.tree.MethodTree" include nil nil [905 943])
+            ("com.sun.source.tree.Scope" include nil nil [944 977])
+            ("com.sun.source.tree.Tree" include nil nil [978 1010])
+            ("Trees" type
+               (:typemodifiers ("public" "abstract")
+                :members 
+                  ( ("instance" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("task" variable (:type "CompilationTask") (reparse-symbol formal_parameters) [1413 1433]))                          
+                        :type "Trees")
+                        (reparse-symbol class_member_declaration) [1384 1768])
+                    ("instance" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("env" variable (:type "ProcessingEnvironment") (reparse-symbol formal_parameters) [2043 2068]))                          
+                        :type "Trees")
+                        (reparse-symbol class_member_declaration) [2014 2298])
+                    ("getJavacTrees" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("" variable (:type "argType") (reparse-symbol formal_parameters) [2340 2347])
+                            ("arg" variable (:type "Object") (reparse-symbol formal_parameters) [2349 2359]))                          
+                        :type "Trees")
+                        (reparse-symbol class_member_declaration) [2304 2824])
+                    ("getSourcePositions" function
+                       (:typemodifiers ("public" "abstract")
+                        :type "SourcePositions")
+                        (reparse-symbol class_member_declaration) [2907 2960])
+                    ("getTree" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("element" variable (:type "Element") (reparse-symbol formal_parameters) [3108 3123]))                          
+                        :type "Tree")
+                        (reparse-symbol class_member_declaration) [3079 3125])
+                    ("getTree" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("element" variable (:type "TypeElement") (reparse-symbol formal_parameters) [3287 3306]))                          
+                        :type "ClassTree")
+                        (reparse-symbol class_member_declaration) [3253 3308])
+                    ("getTree" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("method" variable (:type "ExecutableElement") (reparse-symbol formal_parameters) [3478 3502]))                          
+                        :type "MethodTree")
+                        (reparse-symbol class_member_declaration) [3443 3504])
+                    ("getTree" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("e" variable (:type "Element") (reparse-symbol formal_parameters) [3675 3684])
+                            ("a" variable (:type "AnnotationMirror") (reparse-symbol formal_parameters) [3686 3704]))                          
+                        :type "Tree")
+                        (reparse-symbol class_member_declaration) [3646 3706])
+                    ("getTree" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("e" variable (:type "Element") (reparse-symbol formal_parameters) [3900 3909])
+                            ("a" variable (:type "AnnotationMirror") (reparse-symbol formal_parameters) [3911 3929])
+                            ("v" variable (:type "AnnotationValue") (reparse-symbol formal_parameters) [3931 3948]))                          
+                        :type "Tree")
+                        (reparse-symbol class_member_declaration) [3871 3950])
+                    ("getPath" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("unit" variable (:type "CompilationUnitTree") (reparse-symbol formal_parameters) [4078 4102])
+                            ("node" variable (:type "Tree") (reparse-symbol formal_parameters) [4104 4113]))                          
+                        :type "TreePath")
+                        (reparse-symbol class_member_declaration) [4045 4115])
+                    ("getPath" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("e" variable (:type "Element") (reparse-symbol formal_parameters) [4271 4280]))                          
+                        :type "TreePath")
+                        (reparse-symbol class_member_declaration) [4238 4282])
+                    ("getPath" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("e" variable (:type "Element") (reparse-symbol formal_parameters) [4461 4470])
+                            ("a" variable (:type "AnnotationMirror") (reparse-symbol formal_parameters) [4472 4490]))                          
+                        :type "TreePath")
+                        (reparse-symbol class_member_declaration) [4428 4492])
+                    ("getPath" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("e" variable (:type "Element") (reparse-symbol formal_parameters) [4694 4703])
+                            ("a" variable (:type "AnnotationMirror") (reparse-symbol formal_parameters) [4705 4723])
+                            ("v" variable (:type "AnnotationValue") (reparse-symbol formal_parameters) [4725 4742]))                          
+                        :type "TreePath")
+                        (reparse-symbol class_member_declaration) [4661 4744])
+                    ("getElement" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("path" variable (:type "TreePath") (reparse-symbol formal_parameters) [5060 5073]))                          
+                        :type "Element")
+                        (reparse-symbol class_member_declaration) [5025 5075])
+                    ("getTypeMirror" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("path" variable (:type "TreePath") (reparse-symbol formal_parameters) [5406 5419]))                          
+                        :type "TypeMirror")
+                        (reparse-symbol class_member_declaration) [5365 5421])
+                    ("getScope" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("path" variable (:type "TreePath") (reparse-symbol formal_parameters) [5597 5610]))                          
+                        :type "Scope")
+                        (reparse-symbol class_member_declaration) [5566 5612])
+                    ("getDocComment" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("path" variable (:type "TreePath") (reparse-symbol formal_parameters) [5856 5869]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [5819 5871])
+                    ("isAccessible" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("scope" variable (:type "Scope") (reparse-symbol formal_parameters) [6133 6144])
+                            ("type" variable (:type "TypeElement") (reparse-symbol formal_parameters) [6146 6162]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [6096 6164])
+                    ("isAccessible" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("scope" variable (:type "Scope") (reparse-symbol formal_parameters) [6565 6576])
+                            ("member" variable (:type "Element") (reparse-symbol formal_parameters) [6578 6592])
+                            ("type" variable (:type "DeclaredType") (reparse-symbol formal_parameters) [6594 6611]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [6528 6613])
+                    ("getOriginalType" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("errorType" variable (:type "ErrorType") (reparse-symbol formal_parameters) [6932 6951]))                          
+                        :type "TypeMirror")
+                        (reparse-symbol class_member_declaration) [6889 6953])
+                    ("printMessage" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("kind" variable (:type "Diagnostic.Kind") (reparse-symbol formal_parameters) [7345 7365])
+                            ("msg" variable (:type "CharSequence") (reparse-symbol formal_parameters) [7367 7383])
+                            ("t" variable (:type "com.sun.source.tree.Tree") (reparse-symbol formal_parameters) [7397 7423])
+                            ("root" variable (:type "com.sun.source.tree.CompilationUnitTree") (reparse-symbol formal_parameters) [7437 7481]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7311 7483])
+                    ("getLub" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("tree" variable (:type "CatchTree") (reparse-symbol formal_parameters) [7712 7726]))                          
+                        :type "TypeMirror")
+                        (reparse-symbol class_member_declaration) [7678 7728]))                  
+                :type "class")
+                nil [1120 7730]))          
+      :file "Trees.java"
+      :pointmax 7731
+      :fsize 7730
+      :lastmodtime '(22500 20624 0 0)
+      :unmatched-syntax '((GT 2338 . 2339) (QUESTION 2337 . 2338) (IDENTIFIER 2331 . 2336) (LT 2336 . 2337) (IDENTIFIER 1111 . 1119) (DOT 1110 . 1111) (IDENTIFIER 1106 . 1110))))
+  :file "!Volumes!macHDD!jdk1.8.0_111!src!com!sun!source!util!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

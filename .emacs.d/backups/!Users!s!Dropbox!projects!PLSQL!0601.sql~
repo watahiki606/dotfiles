@@ -1,0 +1,8 @@
+set serveroutput on
+set echo on
+
+create procedure out_put
+  is begin
+  DBMS_OUTPUT.PUT_LINE('100');
+  end;
+/

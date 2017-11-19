@@ -1,0 +1,9 @@
+use strict;
+use warnings;
+
+my $students = [
+{num =>1, name => 'watanabe', address => 'xxx-1-23'},
+{num =>2, name => 'suzuki', address => 'yyy-5-43'},
+{num =>3, name => 'endo', address => 'zzz-9-23'},
+
+]

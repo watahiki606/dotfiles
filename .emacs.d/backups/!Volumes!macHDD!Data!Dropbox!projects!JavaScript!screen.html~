@@ -1,0 +1,12 @@
+<script type="text/javascript">
+ //ウィンドウサイズをモニタサイズにあわせて拡大する
+ //調整ボタンクリック時に実行
+ function adjust(){
+     //ウィンドウ位置を左上隅に合わせる
+     window.moveTo(0, 0);
+     //スクリーンサイズに合わせてウィンドウをリサイズ
+     window.resizeTo(screen.width, screen.height);
+ }
+</script>
+
+<input type="button" value="調整" onclick="adjust()"/>

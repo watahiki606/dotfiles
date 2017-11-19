@@ -1,0 +1,22 @@
+<script type="text/javascript">
+ function addListner(elem, ev, listener){
+     if(elem.addListner){//Internet Explorer以外のブラウザ対応
+         elem.addListner(ev, listener, false);
+     }else if(elem.attachEvent){//Internet Explorer対応
+         elem.attachEvent('on' + ev, listener);
+     }else{//イベントリスナに未対応の場合
+         throw new Error(' イベントリスナ未対応です。');
+     }
+ }
+
+ //ページロード時のイベントリスナとしてinit関数を登録
+ addListner(window, 'load', init);
+
+ function init(){
+     addListner(document.getElementById('btn'), 'click', function(){
+         window.alert('ボタンがクリックされました');
+     });
+ }
+</script>
+
+<input type="button" id="btn" value="ダイアログ表示"/>

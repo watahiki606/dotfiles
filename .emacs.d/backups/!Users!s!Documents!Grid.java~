@@ -1,0 +1,268 @@
+import java.util.ArrayList;
+
+/**
+ * 一つのマスを表すクラス
+ */
+public class Grid {
+
+    /**
+     * 行番号
+     */
+    private int lineNumber;
+
+    /**
+     * 列番号
+     */
+    private int columnNumber;
+
+    /**
+     * ブロック番号
+     */
+    private int blockNumber;
+
+    /**
+     * 候補数字の配列
+     * 確定数字の候補となる数字を格納する。
+     */
+    private ArrayList<Integer> possibilities = new ArrayList<>();
+
+    /**
+     * 訪問済み候補数字の配列
+     * 候補数字のうち、当てはまらないと判断した数字はこちらに格納する。
+     */
+    private ArrayList<Integer> visited = new ArrayList<>();
+
+    /**
+     * 確定した数字
+     * 初期値を0(使われることのない値)とし、マスの数字が確定しているかしていないかの判定に使う
+     */
+    private int decision = 0;
+
+    /**
+     * 数独ボードのサイズ
+     */
+    private int SIZE;
+
+    /**
+     * コンストラクタ
+     * サイズに応じて候補となる数字をあらかじめ登録する。
+     * @param SIZE 数独ボードのサイズ
+     */
+    public Grid(int SIZE) {
+        for (int i = 1; i <= SIZE; i++) {
+            this.possibilities.add(i);
+            this.SIZE = SIZE;
+        }
+    }
+
+    /**
+     * 0行目の数字を確定する。
+     * @param randomArray サイズ分に作られたランダムな数字
+     */
+    public void initFirstLine(int randomArray) {
+        if (this.lineNumber == 0) {
+            this.decision = randomArray;
+            possibilities.clear();
+        }
+    };
+
+    /**
+     * 行番号を返す。
+     * @return 行番号
+     */
+    public int getLineNumber() {
+        return lineNumber;
+    }
+
+    /**
+     * 行番号をセットする。
+     * @param lineNumber 行番号
+     */
+    public void setLineNumber(int lineNumber) {
+        this.lineNumber = lineNumber;
+    }
+
+    /**
+     * 列番号を返す。
+     * @return 列番号
+     */
+    public int getColumnNumber() {
+        return columnNumber;
+    }
+
+    /**
+     * 列番号をセットする。
+     * @param columnNumber 列番号
+     */
+    public void setColumnNumber(int columnNumber) {
+        this.columnNumber = columnNumber;
+    }
+
+    /**
+     * ブロック番号を返す。
+     * @return ブロック番号
+     */
+    public int getBlockNumber() {
+        return blockNumber;
+    }
+
+    /**
+     * ブロック番号をセットする。
+     * @param lineNumber 行番号
+     * @param columnNumber 列番号
+     */
+    public void setBlockNumber(int lineNumber, int columnNumber) {
+        int b = (int) Math.sqrt(SIZE);
+        this.blockNumber = (lineNumber / b) * b + columnNumber / b;
+    }
+
+    /**
+     * 確定した数字を返す。
+     * @return 確定した数字
+     */
+    public int getDecision() {
+        return this.decision;
+    }
+
+    /**
+     * 数字を確定する。
+     * 候補数字の中から値を一つ取り出し、その値は訪問済み候補数字として登録する。
+     */
+    public void setDecision() {
+        //候補の中から先頭を取り出す
+        int decision = this.possibilities.get(0);
+        //取り出した値を訪問済みにする。
+        this.visited.add(decision);
+        //取り出した値を候補から削除する。
+        this.removePossibilities(decision);
+        //取り出した値に確定する。
+        this.decision = decision;
+    }
+
+    /**
+     * 確定した数字を取りやめ、訪問済み候補数字を候補数字に戻す。
+     */
+    public void resetDecision() {
+        //確定数字のリセット
+        this.decision = 0;
+        //訪問済み候補数字をすべて候補数字としてコピーする。
+        for (int temp : this.visited) {
+            this.possibilities.add(temp);
+        }
+        //まだどこも訪問していない状態からやり直す。
+        this.visited.clear();
+    }
+
+    /**
+     * 候補数字の配列の中から値を削除する。
+     * @param checked 削除したい値
+     */
+    public void removePossibilities(Object checked) {
+        this.possibilities.remove(checked);
+    }
+
+    /**
+     * マスの候補を表示する。
+     */
+    public void printPossibilities() {
+        if (this.possibilities.isEmpty()) {
+            System.out.print("[]");
+        } else {
+            System.out.print(this.possibilities);
+        }
+    }
+
+    /**
+     * マスの訪問済み候補を表示する。
+     */
+    public void printVisited() {
+        if (this.visited.isEmpty()) {
+            System.out.print("[]");
+        } else {
+            System.out.print(this.visited);
+        }
+    }
+
+    /**
+     * 行方向のマスをチェックして、他のマスが確定している場合は
+     * 候補から他のマスの確定数字を取り除く。
+     * @param grids 数独ボード上のマスのインスタンスが格納されている2次元配列
+     */
+    public void lineCheck(Grid[][] grids) {
+        //行方向をすべてチェック
+        for (int j = 0; j < SIZE; j++) {
+            int decision = grids[this.lineNumber][j].decision;
+            //確定している場合
+            if (decision != 0) {
+                //同じ数字を候補から取り除く。
+                this.removePossibilities(decision);
+                //取り除いた値は訪問済みとして登録する。
+                //行・列・ブロックで同じように訪問済みとするため、値が重複し
+                //すでに訪問済みに登録されている場合は登録しないようにする。
+                boolean visited = this.visited.contains(decision);
+                if (!visited) {
+                    this.visited.add(decision);
+                }
+            }
+        }
+    }
+
+    /**
+     * 列方向のマスをチェックして、他のマスが確定している場合は
+     * 候補から他のマスの確定数字を取り除く。
+     * @param grids 数独ボード上のマスのインスタンスが格納されている2次元配列
+     */
+    public void columnCheck(Grid[][] grids) {
+        //列方向をすべてチェック
+        for (int i = 0; i < SIZE; i++) {
+            int decision = grids[i][this.columnNumber].decision;
+            //確定している場合
+            if (decision != 0) {
+                //同じ数字を候補から取り除く。
+                this.removePossibilities(decision);
+                //取り除いた値は訪問済みとして登録する。
+                //行・列・ブロックで同じように訪問済みとするため、値が重複し
+                //すでに訪問済みに登録されている場合は登録しないようにする。
+                boolean visited = this.visited.contains(decision);
+                if (!visited) {
+                    this.visited.add(decision);
+                }
+            }
+        }
+    }
+
+    /**
+     * ブロック内のマスをチェックして、他のマスが確定している場合は
+     * 候補から他のマスの確定数字を取り除く。
+     * @param grids 数独ボード上のマスのインスタンスが格納されている2次元配列
+     */
+    public void blockCheck(Grid[][] grids) {
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                if (grids[i][j].blockNumber == this.blockNumber) {
+                    int decision = grids[i][j].decision;
+                    //確定している場合
+                    if (decision != 0) {
+                        //同じ数字を候補から取り除く。
+                        this.removePossibilities(decision);
+                        //取り除いた値は訪問済みとして登録する。
+                        //行・列・ブロックで同じように訪問済みとするため、値が重複し
+                        //すでに訪問済みに登録されている場合は登録しないようにする。
+                        boolean visited = this.visited.contains(decision);
+                        if (!visited) {
+                            this.visited.add(decision);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * マスの候補数字の数を返す。
+     * @return 候補数字の数
+     */
+    public int countPossibilities() {
+        return this.possibilities.size();
+    }
+}

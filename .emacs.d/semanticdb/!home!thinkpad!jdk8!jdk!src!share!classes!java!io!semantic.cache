@@ -1,0 +1,670 @@
+;; Object io/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "io/"
+  :tables
+  (list
+    (semanticdb-table "Console.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.io" package nil nil [1215 1231])
+            ("java.util.*" include nil nil [1233 1252])
+            ("java.nio.charset.Charset" include nil nil [1253 1285])
+            ("sun.nio.cs.StreamDecoder" include nil nil [1286 1318])
+            ("sun.nio.cs.StreamEncoder" include nil nil [1319 1351])
+            ("Console" type
+               (:typemodifiers ("public" "final")
+                :interfaces ("Flushable")
+                :members 
+                  ( ("writer" function
+                       (:typemodifiers ("public")
+                        :type "PrintWriter")
+                        (reparse-symbol class_member_declaration) [4242 4296])
+                    ("reader" function
+                       (:typemodifiers ("public")
+                        :type "Reader")
+                        (reparse-symbol class_member_declaration) [5774 5827])
+                    ("format" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("fmt" variable (:type "String") (reparse-symbol formal_parameters) [7301 7311])
+                            ("" variable (:type "args") (reparse-symbol formal_parameters) [7323 7327]))                          
+                        :type "Console")
+                        (reparse-symbol class_member_declaration) [7279 7402])
+                    ("printf" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("format" variable (:type "String") (reparse-symbol formal_parameters) [9096 9109])
+                            ("" variable (:type "args") (reparse-symbol formal_parameters) [9122 9126]))                          
+                        :type "Console")
+                        (reparse-symbol class_member_declaration) [9074 9172])
+                    ("readLine" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("fmt" variable (:type "String") (reparse-symbol formal_parameters) [10635 10645])
+                            ("" variable (:type "args") (reparse-symbol formal_parameters) [10658 10662]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [10612 11153])
+                    ("readLine" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [11496 11557])
+                    ("readPassword" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("fmt" variable (:type "String") (reparse-symbol formal_parameters) [13110 13120])
+                            ("" variable (:type "args") (reparse-symbol formal_parameters) [13133 13137]))                          
+                        :type "char[]")
+                        (reparse-symbol class_member_declaration) [13083 14196])
+                    ("readPassword" function
+                       (:typemodifiers ("public")
+                        :type "char[]")
+                        (reparse-symbol class_member_declaration) [14590 14659])
+                    ("flush" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [14774 14821])
+                    ("readLock" variable
+                       (:typemodifiers ("private")
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [14827 14851])
+                    ("writeLock" variable
+                       (:typemodifiers ("private")
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [14856 14881])
+                    ("reader" variable
+                       (:typemodifiers ("private")
+                        :type "Reader")
+                        (reparse-symbol class_member_declaration) [14886 14908])
+                    ("out" variable
+                       (:typemodifiers ("private")
+                        :type "Writer")
+                        (reparse-symbol class_member_declaration) [14913 14932])
+                    ("pw" variable
+                       (:typemodifiers ("private")
+                        :type "PrintWriter")
+                        (reparse-symbol class_member_declaration) [14937 14960])
+                    ("formatter" variable
+                       (:typemodifiers ("private")
+                        :type "Formatter")
+                        (reparse-symbol class_member_declaration) [14965 14993])
+                    ("cs" variable
+                       (:typemodifiers ("private")
+                        :type "Charset")
+                        (reparse-symbol class_member_declaration) [14998 15017])
+                    ("rcb" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "char")
+                        (reparse-symbol class_member_declaration) [15022 15041])
+                    ("encoding" function
+                       (:typemodifiers ("private" "static" "native")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [15046 15086])
+                    ("echo" function
+                       (:throws ("IOException")
+                        :typemodifiers ("private" "static" "native")
+                        :arguments 
+                          ( ("on" variable (:type "boolean") (reparse-symbol formal_parameters) [15126 15136]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [15091 15157])
+                    ("echoOff" variable
+                       (:typemodifiers ("private" "static")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [15162 15193])
+                    ("readline" function
+                       (:throws ("IOException")
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("zeroOut" variable (:type "boolean") (reparse-symbol formal_parameters) [15223 15238]))                          
+                        :type "char[]")
+                        (reparse-symbol class_member_declaration) [15199 15871])
+                    ("grow" function
+                       (:typemodifiers ("private")
+                        :type "char[]")
+                        (reparse-symbol class_member_declaration) [15877 16083])
+                    ("LineReader" type
+                       (:superclasses "Reader"
+                        :members 
+                          ( ("in" variable
+                               (:typemodifiers ("private")
+                                :type "Reader")
+                                (reparse-symbol class_member_declaration) [16131 16149])
+                            ("cb" variable
+                               (:dereference 1
+                                :typemodifiers ("private")
+                                :type "char")
+                                (reparse-symbol class_member_declaration) [16158 16176])
+                            ("nChars" variable
+                               (:typemodifiers ("private")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [16185 16204])
+                            ("nextChar" variable
+                               (:typemodifiers ("private")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [16205 16214])
+                            ("leftoverLF" variable (:type "boolean") (reparse-symbol class_member_declaration) [16223 16242])
+                            ("LineReader" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("in" variable (:type "Reader") (reparse-symbol formal_parameters) [16262 16271]))                                  )
+                                (reparse-symbol class_member_declaration) [16251 16410])
+                            ("close" function
+                               (:typemodifiers ("public")
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [16419 16442])
+                            ("ready" function
+                               (:throws ("IOException")
+                                :typemodifiers ("public")
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [16451 16591])
+                            ("read" function
+                               (:throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("cbuf" variable
+                                       (:dereference 1
+                                        :type "char")
+                                        (reparse-symbol formal_parameters) [16617 16628])
+                                    ("offset" variable (:type "int") (reparse-symbol formal_parameters) [16630 16640])
+                                    ("length" variable (:type "int") (reparse-symbol formal_parameters) [16642 16652]))                                  
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [16601 20859]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [16089 20865])
+                    ("cons" variable
+                       (:typemodifiers ("private" "static")
+                        :type "Console")
+                        (reparse-symbol class_member_declaration) [22338 22366])
+                    ("istty" function
+                       (:typemodifiers ("private" "native" "static")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [22371 22409])
+                    ("Console" function
+                       (:constructor-flag t
+                        :typemodifiers ("private"))
+                        (reparse-symbol class_member_declaration) [22414 23238]))                  
+                :type "class")
+                nil [3998 23240]))          
+      :file "Console.java"
+      :pointmax 23241
+      :fsize 23240
+      :lastmodtime '(22652 57087 901222 950000)
+      :unmatched-syntax '((DOT 13131 . 13132) (IDENTIFIER 13122 . 13128) (DOT 13130 . 13131) (DOT 10656 . 10657) (IDENTIFIER 10647 . 10653) (DOT 10655 . 10656) (DOT 9120 . 9121) (IDENTIFIER 9111 . 9117) (DOT 9119 . 9120) (DOT 7322 . 7323) (IDENTIFIER 7313 . 7319) (DOT 7321 . 7322)))
+    (semanticdb-table "PrintStream.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.io" package nil nil [1215 1231])
+            ("java.util.Formatter" include nil nil [1233 1260])
+            ("java.util.Locale" include nil nil [1261 1285])
+            ("java.nio.charset.Charset" include nil nil [1286 1318])
+            ("java.nio.charset.IllegalCharsetNameException" include nil nil [1319 1371])
+            ("java.nio.charset.UnsupportedCharsetException" include nil nil [1372 1424])
+            ("PrintStream" type
+               (:typemodifiers ("public")
+                :interfaces ("Appendable" "Closeable")
+                :superclasses "FilterOutputStream"
+                :members 
+                  ( ("autoFlush" variable
+                       (:typemodifiers ("private" "final")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [2630 2662])
+                    ("trouble" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [2667 2699])
+                    ("formatter" variable
+                       (:typemodifiers ("private")
+                        :type "Formatter")
+                        (reparse-symbol class_member_declaration) [2704 2732])
+                    ("textOut" variable
+                       (:typemodifiers ("private")
+                        :type "BufferedWriter")
+                        (reparse-symbol class_member_declaration) [2892 2923])
+                    ("charOut" variable
+                       (:typemodifiers ("private")
+                        :type "OutputStreamWriter")
+                        (reparse-symbol class_member_declaration) [2928 2963])
+                    ("requireNonNull" function
+                       (:arguments 
+                          ( ("obj" variable (:type "T") (reparse-symbol formal_parameters) [3220 3225])
+                            ("message" variable (:type "String") (reparse-symbol formal_parameters) [3227 3241]))                          
+                        :type "T")
+                        (reparse-symbol class_member_declaration) [3203 3348])
+                    ("toCharset" function
+                       (:throws ("UnsupportedEncodingException")
+                        :typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("csn" variable (:type "String") (reparse-symbol formal_parameters) [3600 3610]))                          
+                        :type "Charset")
+                        (reparse-symbol class_member_declaration) [3567 3977])
+                    ("PrintStream" function
+                       (:constructor-flag t
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("autoFlush" variable (:type "boolean") (reparse-symbol formal_parameters) [4034 4051])
+                            ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [4053 4069]))                          )
+                        (reparse-symbol class_member_declaration) [4014 4239])
+                    ("PrintStream" function
+                       (:constructor-flag t
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("autoFlush" variable (:type "boolean") (reparse-symbol formal_parameters) [4265 4282])
+                            ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [4284 4300])
+                            ("charset" variable (:type "Charset") (reparse-symbol formal_parameters) [4302 4317]))                          )
+                        (reparse-symbol class_member_declaration) [4245 4496])
+                    ("PrintStream" function
+                       (:constructor-flag t
+                        :throws ("UnsupportedEncodingException")
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("autoFlush" variable (:type "boolean") (reparse-symbol formal_parameters) [4765 4782])
+                            ("charset" variable (:type "Charset") (reparse-symbol formal_parameters) [4784 4799])
+                            ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [4801 4817]))                          )
+                        (reparse-symbol class_member_declaration) [4745 4913])
+                    ("PrintStream" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [5226 5242]))                          )
+                        (reparse-symbol class_member_declaration) [5207 5277])
+                    ("PrintStream" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [5862 5878])
+                            ("autoFlush" variable (:type "boolean") (reparse-symbol formal_parameters) [5880 5897]))                          )
+                        (reparse-symbol class_member_declaration) [5843 5974])
+                    ("PrintStream" function
+                       (:constructor-flag t
+                        :throws ("UnsupportedEncodingException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [6783 6799])
+                            ("autoFlush" variable (:type "boolean") (reparse-symbol formal_parameters) [6801 6818])
+                            ("encoding" variable (:type "String") (reparse-symbol formal_parameters) [6820 6835]))                          )
+                        (reparse-symbol class_member_declaration) [6764 7007])
+                    ("PrintStream" function
+                       (:constructor-flag t
+                        :throws ("FileNotFoundException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("fileName" variable (:type "String") (reparse-symbol formal_parameters) [8320 8335]))                          )
+                        (reparse-symbol class_member_declaration) [8301 8426])
+                    ("PrintStream" function
+                       (:constructor-flag t
+                        :throws ("FileNotFoundException" "UnsupportedEncodingException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("fileName" variable (:type "String") (reparse-symbol formal_parameters) [9876 9891])
+                            ("csn" variable (:type "String") (reparse-symbol formal_parameters) [9893 9903]))                          )
+                        (reparse-symbol class_member_declaration) [9857 10115])
+                    ("PrintStream" function
+                       (:constructor-flag t
+                        :throws ("FileNotFoundException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("file" variable (:type "File") (reparse-symbol formal_parameters) [11413 11422]))                          )
+                        (reparse-symbol class_member_declaration) [11394 11509])
+                    ("PrintStream" function
+                       (:constructor-flag t
+                        :throws ("FileNotFoundException" "UnsupportedEncodingException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("file" variable (:type "File") (reparse-symbol formal_parameters) [12944 12953])
+                            ("csn" variable (:type "String") (reparse-symbol formal_parameters) [12955 12965]))                          )
+                        (reparse-symbol class_member_declaration) [12925 13173])
+                    ("ensureOpen" function
+                       (:throws ("IOException")
+                        :typemodifiers ("private")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [13245 13374])
+                    ("flush" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [13599 13839])
+                    ("closing" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [13845 13877])
+                    ("close" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [14104 14542])
+                    ("checkError" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [15427 15676])
+                    ("setError" function
+                       (:typemodifiers ("protected")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [15957 16014])
+                    ("clearError" function
+                       (:typemodifiers ("protected")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [16313 16373])
+                    ("write" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("b" variable (:type "int") (reparse-symbol formal_parameters) [17079 17084]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [17061 17475])
+                    ("write" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("buf" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [18139 18149])
+                            ("off" variable (:type "int") (reparse-symbol formal_parameters) [18151 18158])
+                            ("len" variable (:type "int") (reparse-symbol formal_parameters) [18160 18167]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [18121 18555])
+                    ("write" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("buf" variable
+                               (:dereference 1
+                                :type "char")
+                                (reparse-symbol formal_parameters) [18819 18829]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [18800 19418])
+                    ("write" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("s" variable (:type "String") (reparse-symbol formal_parameters) [19443 19451]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [19424 19935])
+                    ("newLine" function
+                       (:typemodifiers ("private")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [19941 20421])
+                    ("print" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("b" variable (:type "boolean") (reparse-symbol formal_parameters) [20894 20903]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [20876 20949])
+                    ("print" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("c" variable (:type "char") (reparse-symbol formal_parameters) [21309 21315]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [21291 21358])
+                    ("print" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol formal_parameters) [21822 21827]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [21804 21870])
+                    ("print" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("l" variable (:type "long") (reparse-symbol formal_parameters) [22338 22344]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [22320 22387])
+                    ("print" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("f" variable (:type "float") (reparse-symbol formal_parameters) [22868 22875]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [22850 22918])
+                    ("print" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("d" variable (:type "double") (reparse-symbol formal_parameters) [23420 23428]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [23402 23471])
+                    ("print" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("s" variable
+                               (:dereference 1
+                                :type "char")
+                                (reparse-symbol formal_parameters) [23912 23920]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [23894 23947])
+                    ("print" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("s" variable (:type "String") (reparse-symbol formal_parameters) [24408 24416]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [24390 24502])
+                    ("print" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("obj" variable (:type "Object") (reparse-symbol formal_parameters) [24980 24990]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [24962 25035])
+                    ("println" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [25356 25404])
+                    ("println" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("x" variable (:type "boolean") (reparse-symbol formal_parameters) [25697 25706]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [25677 25800])
+                    ("println" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("x" variable (:type "char") (reparse-symbol formal_parameters) [26090 26096]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [26070 26190])
+                    ("println" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol formal_parameters) [26477 26482]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [26457 26576])
+                    ("println" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("x" variable (:type "long") (reparse-symbol formal_parameters) [26863 26869]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [26843 26963])
+                    ("println" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("x" variable (:type "float") (reparse-symbol formal_parameters) [27251 27258]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [27231 27352])
+                    ("println" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("x" variable (:type "double") (reparse-symbol formal_parameters) [27643 27651]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [27623 27745])
+                    ("println" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("x" variable
+                               (:dereference 1
+                                :type "char")
+                                (reparse-symbol formal_parameters) [28039 28047]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [28019 28141])
+                    ("println" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("x" variable (:type "String") (reparse-symbol formal_parameters) [28432 28440]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [28412 28534])
+                    ("println" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("x" variable (:type "Object") (reparse-symbol formal_parameters) [28920 28928]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [28900 29060])
+                    ("printf" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("format" variable (:type "String") (reparse-symbol formal_parameters) [30940 30953])
+                            ("" variable (:type "args") (reparse-symbol formal_parameters) [30966 30970]))                          
+                        :type "PrintStream")
+                        (reparse-symbol class_member_declaration) [30914 31016])
+                    ("printf" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("l" variable (:type "Locale") (reparse-symbol formal_parameters) [33104 33112])
+                            ("format" variable (:type "String") (reparse-symbol formal_parameters) [33114 33127])
+                            ("" variable (:type "args") (reparse-symbol formal_parameters) [33140 33144]))                          
+                        :type "PrintStream")
+                        (reparse-symbol class_member_declaration) [33078 33193])
+                    ("format" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("format" variable (:type "String") (reparse-symbol formal_parameters) [35056 35069])
+                            ("" variable (:type "args") (reparse-symbol formal_parameters) [35082 35086]))                          
+                        :type "PrintStream")
+                        (reparse-symbol class_member_declaration) [35030 35616])
+                    ("format" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("l" variable (:type "Locale") (reparse-symbol formal_parameters) [37462 37470])
+                            ("format" variable (:type "String") (reparse-symbol formal_parameters) [37472 37485])
+                            ("" variable (:type "args") (reparse-symbol formal_parameters) [37498 37502]))                          
+                        :type "PrintStream")
+                        (reparse-symbol class_member_declaration) [37436 37986])
+                    ("append" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("csq" variable (:type "CharSequence") (reparse-symbol formal_parameters) [38937 38953]))                          
+                        :type "PrintStream")
+                        (reparse-symbol class_member_declaration) [38911 39083])
+                    ("append" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("csq" variable (:type "CharSequence") (reparse-symbol formal_parameters) [40338 40354])
+                            ("start" variable (:type "int") (reparse-symbol formal_parameters) [40356 40365])
+                            ("end" variable (:type "int") (reparse-symbol formal_parameters) [40367 40374]))                          
+                        :type "PrintStream")
+                        (reparse-symbol class_member_declaration) [40312 40514])
+                    ("append" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("c" variable (:type "char") (reparse-symbol formal_parameters) [40952 40958]))                          
+                        :type "PrintStream")
+                        (reparse-symbol class_member_declaration) [40926 41006]))                  
+                :type "class")
+                nil [2534 41009]))          
+      :file "PrintStream.java"
+      :pointmax 41010
+      :fsize 41009
+      :lastmodtime '(22652 57087 937223 326000)
+      :unmatched-syntax '((DOT 37496 . 37497) (IDENTIFIER 37487 . 37493) (DOT 37495 . 37496) (DOT 35080 . 35081) (IDENTIFIER 35071 . 35077) (DOT 35079 . 35080) (DOT 33138 . 33139) (IDENTIFIER 33129 . 33135) (DOT 33137 . 33138) (DOT 30964 . 30965) (IDENTIFIER 30955 . 30961) (DOT 30963 . 30964) (GT 3201 . 3202) (PRIVATE 3184 . 3191) (LT 3199 . 3200)))
+    (semanticdb-table "BufferedWriter.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.io" package nil nil [1215 1231])
+            ("BufferedWriter" type
+               (:typemodifiers ("public")
+                :superclasses "Writer"
+                :members 
+                  ( ("out" variable
+                       (:typemodifiers ("private")
+                        :type "Writer")
+                        (reparse-symbol class_member_declaration) [2776 2795])
+                    ("cb" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "char")
+                        (reparse-symbol class_member_declaration) [2801 2819])
+                    ("nChars" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [2824 2843])
+                    ("nextChar" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [2844 2853])
+                    ("defaultCharBufferSize" variable
+                       (:typemodifiers ("private" "static")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [2859 2907])
+                    ("lineSeparator" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [3059 3088])
+                    ("BufferedWriter" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("out" variable (:type "Writer") (reparse-symbol formal_parameters) [3266 3276]))                          )
+                        (reparse-symbol class_member_declaration) [3244 3327])
+                    ("BufferedWriter" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("out" variable (:type "Writer") (reparse-symbol formal_parameters) [3644 3654])
+                            ("sz" variable (:type "int") (reparse-symbol formal_parameters) [3656 3662]))                          )
+                        (reparse-symbol class_member_declaration) [3622 4018])
+                    ("ensureOpen" function
+                       (:throws ("IOException")
+                        :typemodifiers ("private")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4091 4220])
+                    ("flushBuffer" function
+                       (:throws ("IOException")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4436 4668])
+                    ("write" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("c" variable (:type "int") (reparse-symbol formal_parameters) [4804 4809]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4786 5009])
+                    ("min" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("a" variable (:type "int") (reparse-symbol formal_parameters) [5198 5203])
+                            ("b" variable (:type "int") (reparse-symbol formal_parameters) [5205 5210]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [5182 5266])
+                    ("write" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("cbuf" variable
+                               (:dereference 1
+                                :type "char")
+                                (reparse-symbol formal_parameters) [6029 6040])
+                            ("off" variable (:type "int") (reparse-symbol formal_parameters) [6042 6049])
+                            ("len" variable (:type "int") (reparse-symbol formal_parameters) [6051 6058]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6011 7114])
+                    ("write" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("s" variable (:type "String") (reparse-symbol formal_parameters) [7759 7767])
+                            ("off" variable (:type "int") (reparse-symbol formal_parameters) [7769 7776])
+                            ("len" variable (:type "int") (reparse-symbol formal_parameters) [7778 7785]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7741 8199])
+                    ("newLine" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8473 8551])
+                    ("flush" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8662 8800])
+                    ("close" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8835 9149]))                  
+                :type "class")
+                nil [2726 9151]))          
+      :file "BufferedWriter.java"
+      :pointmax 9152
+      :fsize 9150
+      :lastmodtime '(22652 57087 897222 908000)
+      :unmatched-syntax nil))
+  :file "!home!thinkpad!jdk8!jdk!src!share!classes!java!io!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

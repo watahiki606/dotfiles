@@ -1,0 +1,30 @@
+#オブジェクト指向モジュールの一つBenchmarkを使ってベンチマークのテストを行う
+
+#ベンチマーク
+#benchmark.pl
+
+#モジュール呼び出し
+use Benchmark;
+
+#1つ目のベンチマークオブジェクト
+$before_time = new Benchmark;
+
+#500000カウントの計算
+&recursive(50000);
+
+#2つ目のベンチマークオブジェクト
+$after_time = new Benchmark;
+
+#2つのベンチマークから結果を求める
+$diff = timediff($after_time, $before_time);
+
+#表示
+print "結果:", timestr($diff), "\n";
+
+#時間を計測するための再帰呼び出し
+sub recursive{
+    my($number) = @_;
+
+    #1つずつカウンタを減らして0になるまで再帰呼び出しを行う
+    &recursive(--$number) if ($number);
+}

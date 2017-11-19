@@ -1,0 +1,8 @@
+#begin_endモジュールを読み込む
+#begin_end_call.pl
+
+print "モジュール呼び出し前\n";
+
+#モジュール呼び出し
+use begin_end;
+print "メインルーチンの終了\n";

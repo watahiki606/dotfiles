@@ -1,0 +1,10 @@
+<script type="text/javascript">
+ //こんにちは〇〇さん！
+ //送信ボタンを押したタイミングで実行
+ function process(){
+     //テキストボックスの入力値を元にメッセージをダイアログ表示
+     var namee = document.fm.name.value;
+     window.alert('こんにちは' + name + 'さん！ ');
+     return false;
+ }
+</script>

@@ -1,0 +1,9 @@
+use strict;
+use warnings;
+
+my %hash = {
+    'abc' => 36,
+    'def'=>22,
+    'ghi'=>25,
+};
+print $hash{'abc'};

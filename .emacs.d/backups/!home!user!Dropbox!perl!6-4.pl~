@@ -1,0 +1,4 @@
+use strict;
+use warnings;
+
+my @number = (0..F);

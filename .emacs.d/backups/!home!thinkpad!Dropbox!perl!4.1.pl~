@@ -1,0 +1,4 @@
+print "1-7を入力してください";
+$num = <STDIN>;
+@weekday = qw(Sun Mon Tue Wed Thu Fri Sat);
+print $weekday[$num];

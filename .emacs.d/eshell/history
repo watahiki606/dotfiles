@@ -1,0 +1,87 @@
+ls
+ls -la
+cd
+ls
+cd Dropbox/
+ls
+cd JavaGoldSE8_SpeedMaster_SampleCode/
+ls
+cd Ch02
+cd ch02
+ls
+cd ../
+cd ch01
+ls
+cat 1-12
+cd 1-12
+ls
+cat SampleFamily.java 
+cd
+ls
+cd Dropbox/
+ls
+cd projects/
+ls
+cd Java
+ls
+javac SampleFamily.java 
+javac SampleFamily.java 
+ls
+ls -la
+ls
+sqlplus
+tnsping 192.168.0.8
+tnsping 192.168.0.8
+lsnrctl start
+tnsping 192.168.0.8
+sqlplus
+lsnrctl stop
+lsnodes.exe rctl status
+lsnctrl status
+lsnrctl status
+sqlplus
+lsnrctl status
+tnsping thinkpad.windows
+sqlplus system/system@192.168.0.8:1521/orcl
+sqlplus system/system@192.168.0.8:1521/orcl
+sqlplus system/system@192.168.0.8:1521/orcl
+lsnrctl status
+tnsping thinkpad.windows
+lsnrctl start
+tnsping thinkpad.windows
+tnsping thinkpad.windows
+sqlplus system/system@192.168.0.8:1521/orcl
+sqlplus system/system@192.168.0.8:1521/orcl
+sqlplus system/system@192.168.0.8:1521/orcl
+tnsping thinkpad.windows
+lsnrctl start
+lsnctrl status
+sqlplus system/system@192.168.0.8:1521/orcl
+lsnrctl star
+sqlplus /nolog
+lsnrctl start
+echo %oracle_sid%
+echo %ORACLE_SID%
+echo %ORACLE_HOME
+echo PATH
+echo %PATH
+echo %PATH%
+echo HOME
+echo %HOME
+path
+cd
+path
+echo %PATH%
+sqlplus /nolog
+lsnrctl start
+lsnrctl start
+lsnctrl status
+lsnrctl status
+sqlplus /nolog
+ls
+history
+ls
+cd
+echo $PATH
+history
+echo $PATH

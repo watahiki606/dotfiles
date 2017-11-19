@@ -1,0 +1,21 @@
+#forkを使って2つの処理を作る
+#fork関数を使って処理を分岐し、親プロセスと子プロセスでそれぞれ異なる文字列表示を実行する
+#fork.pl
+
+if($pid = fork()){
+    #親プロセス
+    for($i = 1; $i <= 3; $i++){
+        print "親プロセス\n";
+        sleep(3);
+    }
+    waitpid($pid, 0);
+}
+elsif(defined $pid){
+    #子プロセス
+    for($i = 1; $i <= 5; $i++){
+        print "子プロセス\n";
+        sleep(1);
+    }
+}else{
+    die "fork出来ません:$!\n";
+}

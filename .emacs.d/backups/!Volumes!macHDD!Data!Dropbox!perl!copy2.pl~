@@ -1,0 +1,22 @@
+#コピー元のファイル名とコピー先のファイル名を入力するとファイルのコピーを行うスクリプト
+
+#ファイルの内容を別のファイル名のファイルにコピーする
+
+print "コピー元のファイル名を指定してください>";
+$from_file = <STDIN>;
+print "コピー先のファイル名を指定してください>";
+$to_file = <STDION>;
+
+chomp($from_file, $to_file);
+
+#それぞれのファイルをオープン
+open(F, $from_file)  || die "$from_file をオープンできません:$!\n";
+open(F2, ">$to_file") || die "to_file を作成できません:$!\n";
+
+while(<F>){
+    #コピー元のファイルから読み込み、コピー先のファイルに書き出す
+    print F2;
+}
+
+close(F2);
+close(F);

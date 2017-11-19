@@ -1,0 +1,10 @@
+use strict;
+use warnings;
+
+openI(FILE, 'dep2member.csv') or die"$!";
+while(my $line = <FILE>){
+    my ($ID, $name, $busho, $jousiID, $sei, $birthday, $adress, $other){
+        print $name, "\t", $birthday,"\n";
+    }
+}
+close(FILE);

@@ -1,0 +1,24 @@
+#配列のリファレンス
+
+@array = (1 .. 5);
+
+#サブルーチン実行前
+print "実行前：",join(", ", @array), "\n";
+
+#リファレンスを渡してサブルーチン実行
+&sub_reference_array(\@array);
+
+#サブルーチン実行後
+print "実行後：",join(",", @array), "\n";
+
+#サブルーチン
+sub sub_reference_array{
+    #リファレンスを受け取る
+    my($reference_array) = @_;
+
+    #リファレンスの配列の内容を変更
+    for($i = 0; $i < @$referece_array; $i++){
+        $$referece_array[$i]++;
+    }
+
+}
