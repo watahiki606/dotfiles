@@ -1,5 +1,0 @@
-#キーボードの入力を、キーワードENDを含んだ文字列が入るまで、そのまま標準エラー出力に表示するスクリプト
-$string = <STDIN>;
-while($string =~ /END/){
-    print $string;
-}

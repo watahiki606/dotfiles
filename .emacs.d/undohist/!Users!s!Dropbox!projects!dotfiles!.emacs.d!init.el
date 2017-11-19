@@ -1,23 +1,35 @@
 
-((digest . "a70ad193ab187b5a6ec74536ecdeb7d3") (undo-list nil (17820 . 17822) ("書く" . -17820) (17820 . 17822) ("かく" . -17820) (17820 . 17822) ("かｋ" . -17820) (17820 . 17822) ("か" . -17820) (17820 . 17821) ("ｋ" . -17820) (17816 . 17821) ("のぶんも" . -17816) (17816 . 17820) ("のぶんも" . -17816) (17816 . 17820) ("のぶんｍ" . -17816) (17816 . 17820) ("のぶん" . -17816) (17816 . 17819) ("のぶｎ" . -17816) (17816 . 17819) ("のぶ" . -17816) (17816 . 17818) ("のｂ" . -17816) (17816 . 17818) ("の" . -17816) (17816 . 17817) ("ｎ" . -17816) (17811 . 17817) nil (17809 . 17811) ("ｗ" . -17809) (17807 . 17810) ("とか" . -17807) (17807 . 17809) ("とｋ" . -17807) (17807 . 17809) ("と" . -17807) (17807 . 17808) ("ｔ" . -17807) (17802 . 17808) ("ｌ" . -17802) (17799 . 17803) ("あとで" . -17799) (17799 . 17802) ("あとｄ" . -17799) (17799 . 17802) ("あと" . -17799) (17799 . 17801) ("あｔ" . -17799) (17799 . 17801) ("あ" . -17799) (17798 . 17800) ("、" . -17798) (17794 . 17799) ("だけかも" . -17794) (17794 . 17798) ("だけかｍ" . -17794) (17794 . 17798) ("だけか" . -17794) (17794 . 17797) ("だけｋ" . -17794) (17794 . 17797) ("だけ" . -17794) (17794 . 17796) ("だｋ" . -17794) (17794 . 17796) ("だ" . -17794) (17794 . 17795) ("ｄ" . -17794) (17791 . 17795) nil (")" . -17792) ((marker*) . 1) ((marker) . -1) nil (17791 . 17792) (")" . -17791) (17791 . 17792) (17790 . 17792) ("(" . -17790) (17790 . 17791) (t 23052 15198 0 0) nil (nil rear-nonsticky nil 17940 . 17941) (nil fontified nil 17877 . 17941) (17877 . 17941) nil (" \"google-chrome\")" . 17877) ((marker . 17974) . -17) ((marker . 17974) . -17) ((marker) . -17) ((marker*) . 1) ((marker) . -17) ((marker) . -17) 17850 (t 23052 14746 0 0) nil (17894 . 17895) 17790 nil (17787 . 17790) ("にする" . -17787) (17787 . 17790) ("にすｒ" . -17787) (17787 . 17790) ("にす" . -17787) (17787 . 17789) ("にｓ" . -17787) (17787 . 17789) ("に" . -17787) (17787 . 17788) ("ｎ" . -17787) (17780 . 17788) ("を" . -17780) (17780 . 17781) ("ｗ" . -17780) (17771 . 17781) nil ("デフォルトブラウザ" . -17771) (17771 . 17780) ("でふぉるとぶら" . -17771) (17771 . 17778) ("でふぉるとぶｒ" . -17771) (17771 . 17778) ("でふぉるとぶ" . -17771) (17771 . 17777) ("でふぉるとｂ" . -17771) (17771 . 17777) ("でふぉると" . -17771) (17771 . 17776) ("でふぉるｔ" . -17771) (17771 . 17776) ("でふぉる" . -17771) (17771 . 17775) ("でふぉｒ" . -17771) (17771 . 17775) ("でふぉ" . -17771) (17771 . 17774) ("でｆ" . -17771) (17771 . 17773) ("で" . -17771) (17771 . 17772) ("ｄ" . -17771) (17771 . 17772) ("d" . -17771) nil ("e" . -17772) nil (17769 . 17773) nil (nil rear-nonsticky nil 17872 . 17873) (nil fontified nil 17770 . 17873) (17770 . 17873) (t 23050 60082 0 0) nil (nil rear-nonsticky nil 11957 . 11958) (nil fontified nil 11935 . 11958) (11935 . 11958) nil ("yasnippet-20161221.1953" . 11935) nil (17768 . 17770) (t 22963 28402 0 0) nil (17767 . 17768) nil (nil rear-nonsticky nil 17766 . 17767) (nil fontified nil 17752 . 17767) (17752 . 17767) nil ("(fringe-mode (cons 0 nil))" . 17752) nil ("
-" . 17778) nil (nil rear-nonsticky nil 17777 . 17778) (nil fontified nil 17752 . 17778) (17752 . 17778) nil ("(fringe-mode (cons 0 nil))" . 17752) (t 22961 53677 0 0) nil (17778 . 17779) nil (nil rear-nonsticky nil 17777 . 17778) (nil fontified nil 17752 . 17778) (17752 . 17778) nil (17751 . 17752) (t 22961 53253 0 0) nil ("
-" . 13261) nil (";;(require 'jdee)" . 13261) (t 22961 53200 0 0) nil ("
-" . 13092) nil ("(help-at-pt-set-timer)" . 13092) nil (";; regular auto-complete initialization
-(require 'auto-complete-config)
-(ac-config-default)
-;; add the emacs-eclim source
-;;(require 'ac-emacs-eclim);;ac-emacs-eclim-sourceはない、中身的にこれが同じ
-;;(ac-emacs-eclim-config)
+((digest . "0a7451674349b12db87dc0e6afd5168a") (undo-list nil ("
+" . 13307) ((marker . 16672) . -1) ((marker . 16672) . -1) nil ("
+" . 13253) ((marker . 16422) . -1) ((marker . 16422) . -1) nil (";; If you want PL/SQL support also, try something like this:
 
-(setq help-at-pt-display-when-idle t)
-(setq help-at-pt-timer-delay 0.1)
-" . 13092) 13377 nil ("
-" . 11843) nil (";;A Better Java Development Environment for Emacs
-;;サーバーがstartしないのでコメントアウト
-;;(require 'meghanada)
-;;(add-hook 'java-mode-hook
-;;          (lambda ()
-;;            ;; meghanada-mode on
-;;            (meghanada-mode t)
-;;            (add-hook 'before-save-hook 'delete-trailing-whitespace)))
-" . 11843) 12133 (t 22961 52369 0 0) nil undo-tree-canary))
+ ;; (require 'plsql)
+ ;; (setq auto-mode-alist
+ ;;   (append '((\"\\\\.pls\\\\'\" . plsql-mode) (\"\\\\.pkg\\\\'\" . plsql-mode)
+ ;;    	(\"\\\\.pks\\\\'\" . plsql-mode) (\"\\\\.pkb\\\\'\" . plsql-mode)
+ ;;    	(\"\\\\.sql\\\\'\" . plsql-mode) (\"\\\\.PLS\\\\'\" . plsql-mode)
+ ;;    	(\"\\\\.PKG\\\\'\" . plsql-mode) (\"\\\\.PKS\\\\'\" . plsql-mode)
+ ;;    	(\"\\\\.PKB\\\\'\" . plsql-mode) (\"\\\\.SQL\\\\'\" . plsql-mode)
+ ;;    	(\"\\\\.prc\\\\'\" . plsql-mode) (\"\\\\.fnc\\\\'\" . plsql-mode)
+ ;;    	(\"\\\\.trg\\\\'\" . plsql-mode) (\"\\\\.vw\\\\'\" . plsql-mode)
+ ;;    	(\"\\\\.PRC\\\\'\" . plsql-mode) (\"\\\\.FNC\\\\'\" . plsql-mode)
+ ;;    	(\"\\\\.TRG\\\\'\" . plsql-mode) (\"\\\\.VW\\\\'\" . plsql- ;;          auto-mode-alist ))
+" . 13253) ((marker) . -489) ((marker) . -489) ((marker) . -550) ((marker) . -550) ((marker) . -241) ((marker) . -241) ((marker) . -303) ((marker) . -303) ((marker) . -365) ((marker) . -365) ((marker) . -427) ((marker) . -427) ((marker) . -699) ((marker) . -699) ((marker) . -612) ((marker) . -612) ((marker . 16726) . -109) ((marker . 16726) . -109) ((marker . 16672) . -83) ((marker . 16672) . -83) ((marker . 16368) . -62) ((marker . 16368) . -62) ((marker . 16310) . -61) ((marker . 16310) . -61) ((marker) . -179) ((marker) . -179) ((marker) . -699) 13952 nil ("mode))
+" . -13920) ((marker . 16422) . -7) ((marker . 16422) . -7) ((marker) . -7) nil ("
+" . 12846) ((marker) . -1) ((marker) . -1) nil ("
+" . 12846) ((marker) . -1) ((marker) . -1) ((marker . 13253) . -1) nil ("
+" . 12847) ((marker) . -1) ((marker) . -1) nil ("
+;;(require 'eclim)
+;;(global-eclim-mode)
+;;(require 'eclimd)
+
+;;java-modeで有効
+;; (add-hook 'java-mode-hook 'eclim-mode)
+;; (custom-set-variables
+;;   '(eclim-eclipse-dirs '(\"~/eclipse\"))
+;;   '(eclim-executable \"~/eclipse/eclim\")
+;;  '(eclimd-default-workspace \"~/workspace\"))
+
+
+;;(define-key eclim-mode-map (kbd \"C-c C-e ;\") 'eclim-run-class)
+" . 12847) ((marker) . -20) ((marker) . -20) ((marker . 15904) . -62) ((marker . 15904) . -62) ((marker . 15976) . -145) ((marker . 15976) . -145) ((marker) . -42) ((marker) . -42) ((marker . 16108) . -279) ((marker . 16108) . -279) ((marker . 15975) . -120) ((marker . 15975) . -120) ((marker . 15949) . -78) ((marker . 15949) . -78) ((marker . 15932) . -63) ((marker . 15932) . -63) ((marker . 16109) . -344) ((marker . 16109) . -344) ((marker . 15990) . -187) ((marker . 15990) . -187) ((marker . 16056) . -278) ((marker . 16056) . -278) ((marker . 16043) . -277) ((marker . 16043) . -277) ((marker . 16042) . -230) ((marker . 16042) . -230) ((marker) . -344) 13191 (t 23057 12780 0 0) nil undo-tree-canary))

@@ -1,8 +1,0 @@
-#lengthのテスト
-
-print "文字列を入力してください＞";
-$string = <STDIN>;
-chomp($string);
-
-#長さを調べる
-print "文字列の長さ：", length($string), "\n";

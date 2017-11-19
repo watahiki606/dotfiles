@@ -198,20 +198,23 @@
 (set-face-background 'show-paren-match-face nil)
 (set-face-underline-p 'show-paren-match-face "yellow")
 
+;; ロックファイルを作成しない
+ (setq create-lockfiles nil)
+
 ;; バックアップとオートセーブの設定
 ;; バックアップファイルを作成しない
-;; (setq make-backup-files nil) ; 初期値はt
+ (setq make-backup-files t) ; 初期値はt
 
 ;; オートセーブファイルを作らない
-;; (setq auto-save-default nil) ; 初期値はt
+ (setq auto-save-default nil) ; 初期値はt
 
 ;; バックアップファイルの作成場所をシステムのTempディレクトリに変更する
-;; (setq backup-directory-alist
-;;       `((".*" . ,temporary-file-directory)))
+ (setq backup-directory-alist
+       `((".*" . ,temporary-file-directory)))
 
 ;; オートセーブファイルの作成場所をシステムのTempディレクトリに変更する
-;; (setq auto-save-file-name-transforms
-;;       `((".*" ,temporary-file-directory t)))
+ (setq auto-save-file-name-transforms
+       `((".*" ,temporary-file-directory t)))
 
 ;; バックアップとオートセーブファイルを~/.emacs.d/backups/へ集める
 (add-to-list 'backup-directory-alist
@@ -460,23 +463,6 @@
 ;;(setq company-minimum-prefix-length 2)
 ;;(setq company-selection-wrap-around t)
 
-
-
-;;(require 'eclim)
-;;(global-eclim-mode)
-;;(require 'eclimd)
-
-;;java-modeで有効
-;; (add-hook 'java-mode-hook 'eclim-mode)
-;; (custom-set-variables
-;;   '(eclim-eclipse-dirs '("~/eclipse"))
-;;   '(eclim-executable "~/eclipse/eclim")
-;;  '(eclimd-default-workspace "~/workspace"))
-
-
-;;(define-key eclim-mode-map (kbd "C-c C-e ;") 'eclim-run-class)
-
-
 ;;cua-modeの設定（矩形選択）ctrl+Enterで矩形選択モードに入る
 (cua-mode t)
 ;CUAキーバインドを無効化
@@ -497,24 +483,8 @@
    (require 'sqlplus)
    (add-to-list 'auto-mode-alist '("\\.sqp\\'" . sqlplus-mode))
 
-;; If you want PL/SQL support also, try something like this:
-
- ;; (require 'plsql)
- ;; (setq auto-mode-alist
- ;;   (append '(("\\.pls\\'" . plsql-mode) ("\\.pkg\\'" . plsql-mode)
- ;;    	("\\.pks\\'" . plsql-mode) ("\\.pkb\\'" . plsql-mode)
- ;;    	("\\.sql\\'" . plsql-mode) ("\\.PLS\\'" . plsql-mode)
- ;;    	("\\.PKG\\'" . plsql-mode) ("\\.PKS\\'" . plsql-mode)
- ;;    	("\\.PKB\\'" . plsql-mode) ("\\.SQL\\'" . plsql-mode)
- ;;    	("\\.prc\\'" . plsql-mode) ("\\.fnc\\'" . plsql-mode)
- ;;    	("\\.trg\\'" . plsql-mode) ("\\.vw\\'" . plsql-mode)
- ;;    	("\\.PRC\\'" . plsql-mode) ("\\.FNC\\'" . plsql-mode)
- ;;    	("\\.TRG\\'" . plsql-mode) ("\\.VW\\'" . plsql-mode))
- ;;          auto-mode-alist ))
-
 ;;shellのPathを引き継ぐ  
 (exec-path-from-shell-initialize)
-
 
 ;; eshell での補完に auto-complete.el を使う
 (require 'pcomplete)

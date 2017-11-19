@@ -1,8 +1,0 @@
-use strict;
-use warnings;
-
-$_ = 'The HAL-9000 requires authorization to continue.';
-
-if(/HAL-[\d]+/a){
-    say 'The string mentions some model ofHAL computer.';
-}

@@ -1,9 +1,0 @@
-<script type="text/JavaScript">
- <!--
-                               function btn_onclick(){
-                                   window.alert('ボタンがクリックされました');
-                               }
-//-->
-</script>
-
-<input type="button" value="ダイアログ表示" onclick="btn_onclick()" />

@@ -1,5 +1,0 @@
-use strict;
-use warnings;
-use File::Copy 'move';
-move($from, $to)
-    or die qq{can't move "$from " to "$to":$! };

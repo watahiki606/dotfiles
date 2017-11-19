@@ -1,1 +1,0 @@
-ln -s /Volumes/\ macSSD2/Data/Dropbox/projects/dotfiles/.emacs.d  /Users/s/.emacs.d

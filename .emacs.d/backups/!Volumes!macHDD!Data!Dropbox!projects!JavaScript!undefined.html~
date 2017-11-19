@@ -1,4 +1,0 @@
-<script>
-    var x;
-    document.writeln(x);
-</script>

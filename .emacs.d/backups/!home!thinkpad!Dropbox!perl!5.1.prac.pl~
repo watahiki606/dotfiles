@@ -1,8 +1,0 @@
-$input = <STDIN>;
-chomp($input);
-$count = 0;
-if($input =~ /i/i){
-    $count++;
-}
-
-print $count;

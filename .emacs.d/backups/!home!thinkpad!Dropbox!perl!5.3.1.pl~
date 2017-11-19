@@ -1,6 +1,0 @@
-$string = <STDIN>;
-chomp($string);
-
-$string =~ s/\w+\s+\w+/$2 $1/;
-
-print $string;

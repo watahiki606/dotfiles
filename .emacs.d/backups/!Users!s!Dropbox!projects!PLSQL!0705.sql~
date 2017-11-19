@@ -1,8 +1,0 @@
-create or replace procedure triangle(base number, height number)
-  is
-  area number;
-  begin
-  area := ( base * height) / 2;
-  dbms_output.put_line( area );
-  end;
-/

@@ -1,4 +1,0 @@
-<script>
-var ary = ['JavaScript, 'Ajax', 'ASP.NET'];
- document.writeln(delete ary[0]);
-</script>

@@ -1,9 +1,0 @@
-declare
-var NUMBER;
-BEGIN
-var ;= 10;
-DBMS_OUTPUT.put_LINE(var);
-
-select * from db
-where tabel = '';
-group by asc;

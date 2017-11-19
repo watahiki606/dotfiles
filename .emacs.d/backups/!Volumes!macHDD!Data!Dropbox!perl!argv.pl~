@@ -1,9 +1,0 @@
-#引数の数と内容を表示する。
-
-#引数の数を表示
-print "ARGVの数：".@ARGV."\n";
-
-#各引数の内容を表示
-for($number = 0; $number< @ARGV; $number++){
-    print "引数$number: $ARGV[$number]\n";
-}

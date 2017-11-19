@@ -1,6 +1,0 @@
-#指定したファイルを削除する
-#unlink.pl
-
-$file = <STDIN>;
-chomp($file);
-unlink($file) || die "$fileを削除できません:$!\n";

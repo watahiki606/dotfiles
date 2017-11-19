@@ -1,5 +1,0 @@
-print "あなたの名前はなんですか";
-$string = <STDIN>;
-chomp($string);
-
-print "こんにちは、太郎さん。\n"if($string =~ /太郎/);

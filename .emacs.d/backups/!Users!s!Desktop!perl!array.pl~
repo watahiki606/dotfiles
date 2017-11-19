@@ -1,9 +1,0 @@
-use strict;
-use warnings;
-
-my $sum;
-my @score = (98,99,100);
-foreach(@score){
-    $sum = $_;
-}
-print $sum,"\n";

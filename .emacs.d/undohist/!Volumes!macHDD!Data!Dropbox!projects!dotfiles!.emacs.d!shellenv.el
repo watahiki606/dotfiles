@@ -1,2 +1,0 @@
-
-((digest . "a6ab16fa5f914ddda1ddc4a502479916") (undo-list (254 . 255) 252 nil (nil rear-nonsticky nil 251 . 252) (nil fontified nil 237 . 252) (237 . 252) nil ("/Users/handle" . 237) ((marker . 237) . -13) ((marker) . -13) ((marker) . -13) 238 nil (nil rear-nonsticky nil 233 . 234) (nil fontified nil 223 . 234) (223 . 234) nil ("GOPATH" . 223) ((marker . 223) . -4) ((marker) . -6) ((marker) . -6) 227 nil (nil rear-nonsticky nil 246 . 247) (nil fontified nil 214 . 247) (214 . 247) (t 22676 37915 0 0)))

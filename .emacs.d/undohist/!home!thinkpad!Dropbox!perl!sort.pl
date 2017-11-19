@@ -1,2 +1,0 @@
-
-((digest . "cac57bf31d66894f3dfb9ed27fd7b1e6") (undo-list (708 . 709) 659 nil (" " . 659) nil (" " . 659) nil (" " . 659) nil (" " . 659) nil (" " . 585) nil (" " . 585) nil (" " . 585) nil (" " . 585) nil (" " . 550) nil (" " . 550) nil (" " . 550) nil (" " . 550) nil (" " . 533) nil (" " . 533) nil (" " . 533) nil (" " . 533) nil (" " . 395) nil (" " . 395) nil (" " . 395) nil (" " . 395) nil ("    " . 356) nil (346 . 347) nil ("b" . -346) nil (346 . 347) nil (329 . 330) nil (305 . 306) nil (293 . 294) nil (" " . 343) nil ("    " . 343) nil undo-tree-canary))

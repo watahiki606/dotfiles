@@ -1,9 +1,0 @@
-#==>を使わないハッシュの定義
-%hash_array = ('姓', '山田', '名', '太郎');
-print "姓：", $hash_array{'姓'}, "\n";
-print "名：", $hash_array{'名'}, "\n";
-
-#=>を使ったハッシュの定義
-%hash_array = ('姓'=>'スズキ','名'=>'花小');
-print "姓", $hash_array{'姓'}, "\n";
-print "名", $hash_array{'名'}, "\n";
