@@ -1,5 +1,5 @@
 # dotfiles
-emacsSetting
+  emacsSetting
 #　必要なディレクトリ
 - "elisp" "helm" "helm-descbinds" "elpa"
 
