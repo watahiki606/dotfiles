@@ -1,6 +1,6 @@
 # dotfiles
   emacsSetting
-#　必要なディレクトリ
+## 必要なディレクトリ
 - "elisp" "helm" "helm-descbinds" "elpa"
 
 |　C-h　|　backspace　|
