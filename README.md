@@ -3,6 +3,7 @@
 ### 必要なディレクトリ
 - "elisp" "helm" "helm-descbinds" "elpa"
 ###
+|||
 |:--|:--:|
 | C-h | backspace |
 | C-m | newline-and-indent |
