@@ -10,7 +10,7 @@
             (normal-top-level-add-subdirs-to-load-path))))))
 
 ;; 引数のディレクトリとそのサブディレクトリをload-pathに追加
-(add-to-load-path "elisp" "conf" "public_repos" "helm" "helm-descbinds" "elpa")
+(add-to-load-path "elisp" "helm" "helm-descbinds" "elpa")
 
 ;; ターミナル以外はツールバー、スクロールバーを非表示
 (when window-system
@@ -38,9 +38,8 @@
 (define-key global-map (kbd "C-c l") 'toggle-truncate-lines)
 
 ;; "C-t" でウィンドウを切り替える。初期値はtranspose-chars
-;;php-mode のgo back とかぶるのでやめる
-;;デフォルトのC-x oを使うことにする
-;;(define-key global-map (kbd "C-t") 'other-window)
+;;デフォルトはC-x o
+(define-key global-map (kbd "C-t") 'other-window)
 
 ;; パスの設定
 (add-to-list 'exec-path "/opt/local/bin")
@@ -96,10 +95,6 @@
 ;; インデントにタブ文字を使用しない
 (setq-default indent-tabs-mode nil)
 
-;; php-modeのみタブを利用しない
-;; (add-hook 'php-mode-hook
-;;           '(lambda ()
-;;             (setq indent-tabs-mode nil)))
 ;; C、C++、JAVA、PHPなどのインデント
 (add-hook 'c-mode-common-hook
           '(lambda ()
@@ -196,14 +191,14 @@
 
 ;; フェイスを変更する
 (set-face-background 'show-paren-match-face nil)
-(set-face-underline-p 'show-paren-match-face "yellow")
+(set-face-underline 'show-paren-match-face "yellow")
 
 ;; ロックファイルを作成しない
  (setq create-lockfiles nil)
 
 ;; バックアップとオートセーブの設定
 ;; バックアップファイルを作成しない
- (setq make-backup-files t) ; 初期値はt
+ (setq make-backup-files nil) ; 初期値はta
 
 ;; オートセーブファイルを作らない
  (setq auto-save-default nil) ; 初期値はt
@@ -259,12 +254,7 @@
   ;; install-elisp の関数を利用可能にする
   (auto-install-compatibility-setup))
 
-;; ▼要拡張機能インストール▼
-;;  auto-installを利用する
-;; (install-elisp "http://www.emacswiki.org/emacs/download/redo+.el")
-;;(when (require 'redo+ nil t)
-
-;;helmをインストール(auto-installの後継、候補検索をして何らかのアクションを行う)
+;;helmをインストール(候補検索をして何らかのアクションを行う)
 (require 'package)
 (add-to-list 'package-archives
     '("marmalade" .
@@ -564,7 +554,7 @@
                            (yas-global-mode 1)
 
                            (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)   ;goto define
-                           (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back   ) ;go back
+                           (define-key php-mode-map  (kbd "C-[") 'ac-php-location-stack-back   ) ;go back
                            ))
 
 ;;起動時に画面分割
@@ -599,3 +589,23 @@
 ;;デフォルトブラウザをchromeにする(macだけかも、あとでlinuxとかwindowsのぶんも書く)
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
+
+;;マルチカーソル
+;;行選択後<C-M-return>で選択行にカーソルを追加
+;;C-> で次の行にカーソル追加
+;;C-< で前の行にカーソル追加
+;;単語選択後 C-c C-< で画面内のその単語全てにカーソルを追加
+(require 'multiple-cursors)
+(global-set-key (kbd "<C-M-return>") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))

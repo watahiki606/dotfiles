@@ -1,35 +1,20 @@
 
-((digest . "0a7451674349b12db87dc0e6afd5168a") (undo-list nil ("
-" . 13307) ((marker . 16672) . -1) ((marker . 16672) . -1) nil ("
-" . 13253) ((marker . 16422) . -1) ((marker . 16422) . -1) nil (";; If you want PL/SQL support also, try something like this:
-
- ;; (require 'plsql)
- ;; (setq auto-mode-alist
- ;;   (append '((\"\\\\.pls\\\\'\" . plsql-mode) (\"\\\\.pkg\\\\'\" . plsql-mode)
- ;;    	(\"\\\\.pks\\\\'\" . plsql-mode) (\"\\\\.pkb\\\\'\" . plsql-mode)
- ;;    	(\"\\\\.sql\\\\'\" . plsql-mode) (\"\\\\.PLS\\\\'\" . plsql-mode)
- ;;    	(\"\\\\.PKG\\\\'\" . plsql-mode) (\"\\\\.PKS\\\\'\" . plsql-mode)
- ;;    	(\"\\\\.PKB\\\\'\" . plsql-mode) (\"\\\\.SQL\\\\'\" . plsql-mode)
- ;;    	(\"\\\\.prc\\\\'\" . plsql-mode) (\"\\\\.fnc\\\\'\" . plsql-mode)
- ;;    	(\"\\\\.trg\\\\'\" . plsql-mode) (\"\\\\.vw\\\\'\" . plsql-mode)
- ;;    	(\"\\\\.PRC\\\\'\" . plsql-mode) (\"\\\\.FNC\\\\'\" . plsql-mode)
- ;;    	(\"\\\\.TRG\\\\'\" . plsql-mode) (\"\\\\.VW\\\\'\" . plsql- ;;          auto-mode-alist ))
-" . 13253) ((marker) . -489) ((marker) . -489) ((marker) . -550) ((marker) . -550) ((marker) . -241) ((marker) . -241) ((marker) . -303) ((marker) . -303) ((marker) . -365) ((marker) . -365) ((marker) . -427) ((marker) . -427) ((marker) . -699) ((marker) . -699) ((marker) . -612) ((marker) . -612) ((marker . 16726) . -109) ((marker . 16726) . -109) ((marker . 16672) . -83) ((marker . 16672) . -83) ((marker . 16368) . -62) ((marker . 16368) . -62) ((marker . 16310) . -61) ((marker . 16310) . -61) ((marker) . -179) ((marker) . -179) ((marker) . -699) 13952 nil ("mode))
-" . -13920) ((marker . 16422) . -7) ((marker . 16422) . -7) ((marker) . -7) nil ("
-" . 12846) ((marker) . -1) ((marker) . -1) nil ("
-" . 12846) ((marker) . -1) ((marker) . -1) ((marker . 13253) . -1) nil ("
-" . 12847) ((marker) . -1) ((marker) . -1) nil ("
-;;(require 'eclim)
-;;(global-eclim-mode)
-;;(require 'eclimd)
-
-;;java-modeで有効
-;; (add-hook 'java-mode-hook 'eclim-mode)
-;; (custom-set-variables
-;;   '(eclim-eclipse-dirs '(\"~/eclipse\"))
-;;   '(eclim-executable \"~/eclipse/eclim\")
-;;  '(eclimd-default-workspace \"~/workspace\"))
-
-
-;;(define-key eclim-mode-map (kbd \"C-c C-e ;\") 'eclim-run-class)
-" . 12847) ((marker) . -20) ((marker) . -20) ((marker . 15904) . -62) ((marker . 15904) . -62) ((marker . 15976) . -145) ((marker . 15976) . -145) ((marker) . -42) ((marker) . -42) ((marker . 16108) . -279) ((marker . 16108) . -279) ((marker . 15975) . -120) ((marker . 15975) . -120) ((marker . 15949) . -78) ((marker . 15949) . -78) ((marker . 15932) . -63) ((marker . 15932) . -63) ((marker . 16109) . -344) ((marker . 16109) . -344) ((marker . 15990) . -187) ((marker . 15990) . -187) ((marker . 16056) . -278) ((marker . 16056) . -278) ((marker . 16043) . -277) ((marker . 16043) . -277) ((marker . 16042) . -230) ((marker . 16042) . -230) ((marker) . -344) 13191 (t 23057 12780 0 0) nil undo-tree-canary))
+((digest . "99a57b7a7fa5690df226abf06dc67bb0") (undo-list (17224 . 17225) nil (nil rear-nonsticky nil 17223 . 17224) (nil fontified nil 16978 . 17224) (16978 . 17224) nil (16976 . 16978) (t 23064 39831 0 0) nil (")" . 7852) (7851 . 7852) ("
+" . 7850) (7851 . 7852) 7852 nil ("
+" . 7852) (7851 . 7852) (")" . 7850) (7851 . 7852) 7852 nil (")" . 7852) (7851 . 7852) ("
+" . 7850) (7851 . 7852) 7852 nil ("
+" . 7852) (7851 . 7852) (")" . 7850) (7851 . 7852) 7852 nil (")" . 7852) (7851 . 7852) ("
+" . 7850) (7851 . 7852) 7852 nil ("
+" . 7852) (7851 . 7852) (")" . 7850) (7851 . 7852) 7852 nil (")" . 7852) (7851 . 7852) ("
+" . 7850) (7851 . 7852) 7852 nil ("
+" . 7852) (7851 . 7852) (")" . 7850) (7851 . 7852) nil ("a" . -6669) nil ("u" . -6670) nil ("t" . -6671) nil ("o" . -6672) nil ("-" . -6673) nil ("i" . -6674) nil ("n" . -6675) nil ("s" . -6676) nil ("t" . -6677) nil ("a" . -6678) nil ("l" . -6679) nil ("l" . -6680) nil ("の" . -6681) nil ("後" . -6682) nil ("継" . -6683) nil ("、" . -6684) nil ("
+" . 6655) nil ("
+" . 6655) nil ("
+" . 6655) nil (";; ▼要拡張機能インストール▼" . 6655) nil (";;  auto-installを利用する" . 6672) nil ("
+" . 6694) nil (";;(when (require 'redo+ nil t)" . 6694) nil ("
+" . 6694) nil (";; (install-elisp \"http://www.emacswiki.org/emacs/download/redo+.el\")" . 6694) (t 23064 39115 0 0) nil (5153 . 5154) nil (5141 . 5144) nil ("t" . -5141) (t 23064 38851 0 0) nil (5019 . 5025) nil ("g" . -5019) nil ("r" . -5020) nil ("e" . -5021) nil ("e" . -5022) nil ("n" . -5023) nil (5019 . 5024) nil ("w" . -5019) nil ("h" . -5020) nil ("i" . -5021) nil ("t" . -5022) nil ("e" . -5023) nil (5019 . 5024) nil ("p" . -5019) nil ("i" . -5020) nil ("n" . -5021) nil ("k" . -5022) nil (5019 . 5023) nil ("g" . -5019) nil ("r" . -5020) nil ("e" . -5021) nil ("e" . -5022) nil ("n" . -5023) nil (5019 . 5024) nil ("y" . -5019) nil ("e" . -5020) nil ("l" . -5021) nil ("l" . -5022) nil ("o" . -5023) nil ("w" . -5024) (t 23064 38795 0 0) nil ("-" . -4994) nil ("p" . -4995) nil ("
+" . -2410) nil (";; php-modeのみタブを利用しない
+;; (add-hook 'php-mode-hook
+;;           '(lambda ()
+;;             (setq indent-tabs-mode nil)))" . 2411) 2530 (t 23064 38353 0 0) nil (";" . -1055) nil (";" . -1056) nil ("
+" . 1041) nil (";;php-mode のgo back とかぶるのでやめる" . 1041) nil ("を" . -1084) nil ("使" . -1085) nil ("う" . -1086) nil ("こ" . -1087) nil ("と" . -1088) nil ("に" . -1089) nil ("す" . -1090) nil ("る" . -1091) nil (1078 . 1079) nil ("は" . -1078) (1078 . 1079) ("ｈ" . -1078) (1078 . 1079) ("の" . -1078) nil ("}" . -15870) nil ("{" . -15871) nil (15870 . 15872) nil ("s" . -15870) nil ("]" . -15871) nil (15871 . 15872) ("]" . -15871) (15870 . 15872) (t 23064 36018 0 0) nil ("]" . -15796) nil (15795 . 15797) ("[" . -15795) (15795 . 15796) nil ("t" . -15795) (t 23064 35643 0 0)))
