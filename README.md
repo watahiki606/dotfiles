@@ -28,3 +28,8 @@
 |M-x magit-status|git status|
 |カーソルを合わせてs|stage|
 |S|全てstage|
+|tab|diff|
+|c|コミット画面|
+|(コメントを書いた後に)C-c C-c|commit|
+|F|pull画面|
+|u|pull|
