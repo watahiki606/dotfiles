@@ -238,28 +238,8 @@
 ;; emacs-lisp-modeのフックをセット
 (add-hook 'emacs-lisp-mode-hook 'elisp-mode-hooks)
 
-;; ▼要拡張機能インストール▼
-;; 拡張機能を自動インストール──auto-install
-;; auto-installの設定
-(when (require 'auto-install nil t)
-
-  ;; インストールディレクトリを設定する 初期値は ~/.emacs.d/auto-install/
-  (setq auto-install-directory "~/.emacs.d/elisp/")
-
-  ;; EmacsWikiに登録されているelisp の名前を取得する
-  (auto-install-update-emacswiki-package-name t)
-
-  ;; 必要であればプロキシの設定を行う
-  ;; (setq url-proxy-services '(("http" . "localhost:8339")))
-  ;; install-elisp の関数を利用可能にする
-  (auto-install-compatibility-setup))
-
 ;;helmをインストール(候補検索をして何らかのアクションを行う)
 (require 'package)
-(add-to-list 'package-archives
-    '("marmalade" .
-      "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 ;;helmの設定
@@ -286,9 +266,7 @@
 (setq ac-use-menu-map t)       ;; 補完メニュー表示時にC-n/C-pで補完候補選択
 (setq ac-use-fuzzy t)          ;; 曖昧マッチ
 
-;; ▼要拡張機能インストール▼
 ;; 検索結果をリストアップする──color-moccur
-;;https://www.emacswiki.org/emacs/download/color-moccur.el
 ;; color-moccurの設定
 (when (require 'color-moccur nil t)
 
@@ -307,7 +285,6 @@
              (require 'migemo nil t))
     (setq moccur-use-migemo t)))
 
-;; ▼要拡張機能インストール▼
 ;; moccurの結果を直接編集──moccur-edit
 ;; moccur-editの設定
 (require 'moccur-edit nil t)
@@ -317,35 +294,24 @@
 ;;   (after save-after-moccur-edit-buffer activate)
 ;;   (save-buffer))
 
-;; ▼要拡張機能インストール▼
 ;; grepの結果を直接編集──wgrep
 ;; wgrepの設定
 (require 'wgrep nil t)
 
-;; ▼要拡張機能インストール▼
 ;; 編集履歴を記憶する──undohist
 ;; undohistの設定
 (when (require 'undohist nil t)
   (undohist-initialize))
 
-;; ▼要拡張機能インストール▼
 ;; アンドゥの分岐履歴──undo-tree
 ;; undo-treeの設定
 (when (require 'undo-tree nil t)
   (global-undo-tree-mode))
 
-;;  redo+
-;;C-M-/
-(require 'redo+)
-(global-set-key (kbd "C-z") 'redo)
-(setq undo-no-redo t) ; 過去のundoがredoされないようにする
-(setq undo-limit 600000)
-(setq undo-strong-limit 900000)
-
 ;;カッコやクウォートなどの対応関係を自動挿入・管理するパッケージ
-;;(require 'smartparens-config)
+(require 'smartparens-config)
 ;;すべてのモードで使用する(自動起動)
-;;(smartparens-global-mode t)
+(smartparens-global-mode t)
 
 ;;閉じ括弧の自動挿入
 (electric-pair-mode 1)
@@ -363,7 +329,7 @@
 
 (require 'cc-mode)
 
-;; c-mode-common-hook は C/C++ の設定
+;; c-mode-common-hook  C/C++ の設定
 (add-hook 'c-mode-common-hook
           (lambda ()
             (setq c-default-style "k&r") ;; カーニハン・リッチースタイル
@@ -374,8 +340,6 @@
 
 ;;flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
-;;(flycheck-add-next-checker 'javascript-jshint
-  ;;                         'javascript-gjslint)
 (add-to-list 'auto-mode-alist '("\\.js\\'". js2-mode))
 (defalias 'perl-mode 'cperl-mode)
 (setq auto-mode-alist (append '(("\\.psgi$" . cperl-mode)) auto-mode-alist))
@@ -386,7 +350,6 @@
 
 (add-hook 'cperl-mode-hook
           '(lambda ()
-
              ;; インデント設定
              (cperl-set-style "PerlStyle")
              (custom-set-variables
@@ -395,6 +358,7 @@
               '(cperl-indent-subs-specially nil))
              )
          )
+
 ;; 警告音もフラッシュも全て無効(警告音が完全に鳴らなくなるので注意)
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
@@ -426,32 +390,8 @@
 (delete-selection-mode t)
 
 ;;yasnippet
-;;パスを通す
-(add-to-list 'load-path
-             (expand-file-name "~/.emacs.d/elpa/yasnippet-20170923.1646/"))
 (require 'yasnippet)
-;;(eval-after-load "yasnippet"
-;;  '(progn
-;;     ;; companyと競合するのでyasnippetのフィールド移動は "C-i" のみにする
-;;     (define-key yas-keymap (kbd "<tab>") nil)
-     (yas-global-mode 1)
-;;))
-
-
-;;company
-;;(require 'company)
-;;(require 'company-emacs-eclim)
-;;(company-emacs-eclim-setup)
-;;  (global-company-mode 1)
-;;  (global-set-key (kbd "C-M-i") 'company-complete)
-;;  (define-key company-active-map (kbd "C-n") 'company-select-next)
-;;  (define-key company-active-map (kbd "C-p") 'company-select-previous)
-;;  (define-key company-search-map (kbd "C-n") 'company-select-next)
-;;  (define-key company-search-map (kbd "C-n") 'company-select-previous)
-;;  (define-key company-active-map (kbd "<tab>") 'company-complete-selection)
-;;(setq company-idle-delay 0)
-;;(setq company-minimum-prefix-length 2)
-;;(setq company-selection-wrap-around t)
+(yas-global-mode 1)
 
 ;;cua-modeの設定（矩形選択）ctrl+Enterで矩形選択モードに入る
 (cua-mode t)
@@ -495,8 +435,7 @@
             (define-key eshell-mode-map [(tab)] 'auto-complete)))
 
 ;;helm を使う部分
-
-;; helm で履歴から入力
+;;helm で履歴から入力
 (add-hook 'eshell-mode-hook
           #'(lambda ()
               (define-key eshell-mode-map
@@ -509,14 +448,13 @@
                 (kbd "C-n")
                 'helm-esh-pcomplete)))
 
-
 ;; load environment value
 (load-file (expand-file-name "~/.emacs.d/shellenv.el"))
 (dolist (path (reverse (split-string (getenv "PATH") ":")))
   (add-to-list 'exec-path path))
 
 ;;Debian の im-config で fcitx を有効にすると日本語入力に Mozc を利用できるようになるが、この Mozc を Emacs でも利用するためには .emacs でも設定する必要がある。
-;;まずパッケージ emacs-mozc を入れる。
+;;まずパッケージ emacs-mozc を入れること。
 ;;sudo apt-get install emacs-mozc
 
 ;; emacs-mozc のロード
@@ -524,7 +462,6 @@
 (require 'mozc)
 
 ;; 日本語入力を japanese-mozc に
-
 (setq default-input-method "japanese-mozc"))
 
 ;;Format HTML, CSS and JavaScript/JSON by js-beautify
@@ -571,18 +508,6 @@
 ;;F8でトグルする
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(jdee-server-dir "/Users/s/Dropbox/projects/dotfiles/.emacs.d"))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
 (fringe-mode 0)
 
@@ -602,10 +527,5 @@
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 
-(use-package markdown-mode
-  :ensure t
-  :commands (markdown-mode gfm-mode)
-  :mode (("README\\.md\\'" . gfm-mode)
-         ("\\.md\\'" . markdown-mode)
-         ("\\.markdown\\'" . markdown-mode))
-  :init (setq markdown-command "multimarkdown"))
+;;EmacsのGitクライアント
+(require 'magit)
