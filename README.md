@@ -22,9 +22,9 @@
 |C-M-n|対応する閉じ括弧に移動|
 |C-M-p|対応する開き括弧に移動|
 |M-o|color-moccur|
-###
 
 ####magit
+
 |M-x magit-status|git status|
 |カーソルを合わせてs|stage|
 |S|全てstage|
