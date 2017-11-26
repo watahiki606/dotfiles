@@ -33,3 +33,5 @@
 |(コメントを書いた後に)C-c C-c|commit|
 |F|pull画面|
 |u|pull|
+|P|pull画面|
+|P|push|

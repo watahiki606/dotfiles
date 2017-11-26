@@ -104,16 +104,7 @@
 ;; リージョンの背景色を変更
 (set-face-background 'region "darkgreen")
 
-;; ▼要拡張機能インストール▼
-;; 表示テーマの設定
-;; http://download.savannah.gnu.org/releases/color-theme/color-theme-6.6.0.tar.gz
-(when (require 'color-theme nil t)
-
-  ;; テーマを読み込むための設定
-  (color-theme-initialize)
-
-  ;; テーマgray30に変更する
-  (color-theme-gray30))
+(load-theme 'misterioso t)
 
 ;; フォントの設定
 ;;mac
@@ -285,23 +276,9 @@
              (require 'migemo nil t))
     (setq moccur-use-migemo t)))
 
-;; moccurの結果を直接編集──moccur-edit
-;; moccur-editの設定
-(require 'moccur-edit nil t)
-
-;; moccur-edit-finish-editと同時にファイルを保存する
-;; (defadvice moccur-edit-change-file
-;;   (after save-after-moccur-edit-buffer activate)
-;;   (save-buffer))
-
 ;; grepの結果を直接編集──wgrep
 ;; wgrepの設定
 (require 'wgrep nil t)
-
-;; 編集履歴を記憶する──undohist
-;; undohistの設定
-(when (require 'undohist nil t)
-  (undohist-initialize))
 
 ;; アンドゥの分岐履歴──undo-tree
 ;; undo-treeの設定
