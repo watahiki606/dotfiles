@@ -111,7 +111,7 @@
 (when (eq window-system 'ns)
 (set-face-attribute 'default nil
                     :family "Ricty Diminished"
-                    :height 140)
+                    :height 120)
 (set-fontset-font (frame-parameter nil 'font)
                   'japanese-jisx0208
                   (cons "Ricty Diminished" "iso10646-1"))
@@ -229,8 +229,27 @@
 ;; emacs-lisp-modeのフックをセット
 (add-hook 'emacs-lisp-mode-hook 'elisp-mode-hooks)
 
+;; auto-installの設定		
+ (when (require 'auto-install nil t)		
+		
+   ;; インストールディレクトリを設定する 初期値は ~/.emacs.d/auto-install/		
+   (setq auto-install-directory "~/.emacs.d/elisp/")		
+		
+   ;; EmacsWikiに登録されているelisp の名前を取得する		
+   (auto-install-update-emacswiki-package-name t)		
+		
+   ;; 必要であればプロキシの設定を行う		
+   ;; (setq url-proxy-services '(("http" . "localhost:8339")))		
+   ;; install-elisp の関数を利用 可能にする		
+(auto-install-compatibility-setup))
+
 ;;helmをインストール(候補検索をして何らかのアクションを行う)
 (require 'package)
+(add-to-list 'package-archives		
+     '("marmalade" .		
+       "http://marmalade-repo.org/packages/"))		
+ (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 (package-initialize)
 
 ;;helmの設定
