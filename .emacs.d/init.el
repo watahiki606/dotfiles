@@ -409,9 +409,11 @@
    (require 'sqlplus)
    (add-to-list 'auto-mode-alist '("\\.sqp\\'" . sqlplus-mode))
 
-;;shellのPathを引き継ぐ  
-(exec-path-from-shell-initialize)
-
+;;shellのPathを引き継ぐ
+(when (eq window-system 'ns)
+(exec-path-from-shell-initialize))
+(when (eq window-system 'x)
+  (exec-path-from-shell-initialize))
 ;; eshell での補完に auto-complete.el を使う
 (require 'pcomplete)
 (add-to-list 'ac-modes 'eshell-mode)
