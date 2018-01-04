@@ -1,7 +1,7 @@
 /.emacs.d/auto-save-list/*
 /.emacs.d/eshell/*
 /.emacs.d/undohist/*
-/.emacs.d/ac-comphist.*dat
+/.emacs.d/ac-comphist*.dat
 /.emacs.d/recentf
 /.emacs.d/tramp
 /.emacs.d/workbench.xmi
