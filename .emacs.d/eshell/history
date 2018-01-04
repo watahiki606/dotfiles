@@ -85,3 +85,13 @@ cd
 echo $PATH
 history
 echo $PATH
+wget https://progedu.github.io/jsconfig-es6/app.js
+npm install ../sum
+ls
+cat app.js
+node app.js
+node app.js
+echo $PATH
+echo ~/.profile
+cat ~/.profile
+echo $HOME

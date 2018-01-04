@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <17/08/27 18:57:50 /Users/s/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <17/12/31 01:00:00 /Users/s/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -20,4 +20,23 @@
   ("id" "/usr/bin/id")
   ("gid-string" "wheel")
   ("gid-integer" 0)
-  ("uid-integer" 0)))
+  ("uid-integer" 0))
+ (["scp" "ubuntu" "172.16.105.139" nil nil]
+  ("locale" "LC_ALL=en_US.utf8")
+  ("uname" "Linux 4.4.0-103-generic")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~" "/home/ubuntu")
+  ("file-exists" "test -e")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" "\\stat")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1000)
+  ("readlink" "\\readlink")
+  ("gid-string" "ubuntu")))

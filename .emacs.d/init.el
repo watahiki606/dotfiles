@@ -203,20 +203,20 @@
        `((".*" ,temporary-file-directory t)))
 
 ;; バックアップとオートセーブファイルを~/.emacs.d/backups/へ集める
-(add-to-list 'backup-directory-alist
-             (cons "." "~/.emacs.d/backups/"))
-(setq auto-save-file-name-transforms
-      `((".*" ,(expand-file-name "~/.emacs.d/backups/") t)))
+;;(add-to-list 'backup-directory-alist
+;;             (cons "." "~/.emacs.d/backups/"))
+;;(setq auto-save-file-name-transforms
+;;      `((".*" ,(expand-file-name "~/.emacs.d/backups/") t)))
 
 ;; オートセーブファイル作成までの秒間隔
-(setq auto-save-timeout 15)
+;;(setq auto-save-timeout 15)
 
 ;; オートセーブファイル作成までのタイプ間隔
-(setq auto-save-interval 60)
+;;(setq auto-save-interval 60)
 
 ;; ファイルが #! から始まる場合、+xを付けて保存する
-(add-hook 'after-save-hook
-          'executable-make-buffer-file-executable-if-script-p)
+;;(add-hook 'after-save-hook
+;;          'executable-make-buffer-file-executable-if-script-p)
 
 ;; emacs-lisp-mode-hook用の関数を定義
 (defun elisp-mode-hooks ()
@@ -498,10 +498,10 @@
 (split-window-vertically)
 
 ;; 直前のバッファに戻る
-(global-set-key (kbd "s-[") 'switch-to-prev-buffer)
+(global-set-key (kbd "M-[") 'switch-to-prev-buffer)
 
 ;; 次のバッファに進む
-(global-set-key (kbd "s-]") 'switch-to-next-buffer)
+(global-set-key (kbd "M-]") 'switch-to-next-buffer)
 
 ;;F8でトグルする
 (require 'neotree)
