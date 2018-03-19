@@ -12,6 +12,28 @@
 ;; 引数のディレクトリとそのサブディレクトリをload-pathに追加
 (add-to-load-path "elisp" "helm" "helm-descbinds" "elpa")
 
+;;Emacsからgtagsを使えるようにする
+(require 'helm-gtags)
+;;; Enable helm-gtags-mode
+(add-hook 'c-mode-hook 'helm-gtags-mode)
+(add-hook 'c++-mode-hook 'helm-gtags-mode)
+(add-hook 'asm-mode-hook 'helm-gtags-mode)
+(add-hook 'js2-mode-hook 'helm-gtags-mode)
+;; customize
+(custom-set-variables
+ '(helm-gtags-path-style 'relative)
+ '(helm-gtags-ignore-case t)
+ '(helm-gtags-auto-update t))
+;; key bindings
+(eval-after-load "helm-gtags"
+  '(progn
+     (define-key helm-gtags-mode-map (kbd "M-t") 'helm-gtags-find-tag)
+     (define-key helm-gtags-mode-map (kbd "M-r") 'helm-gtags-find-rtag)
+     (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-find-symbol)
+     (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
+     (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
+     (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)))
+
 ;; ターミナル以外はツールバー、スクロールバーを非表示
 (when window-system
   ;; tool-barを非表示
@@ -270,7 +292,9 @@
 (add-to-list 'ac-modes 'org-mode)
 (add-to-list 'ac-modes 'yatex-mode)
 (add-to-list 'ac-modes 'web-mode)
-(add-to-list 'ac-modes 'sql-mode) 
+(add-to-list 'ac-modes 'sql-mode)
+(add-to-list 'ac-modes 'jade-mode)
+(add-to-list 'ac-modes 'js2-mode)
 
 (ac-set-trigger-key "TAB")
 (setq ac-use-menu-map t)       ;; 補完メニュー表示時にC-n/C-pで補完候補選択
@@ -334,9 +358,12 @@
             ))
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
+;;
+(require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'". js2-mode))
+
 ;;flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
-(add-to-list 'auto-mode-alist '("\\.js\\'". js2-mode))
 (defalias 'perl-mode 'cperl-mode)
 (setq auto-mode-alist (append '(("\\.psgi$" . cperl-mode)) auto-mode-alist))
 (setq auto-mode-alist (append '(("\\.cgi$" . cperl-mode)) auto-mode-alist))
@@ -414,6 +441,10 @@
 (exec-path-from-shell-initialize))
 (when (eq window-system 'x)
   (exec-path-from-shell-initialize))
+
+;;gtags用環境変数の設定
+(setenv "GTAGSLABEL" "pygments")
+
 ;; eshell での補完に auto-complete.el を使う
 (require 'pcomplete)
 (add-to-list 'ac-modes 'eshell-mode)
@@ -447,9 +478,9 @@
                 'helm-esh-pcomplete)))
 
 ;; load environment value
-(load-file (expand-file-name "~/.emacs.d/shellenv.el"))
-(dolist (path (reverse (split-string (getenv "PATH") ":")))
-  (add-to-list 'exec-path path))
+;;(load-file (expand-file-name "~/.emacs.d/shellenv.el"))
+;;(dolist (path (reverse (split-string (getenv "PATH") ":")))
+;;  (add-to-list 'exec-path path))
 
 ;;Debian の im-config で fcitx を有効にすると日本語入力に Mozc を利用できるようになるが、この Mozc を Emacs でも利用するためには .emacs でも設定する必要がある。
 ;;まずパッケージ emacs-mozc を入れること。
@@ -527,3 +558,28 @@
 
 ;;EmacsのGitクライアント
 (require 'magit)
+
+;;jade-modeの設定（コピペ）packageもいくつか入れた。いらないかも
+(require 'sws-mode)
+(require 'jade-mode)
+
+(add-to-list 'auto-mode-alist '("\.jade$" . jade-mode))
+
+(require 'auto-highlight-symbol)
+(global-auto-highlight-symbol-mode t)
+
+;;python関係の設定
+(require 'python-mode)
+(setq auto-mode-alist (cons '("\\.py\\'" . python-mode) auto-mode-alist))
+;;補完
+(require 'jedi)
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
+
+(setq ac-sources
+    (delete 'ac-source-words-in-same-mode-buffers ac-sources)) ;;jediの補完候補だけでいい
+  (add-to-list 'ac-sources 'ac-source-filename)
+  (add-to-list 'ac-sources 'ac-source-jedi-direct)
+  (define-key python-mode-map "\C-ct" 'jedi:goto-definition)
+  (define-key python-mode-map "\C-cb" 'jedi:goto-definition-pop-marker)
+  (define-key python-mode-map "\C-cr" 'helm-jedi-related-names)
