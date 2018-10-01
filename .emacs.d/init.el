@@ -1,4 +1,3 @@
-
 ;;;load-path を追加する関数を定義
 (defun add-to-load-path (&rest paths)
   (let (path)
@@ -12,7 +11,119 @@
 ;; 引数のディレクトリとそのサブディレクトリをload-pathに追加
 (add-to-load-path "elisp" "helm" "helm-descbinds" "elpa")
 
+(require 'package)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+
+(defun require-package (package &optional min-version no-refresh)
+  "Install given PACKAGE, optionally requiring MIN-VERSION.
+If NO-REFRESH is non-nil, the available package lists will not be
+re-downloaded in order to locate PACKAGE."
+  (if (package-installed-p package min-version)
+    t
+    (if (or (assoc package package-archive-contents) no-refresh)
+      (if (boundp 'package-selected-packages)
+        ;; Record this as a package the user installed explicitly
+        (package-install package nil)
+        (package-install package))
+      (progn
+        (package-refresh-contents)
+        (require-package package min-version t)))))
+
+(defun maybe-require-package (package &optional min-version no-refresh)
+  "Try to install PACKAGE, and return non-nil if successful.
+In the event of failure, return nil and print a warning message.
+Optionally require MIN-VERSION.  If NO-REFRESH is non-nil, the
+available package lists will not be re-downloaded in order to
+locate PACKAGE."
+  (condition-case err
+    (require-package package min-version no-refresh)
+    (error
+      (message "Couldn't install optional package `%s': %S" package err)
+      nil)))
+
+(maybe-require-package 'helm-gtags)
+(maybe-require-package 'auto-highlight-symbol)
+(maybe-require-package 'jade-mode)
+(maybe-require-package 'sws-mode)
+(maybe-require-package 'magit)
+(maybe-require-package 'multiple-cursors)
+(maybe-require-package 'neotree)
+(maybe-require-package 'ac-php)
+(maybe-require-package 'mozc)
+(maybe-require-package 'pcomplete)
+(maybe-require-package 'sqlplus)
+(maybe-require-package 'yasnippet)
+(maybe-require-package 'sync-recentf)
+(maybe-require-package 'dirtree)
+(maybe-require-package 'recentf-ext)
+(maybe-require-package 'ac-slime)
+(maybe-require-package 'slime)
+(maybe-require-package 'js2-mode)
+(maybe-require-package 'cc-mode)
+(maybe-require-package 'web-mode)
+(maybe-require-package 'smartparens)
+(maybe-require-package 'undo-tree)
+(maybe-require-package 'wgrep)
+(maybe-require-package 'migemo)
+(maybe-require-package 'color-moccur)
+;;(maybe-require-package 'auto-complete-config)
+(maybe-require-package 'auto-complete)
+(maybe-require-package 'helm-descbinds)
+;;(maybe-require-package 'helm-config)
+;;(maybe-require-package 'auto-install)
+;;(maybe-require-package 'ucs-normalize)
+(maybe-require-package 'powerline)
+  
+(require 'powerline)
+(defconst color1 "SteelBlue")
+(defconst color2 "OliveDrab2")
+(set-face-attribute 'mode-line nil
+                    :foreground "#fff"
+                    :background color1
+                    :bold t
+                    :box nil)
+
+(set-face-attribute 'powerline-active1 nil
+                    :foreground "gray23"
+                    :background color2
+                    :bold t
+                    :box nil
+                    :inherit 'mode-line)
+
+(set-face-attribute 'powerline-active2 nil
+                    :foreground "white smoke"
+                    :background "gray20"
+                    :bold t
+                    :box nil
+                    :inherit 'mode-line)
+
+(set-face-attribute 'mode-line-inactive nil
+                    :foreground "#fff"
+                    :background color1
+                    :bold t
+                    :box nil)
+
+(set-face-attribute 'powerline-inactive1 nil
+                    :foreground "gray23"
+                    :background color2
+                    :bold t
+                    :box nil
+                    :inherit 'mode-line)
+
+(set-face-attribute 'powerline-inactive2 nil
+                    :foreground "white smoke"
+                    :background "gray20"
+                    :bold t
+                    :box nil
+                    :inherit 'mode-line)
+
+(powerline-center-theme)
+
 ;;Emacsからgtagsを使えるようにする
+
+
 (require 'helm-gtags)
 ;;; Enable helm-gtags-mode
 (add-hook 'c-mode-hook 'helm-gtags-mode)
@@ -251,34 +362,24 @@
 ;; emacs-lisp-modeのフックをセット
 (add-hook 'emacs-lisp-mode-hook 'elisp-mode-hooks)
 
-;; auto-installの設定		
- (when (require 'auto-install nil t)		
-		
-   ;; インストールディレクトリを設定する 初期値は ~/.emacs.d/auto-install/		
-   (setq auto-install-directory "~/.emacs.d/elisp/")		
-		
+;; auto-installの設定
+;;  (require 'auto-install)
+;; インストールディレクトリを設定する 初期値は ~/.emacs.d/auto-install/		
+;;(setq auto-install-directory "~/.emacs.d/elisp/")		
    ;; EmacsWikiに登録されているelisp の名前を取得する		
-   (auto-install-update-emacswiki-package-name t)		
+;;   (auto-install-update-emacswiki-package-name t)		
 		
    ;; 必要であればプロキシの設定を行う		
    ;; (setq url-proxy-services '(("http" . "localhost:8339")))		
    ;; install-elisp の関数を利用 可能にする		
-(auto-install-compatibility-setup))
+;;(auto-install-compatibility-setup)
 
 ;;helmをインストール(候補検索をして何らかのアクションを行う)
-(require 'package)
-(add-to-list 'package-archives		
-     '("marmalade" .		
-       "http://marmalade-repo.org/packages/"))		
- (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
-(package-initialize)
-
 ;;helmの設定
 (require 'helm-config)
 (helm-mode 1)
-
 (global-set-key (kbd "M-x") 'helm-M-x)
+
 (require 'helm-descbinds)
 (helm-descbinds-mode)
 
@@ -302,37 +403,36 @@
 
 ;; 検索結果をリストアップする──color-moccur
 ;; color-moccurの設定
-(when (require 'color-moccur nil t)
-
+  (require 'color-moccur)
   ;; M-oにoccur-by-moccurを割り当て
   (define-key global-map (kbd "M-o") 'occur-by-moccur)
-
   ;; スペース区切りでAND検索
   (setq moccur-split-word t)
+;; ディレクトリ検索のとき除外するファイル
+(add-to-list 'dmoccur-exclusion-mask "\\.DS_Store")
+(add-to-list 'dmoccur-exclusion-mask "^#.+#$")
+;; Migemoを利用できる環境であればMigemoを使う
+ (when (and (executable-find "cmigemo")
 
-  ;; ディレクトリ検索のとき除外するファイル
-  (add-to-list 'dmoccur-exclusion-mask "\\.DS_Store")
-  (add-to-list 'dmoccur-exclusion-mask "^#.+#$")
-
-  ;; Migemoを利用できる環境であればMigemoを使う
-  (when (and (executable-find "cmigemo")
-             (require 'migemo nil t))
-    (setq moccur-use-migemo t)))
+	     require 'migemo)
+    (setq moccur-use-migemo t)
 
 ;; grepの結果を直接編集──wgrep
 ;; wgrepの設定
-(require 'wgrep nil t)
+
+(require 'wgrep)
 
 ;; アンドゥの分岐履歴──undo-tree
 ;; undo-treeの設定
-(when (require 'undo-tree nil t)
-  (global-undo-tree-mode))
+
+
+  (require 'undo-tree)
+  (global-undo-tree-mode)
 
 ;;カッコやクウォートなどの対応関係を自動挿入・管理するパッケージ
-(require 'smartparens-config)
+(require 'smartparens)
 ;;すべてのモードで使用する(自動起動)
 (smartparens-global-mode t)
-
 ;;閉じ括弧の自動挿入
 (electric-pair-mode 1)
 
@@ -347,6 +447,8 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
+
+
 (require 'cc-mode)
 
 ;; c-mode-common-hook  C/C++ の設定
@@ -359,6 +461,8 @@
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 ;;
+
+
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'". js2-mode))
 
@@ -387,23 +491,33 @@
 (setq ring-bell-function 'ignore)
 
 ;; slime
-(when (require 'slime nil t)
+
+
+  (require 'slime)
   (setq inferior-lisp-program "clisp")
   (slime-setup '(slime-repl slime-fancy slime-banner))
   (setq slime-net-coding-system 'utf-8-unix)
+
+
   (require 'ac-slime)
   (add-hook 'slime-mode-hook 'set-up-slime-ac)
-  (add-hook 'slime-repl-mode-hook 'set-up-slime-ac))
+  (add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
 (put 'downcase-region 'disabled nil)
 
 ;;
+
+
 (require 'recentf-ext)
 
 ;; ディレクトリツリー
+
+
 (require 'dirtree)
 
 ;;起動時の画面フルサイズ
 (set-frame-parameter nil 'fullscreen 'maximized)
+
+
 
 (require 'sync-recentf)
 (setq recentf-auto-cleanup 60)
@@ -413,6 +527,7 @@
 (delete-selection-mode t)
 
 ;;yasnippet
+
 (require 'yasnippet)
 (yas-global-mode 1)
 
@@ -433,8 +548,9 @@
 
 (add-hook 'sql-mode-hook 'sql-mode-hooks)
 
-   (require 'sqlplus)
-   (add-to-list 'auto-mode-alist '("\\.sqp\\'" . sqlplus-mode))
+
+(require 'sqlplus)
+(add-to-list 'auto-mode-alist '("\\.sqp\\'" . sqlplus-mode))
 
 ;;shellのPathを引き継ぐ
 (when (eq window-system 'ns)
@@ -446,6 +562,7 @@
 (setenv "GTAGSLABEL" "pygments")
 
 ;; eshell での補完に auto-complete.el を使う
+
 (require 'pcomplete)
 (add-to-list 'ac-modes 'eshell-mode)
 (ac-define-source pcomplete
@@ -488,7 +605,7 @@
 
 ;; emacs-mozc のロード
 (when (eq window-system 'x)
-(require 'mozc)
+  (require 'mozc)
 
 ;; 日本語入力を japanese-mozc に
 (setq default-input-method "japanese-mozc"))
@@ -515,6 +632,7 @@
 
 (add-hook 'php-mode-hook '(lambda ()
                            (auto-complete-mode t)
+
                            (require 'ac-php)
                            (setq ac-sources  '(ac-source-php ) )
                            (yas-global-mode 1)
@@ -535,6 +653,8 @@
 (global-set-key (kbd "M-]") 'switch-to-next-buffer)
 
 ;;F8でトグルする
+
+
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
@@ -549,6 +669,8 @@
 ;;C-> で次の行にカーソル追加
 ;;C-< で前の行にカーソル追加
 ;;単語選択後 C-c C-< で画面内のその単語全てにカーソルを追加
+
+
 (require 'multiple-cursors)
 (global-set-key (kbd "<C-M-return>") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
@@ -560,8 +682,8 @@
 (require 'magit)
 
 ;;jade-modeの設定（コピペ）packageもいくつか入れた。いらないかも
-(require 'sws-mode)
-(require 'jade-mode)
+  (require 'sws-mode)
+(require 'jade-mode))
 
 (add-to-list 'auto-mode-alist '("\.jade$" . jade-mode))
 
@@ -569,6 +691,8 @@
 (global-auto-highlight-symbol-mode t)
 
 ;;python関係の設定
+
+
 (require 'python-mode)
 (setq auto-mode-alist (cons '("\\.py\\'" . python-mode) auto-mode-alist))
 ;;補完
@@ -577,9 +701,12 @@
 (setq jedi:complete-on-dot t)
 
 (setq ac-sources
-    (delete 'ac-source-words-in-same-mode-buffers ac-sources)) ;;jediの補完候補だけでいい
+  (delete 'ac-source-words-in-same-mode-buffers ac-sources)) ;;jediの補完候補だけでいい
   (add-to-list 'ac-sources 'ac-source-filename)
   (add-to-list 'ac-sources 'ac-source-jedi-direct)
   (define-key python-mode-map "\C-ct" 'jedi:goto-definition)
   (define-key python-mode-map "\C-cb" 'jedi:goto-definition-pop-marker)
   (define-key python-mode-map "\C-cr" 'helm-jedi-related-names)
+
+;;終了状態を、再起動後に自動で復元
+(desktop-save-mode 1)
