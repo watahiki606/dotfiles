@@ -122,8 +122,6 @@ locate PACKAGE."
 (powerline-center-theme)
 
 ;;Emacsからgtagsを使えるようにする
-
-
 (require 'helm-gtags)
 ;;; Enable helm-gtags-mode
 (add-hook 'c-mode-hook 'helm-gtags-mode)
@@ -219,7 +217,7 @@ locate PACKAGE."
 (setq frame-title-format "%f")
 
 ;; 行番号を常に表示する
- (global-linum-mode t)
+(global-linum-mode t)
 
 ;; タブ文字の表示幅
 ;; TABの表示幅。初期値は8
@@ -257,18 +255,15 @@ locate PACKAGE."
 
 ;;windows
 (when (eq system-type 'windows-nt)
-
   ;; asciiフォントをConsolasに
   (set-face-attribute 'default nil
                       :family "Consolas"
                       :height 110)
-
   ;; 日本語フォントをメイリオに
   (set-fontset-font
    nil
    'japanese-jisx0208
    (font-spec :family "メイリオ"))
-
   ;; フォントの横幅を調節する
   (setq face-font-rescale-alist
         '((".*Consolas.*" . 1.0)
@@ -292,11 +287,9 @@ locate PACKAGE."
 
 ;; 現在行のハイライト
 (defface my-hl-line-face
-
   ;; 背景がdarkならば背景色を紺に
   '((((class color) (background dark))
      (:background "NavyBlue" t))
-
     ;; 背景がlightならば背景色を緑に
     (((class color) (background light))
      (:background "LightGoldenrodYellow" t))
@@ -318,21 +311,21 @@ locate PACKAGE."
 (set-face-underline 'show-paren-match-face "yellow")
 
 ;; ロックファイルを作成しない
- (setq create-lockfiles nil)
+(setq create-lockfiles nil)
 
 ;; バックアップとオートセーブの設定
 ;; バックアップファイルを作成しない
- (setq make-backup-files nil) ; 初期値はta
+(setq make-backup-files nil) ; 初期値はta
 
 ;; オートセーブファイルを作らない
- (setq auto-save-default nil) ; 初期値はt
+(setq auto-save-default nil) ; 初期値はt
 
 ;; バックアップファイルの作成場所をシステムのTempディレクトリに変更する
- (setq backup-directory-alist
+(setq backup-directory-alist
        `((".*" . ,temporary-file-directory)))
 
 ;; オートセーブファイルの作成場所をシステムのTempディレクトリに変更する
- (setq auto-save-file-name-transforms
+(setq auto-save-file-name-transforms
        `((".*" ,temporary-file-directory t)))
 
 ;; バックアップとオートセーブファイルを~/.emacs.d/backups/へ集める
@@ -403,36 +396,33 @@ locate PACKAGE."
 
 ;; 検索結果をリストアップする──color-moccur
 ;; color-moccurの設定
-  (require 'color-moccur)
-  ;; M-oにoccur-by-moccurを割り当て
-  (define-key global-map (kbd "M-o") 'occur-by-moccur)
-  ;; スペース区切りでAND検索
-  (setq moccur-split-word t)
+(when (require 'color-moccur nil t)
+;; M-oにoccur-by-moccurを割り当て
+(define-key global-map (kbd "M-o") 'occur-by-moccur)
+;; スペース区切りでAND検索
+(setq moccur-split-word t)
 ;; ディレクトリ検索のとき除外するファイル
 (add-to-list 'dmoccur-exclusion-mask "\\.DS_Store")
 (add-to-list 'dmoccur-exclusion-mask "^#.+#$")
 ;; Migemoを利用できる環境であればMigemoを使う
- (when (and (executable-find "cmigemo")
-
-	     require 'migemo)
-    (setq moccur-use-migemo t)
+(when (and (executable-find "cmigemo")
+     (require 'migemo nil t))
+(setq moccur-use-migemo t)))
 
 ;; grepの結果を直接編集──wgrep
 ;; wgrepの設定
-
 (require 'wgrep)
 
 ;; アンドゥの分岐履歴──undo-tree
 ;; undo-treeの設定
-
-
-  (require 'undo-tree)
-  (global-undo-tree-mode)
+(require 'undo-tree)
+(global-undo-tree-mode)
 
 ;;カッコやクウォートなどの対応関係を自動挿入・管理するパッケージ
 (require 'smartparens)
 ;;すべてのモードで使用する(自動起動)
 (smartparens-global-mode t)
+
 ;;閉じ括弧の自動挿入
 (electric-pair-mode 1)
 
@@ -447,10 +437,7 @@ locate PACKAGE."
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
-
-
 (require 'cc-mode)
-
 ;; c-mode-common-hook  C/C++ の設定
 (add-hook 'c-mode-common-hook
           (lambda ()
@@ -459,9 +446,6 @@ locate PACKAGE."
             (setq c-basic-offset 2)      ;; indent は 2 スペース
             ))
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
-
-;;
-
 
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'". js2-mode))
@@ -491,33 +475,23 @@ locate PACKAGE."
 (setq ring-bell-function 'ignore)
 
 ;; slime
+(when (require 'slime nil t)
+(setq inferior-lisp-program "clisp")
+(slime-setup '(slime-repl slime-fancy slime-banner))
+(setq slime-net-coding-system 'utf-8-unix)
 
+(require 'ac-slime)
+(add-hook 'slime-mode-hook 'set-up-slime-ac)
+(add-hook 'slime-repl-mode-hook 'set-up-slime-ac))
 
-  (require 'slime)
-  (setq inferior-lisp-program "clisp")
-  (slime-setup '(slime-repl slime-fancy slime-banner))
-  (setq slime-net-coding-system 'utf-8-unix)
-
-
-  (require 'ac-slime)
-  (add-hook 'slime-mode-hook 'set-up-slime-ac)
-  (add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
 (put 'downcase-region 'disabled nil)
-
-;;
-
 
 (require 'recentf-ext)
 
 ;; ディレクトリツリー
-
-
 (require 'dirtree)
-
 ;;起動時の画面フルサイズ
 (set-frame-parameter nil 'fullscreen 'maximized)
-
-
 
 (require 'sync-recentf)
 (setq recentf-auto-cleanup 60)
@@ -527,7 +501,6 @@ locate PACKAGE."
 (delete-selection-mode t)
 
 ;;yasnippet
-
 (require 'yasnippet)
 (yas-global-mode 1)
 
@@ -653,8 +626,6 @@ locate PACKAGE."
 (global-set-key (kbd "M-]") 'switch-to-next-buffer)
 
 ;;F8でトグルする
-
-
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
@@ -669,21 +640,18 @@ locate PACKAGE."
 ;;C-> で次の行にカーソル追加
 ;;C-< で前の行にカーソル追加
 ;;単語選択後 C-c C-< で画面内のその単語全てにカーソルを追加
-
-
 (require 'multiple-cursors)
 (global-set-key (kbd "<C-M-return>") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
-
 ;;EmacsのGitクライアント
 (require 'magit)
 
 ;;jade-modeの設定（コピペ）packageもいくつか入れた。いらないかも
-  (require 'sws-mode)
-(require 'jade-mode))
+(require 'sws-mode)
+(require 'jade-mode)
 
 (add-to-list 'auto-mode-alist '("\.jade$" . jade-mode))
 
@@ -691,8 +659,6 @@ locate PACKAGE."
 (global-auto-highlight-symbol-mode t)
 
 ;;python関係の設定
-
-
 (require 'python-mode)
 (setq auto-mode-alist (cons '("\\.py\\'" . python-mode) auto-mode-alist))
 ;;補完
