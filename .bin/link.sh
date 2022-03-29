@@ -10,5 +10,8 @@ for dotfile in "${SCRIPT_DIR}"/.??* ; do
     ln -fnsv "$dotfile" "$HOME"
 done
 
+mkdir -p ~/.config/karabiner
+touch ~/.config/karabiner/karabiner.json
+touch ~/.config/starship.toml
 ln -fnsv ${SCRIPT_DIR}/karabiner.json ~/.config/karabiner/karabiner.json
 ln -fnsv ${SCRIPT_DIR}/starship.toml ~/.config/starship.toml
