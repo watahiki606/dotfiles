@@ -12,6 +12,7 @@ brew "jq"
 brew "rsync"
 brew "tree"
 brew "watch"
+brew "awscli"
 
 cask "appcleaner"
 cask "google-chrome"
