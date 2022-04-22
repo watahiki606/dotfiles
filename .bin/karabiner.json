@@ -624,7 +624,8 @@
                                             "^org\\.x\\.X11$",
                                             "^com\\.apple\\.x11$",
                                             "^org\\.macosforge\\.xquartz\\.X11$",
-                                            "^org\\.macports\\.X11$"
+                                            "^org\\.macports\\.X11$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
