@@ -2796,7 +2796,6 @@
                                             "^com\\.microsoft\\.rdc$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
                                             "^com\\.microsoft\\.rdc\\.osx\\.beta$",
-                                            "^com\\.microsoft\\.VSCode$",
                                             "^net\\.sf\\.cord$",
                                             "^com\\.thinomenon\\.RemoteDesktopConnection$",
                                             "^com\\.itap-mobile\\.qmote$",
