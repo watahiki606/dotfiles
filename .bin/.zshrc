@@ -1,4 +1,4 @@
 eval "$(starship init zsh)"
-alias ls='exa'
-alias ll='exa -Fla'
-alias tree='exa --tree -F'
+alias ls='eza'
+alias ll='eza -Fla'
+alias tree='eza --tree -F'
