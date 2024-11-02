@@ -1,9 +1,7 @@
 cask_args appdir: "/Applications"
 
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/cask-fonts"
 
 brew "exa"
@@ -46,3 +44,4 @@ cask "box-drive"
 cask "homebrew/cask-drivers/fujitsu-scansnap-home"
 cask "font-hackgen"
 cask "font-hackgen-nerd"
+cask  "wezterm"
