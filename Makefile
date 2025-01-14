@@ -1,5 +1,5 @@
 # Do everything.
-all: init link defaults brew
+all: init link defaults brew gitignore_global
 
 # Set initial preference.
 init:
@@ -16,3 +16,8 @@ defaults:
 # Install macOS applications.
 brew:
 	.bin/brew.sh
+
+# Create global gitignore
+gitignore_global:
+	echo ".cursorignore\ncopilot-instructions.md" > ~/.gitignore_global
+	git config --global core.excludesFile ~/.gitignore_global
