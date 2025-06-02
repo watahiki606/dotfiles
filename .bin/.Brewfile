@@ -4,7 +4,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask-versions"
 tap "homebrew/cask-fonts"
 
-brew "eza"
+# brew "eza"
 brew "git"
 brew "jq"
 brew "rsync"
