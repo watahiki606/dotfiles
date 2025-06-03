@@ -45,13 +45,6 @@ DropBoxに各アプリの設定ファイルがおいてある前提
 
 - [ ] ctrl + u で universal_argument
 
-### ファイル操作
-
-- [x] Ctl-x C-f find_file
-- [x] Ctl-x C-s save_buffer
-- [ ] Ctl-x C-w write_file
-- [ ] Ctl-x d dired
-
 ### カーソル移動
 
 - [x] C-b backward_char
@@ -88,17 +81,7 @@ DropBoxに各アプリの設定ファイルがおいてある前提
 - [x] M-w kill_ring_save
 - [x] C-y yank
 - [x] C-/ undo ->  command z
-- [x] Ctl-x u undo ->  command z
-- [ ] C-\* undo ->  command z
 - [x] C-Space set_mark_command
-- [x] Ctl-x h mark_whole_buffer -> command A
-- [ ] Ctl-x C-p mark_page
-
-### バッファ / ウィンドウ操作」のキー設定
-
-- [ ] Ctl-x k kill_buffer
-- [ ] Ctl-x b switch_to_buffer
-- [ ] Ctl-x o other_window
 
 ### 「文字列検索 / 置換」のキー設定
 
@@ -112,13 +95,7 @@ DropBoxに各アプリの設定ファイルがおいてある前提
 - [ ] C-j newline_and_indent
 - [x] C-i tab
 - [x] C-g keyboard_quit
-- [x] Ctl-x C-c kill_emacs
 - [ ] M-! shell_command
-
-### IntelliJ
-
-- キャレット追加(矩形選択)
-  - command + 8(列選択モード) -> Shift ↑↓
 
 ### VScode
 
